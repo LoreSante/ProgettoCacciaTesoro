@@ -22,7 +22,7 @@ CREATE TABLE `paintings` (
 
 CREATE TABLE `matches` (
   `id` int(5) NOT NULL AUTO_INCREMENT,
-  `paintings` text NOT NULL,
+  `paintings` int(5) NOT NULL,
    PRIMARY KEY (`id`),
      INDEX paintings_key (paintings),
      FOREIGN KEY (paintings) REFERENCES paintings(id)
