@@ -130,3 +130,32 @@
         position: fixed;
     }
 }
+.plugin_wrapper{
+    margin:auto;
+    width: 100%;
+
+}
+.plugin_wrapper form{
+    width:100%;
+    margin: auto;
+    text-align: center;
+    font-size: 25px;
+}
+
+
+.nameSelected{
+    margin:auto;
+    width: 20%;
+    height: 95px;
+    font-size: 25px;
+
+}
+
+.fname{
+    font-size: 25px;
+    margin:auto;
+    width:70%;
+    height: 90px;
+}
+
+

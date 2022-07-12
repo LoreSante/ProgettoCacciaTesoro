@@ -11,28 +11,26 @@
         options = $.extend(defaults, options);
         console.log("OPTIONS: " + defaults['serverURL']);
 
-        // for each item in the wrapped set
-        return this.each(function (i, obj) {
-            console.log("INITIALIZE PLUGIN " + i);
+        var $this = $(this);
 
-            // cache "this."
-            var $this = $(this);
+        // Wrap "this" in a div with a class of "plugin_wrapper"
+        $this.wrap('<div class="plugin_wrapper" />');
 
-            // Wrap "this" in a div with a class of "plugin_wrapper"
-            $this.wrap('<div class="plugin_wrapper" />');
-
-            $this.addClass('to-do-list-container');
-
-            $('<h2>My To Do List</h2>' +
-                '<textarea class="todo_textarea"></textarea>' +
-                '<input type="submit" value="add to do" class="to_do_submit" />').insertBefore($this);
-
-            var $submitButton = $('.to_do_submit', $this.parent());
+        $this.addClass('to-do-list-container');
+        $('<form id="frm1" action="/actions.php" method="post">'
+            +'<label title="Nome giocatore">'
+            +'<input type="text" class="fname" placeholder="Inserire nome giocatore">'
+            +'</label>'
+            +'<input type="button" value="Seleziona" class="nameSelected">'
+            +'</form>'
+        ).insertBefore($this);
 
 
-            $submitButton.on("click", function (event) {
+        var $submitButton = $('.nameSelected', $this.parent());
+
+        $submitButton.on("click", function (event) {
                 //alert("To Do Submitted");
-            });
         });
-    }
+    };
+
 })(jQuery);
