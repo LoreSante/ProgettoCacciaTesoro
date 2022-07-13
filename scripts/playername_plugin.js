@@ -27,8 +27,10 @@
 
 
         var $submitButton = $('.nameSelected', $this.parent());
+        var $nameInput = $('.fname', $this.parent() );
 
         $submitButton.on("click", function (event) {
+            document.getElementById("prova").innerHTML=$nameInput.innerText;
                 //alert("To Do Submitted");
         });
     };
