@@ -2,6 +2,7 @@
     margin:0;
     font: normal 13px/100% Verdana, Tahoma, sans-serif;
     color: #000;
+    height: 100%;
 
 }
 
@@ -9,6 +10,7 @@
     display: flex;
     flex-direction: column;
     align-content: center;
+    height:100%;
 }
 
 .headerContainer{
@@ -16,11 +18,9 @@
     background-color: #3f51b5;
     width:100%;
     position: fixed;
-
-
+    height:7%;
 
 }
-/*fixme ho messo l'header sticky ma il logo mi copre l'header sul mio schermo, poi si risolve */
 
 .header{
     background-color: #3f51b5;
@@ -28,6 +28,7 @@
     display: flex;
     flex-direction: row;
     text-align: center;
+    justify-content: space-between;
 }
 
 
@@ -90,10 +91,11 @@
 
 .container{
 
-    margin:100px auto;
+    margin:100px auto; /*fixme verificare visibilita con "auto auto" invece che con "100px auto" */
     width: 50%;
     display: flex;
     flex-direction: column;
+    height:80%;
 
 
 }
@@ -103,14 +105,25 @@
 
 .sub-container{
     width:100%;
-    height: 90px;
+    height: 80%;
+
 }
 
 @media (max-height: 1100px){
     .sub-container{
-        height:60px
+
     }
 }
+
+.logo{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    width:100%;
+}
+
+/*regole footer */
+
 
 .footerContainer{
     bottom: 0;
@@ -120,18 +133,19 @@
     position: fixed;
 }
 
+
 @media (max-height: 1100px){
     .footerContainer{
         bottom: 0;
         background-color: #3f51b5;
         width:100%;
-        height: 7%;
         position: fixed;
     }
 }
 .plugin_wrapper{
     margin:auto;
     width: 100%;
+    height: 80%;
 
 }
 .plugin_wrapper form{
@@ -159,12 +173,34 @@
 
 @media (max-height: 1100px){  /*media query per il form di inserimento Nome Giocatore */
     .fname{
-        height:60px;
+        height:85%;
     }
     .nameSelected {
-        height:65px;
+        height:95%;
     }
 }
 
 
 /* Inizio elementi grafici dedicati alla gallery */
+
+.leftIconWrapper, .rightIconWrapper {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.leftIconWrapper div a span, .rightIconWrapper div a span{
+    color: white;
+    margin: 15px;
+}
+
+.wall{
+    width: 100%;
+    height: 50%;
+    background-color: #ffb053;
+    margin-bottom: 50px;
+
+}
+
+
+
