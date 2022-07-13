@@ -135,7 +135,7 @@ body{
     background-color: #3f51b5;
     width:100%;
     height:7%;
-    position: fixed;
+    position: absolute;
 }
 
 

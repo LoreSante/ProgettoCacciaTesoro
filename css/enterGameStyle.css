@@ -1,0 +1,66 @@
+
+.pageWrapper{
+    width:100%;
+    height:90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.lightBlueContainer{
+    width:50%;
+    height:60%;
+    background-color: #757de8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    border-radius: 20px;
+
+
+}
+
+.playerName{
+    font-size: 40px;
+
+}
+.enterGameLabel{
+    font-size: 35px;
+}
+.playerName, .enterGameLabel{
+    color:white;
+}
+
+.inputForm{
+    width: 80%;
+    height: 10%;
+    background-color: white;
+    text-align: start;
+    border-radius:10px;
+    border: black 1px solid;
+}
+.enterButton{
+    width: 20%;
+    height: 10%;
+}
+.enterButton button{
+    width: 100%;
+    height: 100%;
+    font-size:25px;
+    color:white;
+    background-color: #002984;
+    border-radius: 5px ;
+    border:black 1px solid;
+    cursor:pointer;
+    transition-duration: 0.4s;
+}
+
+.enterButton button:hover{
+    background-color: #ba5100;
+}
+
+.playerName, .enterGameLabel, .inputForm, .enterButton {
+    margin: 20px;
+}

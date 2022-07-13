@@ -17,7 +17,7 @@
         $this.wrap('<div class="plugin_wrapper" />');
 
         $this.addClass('to-do-list-container');
-        $('<form id="frm1" action="/actions.php" method="post">'
+        $('<form id="frm1" action="/action_page.php" method="post">'
             +'<label title="Nome giocatore">'
             +'<input type="text" class="fname" placeholder="Inserire nome giocatore">'
             +'</label>'
