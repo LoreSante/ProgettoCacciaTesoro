@@ -92,15 +92,13 @@ body{
 
 
 .container{
-
     margin:auto auto; /*fixme verificare visibilita con "auto auto" invece che con "100px auto" */
     width: 50%;
     display: flex;
     flex-direction: column;
     height:80%;
-
-
 }
+
 .container div{
     margin: 10px auto;
 }

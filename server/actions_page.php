@@ -7,6 +7,7 @@
 	/* conterrà la stringa di query al database */
 	$query_string = "";
 	/* smista secondo il tipo di richiesta */
+
 	switch($action) {
 
 		case "load" :
