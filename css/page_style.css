@@ -2,11 +2,13 @@
     margin:0;
     font: normal 13px/100% Verdana, Tahoma, sans-serif;
     color: #000;
-    height: 100%;
-
 }
 
-.body{
+html{
+    height: 100%;
+}
+
+body{
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -109,6 +111,8 @@
 
 }
 
+
+
 @media (max-height: 1100px){
     .sub-container{
 
@@ -123,6 +127,7 @@
 }
 
 /*regole footer */
+/*todo riverede le dimensoni del footer, non sono corrette */
 
 
 .footerContainer{
@@ -153,6 +158,7 @@
     margin: auto;
     text-align: center;
     font-size: 25px;
+    height:80%;
 }
 
 
@@ -176,7 +182,7 @@
         height:85%;
     }
     .nameSelected {
-        height:95%;
+        height:100%;
     }
 }
 
