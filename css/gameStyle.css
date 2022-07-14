@@ -1,5 +1,5 @@
 
-.newGamePageWrapper{
+.newGamePageWrapper, .cluePageWrapper{
     display:flex;
     flex-direction: row;
     width:100%;
@@ -15,13 +15,16 @@
     flex-direction: column;
     width:10%;
     height:100%;
+    margin-left:6%;
+    margin-right:6%;
 }
 .adv img{
     margin: 10px;
     height:90%;
+
 }
 
-.lobbyContainer{
+.lobbyContainer, .clueContainer{
     align-self: center;
     justify-self: center;
     display: flex;
@@ -34,7 +37,8 @@
     background-color: #757de8;
 
 }
-/*
+/* deprecato
+
 .lobbyContainer div{
     display:flex;
     justify-content: center;
@@ -60,7 +64,7 @@
 }
 .playerNameSample{ /*todo classe esempio, cambiare nome o rimuovere quando vera inserito il plugin */
     width: 100%;
-    height: 100%;
+    height: 8%;
     background-color:white;
     border: black 1px solid;
     border-radius: 5px;
@@ -96,3 +100,46 @@
     background-color:#ffb053;
     color:black;
 }
+
+/* regole esclusive della pagina dell'indizio: cluepage.html */
+
+.playerNamesContainer{
+    min-height:86%;
+    width: 20%;
+    margin-top:30px;
+    margin-right: 10px;
+}
+
+.cluePageWrapper{
+    justify-content: center;
+}
+
+.clueContainer{
+    width:60%;
+    margin-right:5px;
+}
+
+.clueText{
+    color:white;
+    font-size: 25px;
+    padding:5%;
+    text-align: center;
+    text-overline: 3px;
+    line-height: 1.3;
+}
+
+.paintPicture{
+    border:#ba5100 3px solid;
+    margin:5%;
+    border-radius: 3px;
+}
+
+.selectPaint{
+    width: 50%;
+    height: 30px;
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 5%;
+}
+
+/*fixme da rivedere e da ricontrollare le regole della cluePage.html */
