@@ -5,18 +5,44 @@
 
     $.fn.insertName = function (options) {
         console.log("CALL PLUGIN TODO");
-        /*var defaults = {
+        let defaults = {
             serverURL: "example.com/server_page_url",
         }
         options = $.extend(defaults, options);
-        console.log("OPTIONS: " + defaults['serverURL']);*/
-        console.log(options);
-        var $this = $(this);
+
+        console.log("OPTIONS: " + defaults['serverURL']);
+
+        return this.each(function(i,obj){
+            console.log("obj:" +obj);
+
+            let $this = $(this);
+
+            $this.wrap('<div class="plugin_wrapper" />')
+            $('<form action=server/actions_page.php method="post">'
+                +'<label title="Nome giocatore">'
+                +'<input type="text" class="fname" id="fname" placeholder="Inserire nome giocatore">'
+                +'</label>'
+                +'<input type="button" value="Seleziona" class="nameSelected">'
+                +'</form>'
+            ).insertBefore($this);
+
+
+            let $submitButton = $('.nameSelected', $this.parent());
+
+            $submitButton.on("click", function () {
+                //var $value=document.getElementById("fname").value;
+                sendName($this);
+                //alert("To Do Submitted");
+            });
+        });
+
+        /*console.log(options);
+        let $this = $(this);
 
         // Wrap "this" in a div with a class of "plugin_wrapper"
         $this.wrap('<div class="plugin_wrapper" />');
 
-        $('<form id="frm1" action=server/actions_page.php method="post">'
+        $('<form action=server/actions_page.php method="post">'
             +'<label title="Nome giocatore">'
             +'<input type="text" class="fname" id="fname" placeholder="Inserire nome giocatore">'
             +'</label>'
@@ -25,26 +51,27 @@
         ).insertBefore($this);
 
 
-        var $submitButton = $('.nameSelected', $this.parent());
+        let $submitButton = $('.nameSelected', $this.parent());
 
         $submitButton.on("click", function () {
             //var $value=document.getElementById("fname").value;
             sendName($this);
                 //alert("To Do Submitted");
         });
-
+        */
         function sendName($el){
             console.log($el);
-            var $this = $el;
+            let $this = $el;
             console.log("sendName");
-            request_type = "insert";
-            var $name = $this.parent().find('.fname');
-            var name = $name.val();
+            let request_type = "insert";
+            let $name = $this.parent().find('.fname');
+            let name = $name.val();
             console.log("name:" +name);
-
+            debugger;
             if (name.length > 2) {
-
-                var request = $.ajax({
+                let text= options.serverURL;
+                let request = $.ajax({
+                    contentType: "application/json; charset=utf-8",
                     url: options.serverURL,
                     type: "POST",
                     data: {"text" : name, "action" : request_type},

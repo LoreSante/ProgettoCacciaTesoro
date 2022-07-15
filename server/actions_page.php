@@ -4,6 +4,7 @@
 	include("configuration.php");
 
 	$action = $_POST['action'];
+	echo($action);
 	/* conterrà la stringa di query al database */
 	$query_string = "";
 	/* smista secondo il tipo di richiesta */
@@ -99,7 +100,7 @@
 	}
 */
 	function insertName() {
-		echo "111111";
+		echo ($_POST['text']);
 		if (isset($_POST['text'])) {
 			$player = $_POST['text'];
 			echo "you didn't specify a name";
@@ -108,9 +109,8 @@
 			return;
 		}
 
+		$mysqli = new mysqli($db_host, $db_user, $db_pass, $db_name);
 		$query_string = "INSERT INTO  players(id, nickname, game , points) VALUES ('0','"$player"','0','0')";
-		$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
-
     	// esegui la query per inserire il name nel db
 		$result = $mysqli->query($query_string);
 
@@ -121,7 +121,7 @@
 
     	// esegui la query per rileggere il record inserito
 		$result = $mysqli->query($query_string);
-/*
+
     	$names = array();
 
     	// cicla sul risultato
@@ -140,7 +140,7 @@
 
 		// encodo l'array in JSON
 		echo json_encode($response);
-*/
+
 	}
 
 /*	function updateData() {
