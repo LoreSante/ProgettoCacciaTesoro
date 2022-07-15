@@ -1,5 +1,5 @@
 <?php
-	$db_host = 'localhost';
+	$db_host = 'localhost:8889';
     $db_user = 'CacciaTesoro';
     $db_pass = 'CacciaTesoro';
     $db_name = 'caccia_al_tesoro';
