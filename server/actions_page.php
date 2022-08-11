@@ -1,21 +1,16 @@
 <?php
-	/* setta il formato di risposta */
 	header('Content-Type: text/json');
 	include("configuration.php");
-
 	$action = $_POST['action'];
-	echo($action);
-	/* conterrà la stringa di query al database */
 	$query_string = "";
-	/* smista secondo il tipo di richiesta */
+
+
 
 	switch($action) {
-
 		case "load" :
 			loadData();
 		break;
 		case "insert" :
-			echo($action);
 			insertName();
 		break;
 		case "update" :
@@ -103,28 +98,18 @@
 		echo ($_POST['text']);
 		if (isset($_POST['text'])) {
 			$player = $_POST['text'];
-			echo "you didn't specify a name";
 		} else {
 			echo "you didn't specify a name";
 			return;
 		}
 
-		$mysqli = new mysqli($db_host, $db_user, $db_pass, $db_name);
-		$query_string = "INSERT INTO  players(id, nickname, game , points) VALUES ('0','"$player"','0','0')";
-    	// esegui la query per inserire il name nel db
-		$result = $mysqli->query($query_string);
-
-
-    	$query_string = 'SELECT * FROM players WHERE ID=' . $mysqli->insert_id;
-
-		//$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
-
-    	// esegui la query per rileggere il record inserito
-		$result = $mysqli->query($query_string);
-
+		$mysqli = new mysqli(DB_HOST,DB_USER, DB_PASSWORD,DB_DATABASE);
+		$query_string = 'INSERT INTO  players(nickname, game , points) VALUES ("' .$player .'","0","0")';
+		$result=$mysqli->query($query_string);
+    	$query_string = 'SELECT * FROM players WHERE id="' . $mysqli->insert_id .'"';
+		$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
+		$result=$mysqli->query($query_string);
     	$names = array();
-
-    	// cicla sul risultato
 		while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
 
 			$player_id = $row['id'];
@@ -137,8 +122,6 @@
 		}
 
     	$response = array('names' => $names, 'type' => 'insert');
-
-		// encodo l'array in JSON
 		echo json_encode($response);
 
 	}

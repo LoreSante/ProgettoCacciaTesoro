@@ -67,11 +67,8 @@
             let $name = $this.parent().find('.fname');
             let name = $name.val();
             console.log("name:" +name);
-            debugger;
             if (name.length > 2) {
-                let text= options.serverURL;
                 let request = $.ajax({
-                    contentType: "application/json; charset=utf-8",
                     url: options.serverURL,
                     type: "POST",
                     data: {"text" : name, "action" : request_type},
