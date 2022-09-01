@@ -30,9 +30,9 @@
             let $submitButton = $('.nameSelected', $this.parent());
 
             $submitButton.on("click", function () {
-                //var $value=document.getElementById("fname").value;
+                var $value=document.getElementById("fname").value;
                 sendName($this);
-                //alert("To Do Submitted");
+                //alert("To Do Submitted"); //fixme cancella questo commento
             });
         });
 
@@ -91,3 +91,5 @@
     }
 
 })(jQuery);
+
+
