@@ -20,6 +20,8 @@
             let position=$position.val();
             let $description= null; //fixme [come sopra]
             let description=$description.val();
+            let $url= null; //fixme [come sopra]
+            let url=$url.val();
 
             console.log("title:" +title);
             console.log("author:" +author);
@@ -27,13 +29,14 @@
             console.log("technique:" +technique);
             console.log("position:" +position);
             console.log("description:" +description);
+            console.log("url:" +url);
 
             if (title.length > 2) {
                 let request = $.ajax({
                     url: options.serverURL,
                     type: "POST",
-                    data: {"title" : title, "author" : author , "year" : year,
-                        "technique" : technique ,"position" : position ,"description" : description ,
+                    data: {"title" : title, "author" : author , "year" : year, "technique" : technique ,
+                        "position" : position ,"description" : description , "url" : url ,
                         "action" : request_type},
                     dataType: "json",
 
