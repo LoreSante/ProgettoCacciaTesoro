@@ -22,6 +22,7 @@
 
             $newGameButton.on("click", function () {
                 sendGame($this);
+
             });
         });
 

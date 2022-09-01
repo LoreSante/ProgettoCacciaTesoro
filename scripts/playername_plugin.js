@@ -1,4 +1,5 @@
 // JavaScript Document
+let $playerName= null;
 (function($) {
     console.log("JQUERY: " + $);
 
@@ -30,35 +31,11 @@
             let $submitButton = $('.nameSelected', $this.parent());
 
             $submitButton.on("click", function () {
-                var $value=document.getElementById("fname").value;
-                sendName($this);
+                $playerName=$this.parent().find("fname").val();
+                sendName($this); //fixme sposta sendName dove dovrebbe stare, ovvero nella funzione collegata ai pulsanti CreaPartita EntraInPartita
                 //alert("To Do Submitted"); //fixme cancella questo commento
             });
         });
-
-        /*console.log(options);
-        let $this = $(this);
-
-        // Wrap "this" in a div with a class of "plugin_wrapper"
-        $this.wrap('<div class="plugin_wrapper" />');
-
-        $('<form action=server/actions_page.php method="post">'
-            +'<label title="Nome giocatore">'
-            +'<input type="text" class="fname" id="fname" placeholder="Inserire nome giocatore">'
-            +'</label>'
-            +'<input type="button" value="Seleziona" class="nameSelected">'
-            +'</form>'
-        ).insertBefore($this);
-
-
-        let $submitButton = $('.nameSelected', $this.parent());
-
-        $submitButton.on("click", function () {
-            //var $value=document.getElementById("fname").value;
-            sendName($this);
-                //alert("To Do Submitted");
-        });
-        */
         function sendName($el){
             console.log($el);
             let $this = $el;
