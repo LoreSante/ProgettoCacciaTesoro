@@ -3,7 +3,7 @@
 
     $.fn.insertPainting = function (options){
 
-
+               //TODO fare il plugin
 
 
 
