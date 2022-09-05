@@ -1,6 +1,10 @@
 
 (function($) {
+
     $.fn.insertPainting = function (options){
+
+
+
 
 
         function sendPainting($el){
