@@ -48,7 +48,7 @@ let $playerName= null;
                 let request = $.ajax({
                     url: options.serverURL,
                     type: "POST",
-                    data: {"text" : name, "action" : request_type},
+                    data: {"text" : name, "game" : 1, "action" : request_type},
                     dataType: "json",
 
                 });
