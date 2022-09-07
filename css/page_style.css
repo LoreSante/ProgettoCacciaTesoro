@@ -216,6 +216,8 @@ body{
     height: 100%;
 
 }
+
+
 .material-symbols-outlined.md-96 {
     font-size: 96px;
     margin: 0;
@@ -224,4 +226,8 @@ body{
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);;
+}
+
+.md-96:hover{
+    cursor: pointer;
 }
