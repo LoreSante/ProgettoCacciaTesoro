@@ -108,6 +108,7 @@
     	$query_string = 'SELECT * FROM players WHERE id="' . $mysqli->insert_id .'"';
 		$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
 		$result=$mysqli->query($query_string);
+
 	}
 
 /*	function updateData() {
