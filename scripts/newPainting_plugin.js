@@ -3,7 +3,27 @@
 
     $.fn.insertPainting = function (options){
 
-        //TODO fare il plugin
+        // TODO fare il plugin
+
+        let modal = document.getElementById("formWrapper");
+        let openButton = document.getElementById("addPaintButton");
+        let closeButton = document.getElementById("closeButton");
+
+        openButton.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        closeButton.onclick = function() {
+            modal.style.display = "none";
+        }
+
+
+
+
+
+
+
+
 
 
 
@@ -26,6 +46,8 @@
             let description=$description.val();
             let $url= null; //fixme [come sopra]
             let url=$url.val();
+            let $riddle=null;
+            let riddle=$url.val();
 
             console.log("title:" +title);
             console.log("author:" +author);

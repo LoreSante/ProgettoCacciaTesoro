@@ -228,6 +228,7 @@ body{
     transform: translate(-50%, -50%);;
 }
 
-.md-96:hover{
+#addPaintButton:hover,#closeButton:hover{
     cursor: pointer;
 }
+
