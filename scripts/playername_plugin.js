@@ -1,5 +1,5 @@
 // JavaScript Document
-let $playerName= null;
+let $playerName= "guest";
 (function($) {
     console.log("JQUERY: " + $);
 
@@ -31,7 +31,7 @@ let $playerName= null;
             let $submitButton = $('.nameSelected', $this.parent());
 
             $submitButton.on("click", function () {
-                $playerName=$this.parent().find("fname").val();
+                $playerName=$this.parent().find(".fname").val();
                 sendName($this); //fixme sposta sendName dove dovrebbe stare, ovvero nella funzione collegata ai pulsanti CreaPartita EntraInPartita
                 //alert("To Do Submitted"); //fixme cancella questo commento
             });
@@ -50,7 +50,6 @@ let $playerName= null;
                     type: "POST",
                     data: {"text" : name, "game" : 1, "action" : request_type},
                     dataType: "json",
-
                 });
 
                 request.done(function(data) {

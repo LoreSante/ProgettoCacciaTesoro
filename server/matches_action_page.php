@@ -96,10 +96,27 @@
 	}
 */
 	function insertGame() {
-		$mysqli = new mysqli(DB_HOST,DB_USER, DB_PASSWORD,DB_DATABASE);
+	    $mysqli = new mysqli(DB_HOST,DB_USER, DB_PASSWORD,DB_DATABASE);
+	    $query_string = 'INSERT INTO matches(id) VALUES("0") ';
+	    $result=$mysqli->query($query_string);
     	$query_string = 'SELECT * FROM matches WHERE id="' . $mysqli->insert_id .'"';
 		$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
 		$result=$mysqli->query($query_string);
+		$response =$result;
+		$todos = array();
+
+        // cicla sul risultato
+        while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
+
+        $todo_id = $row['id'];
+        $todo = array('id' => $todo_id);
+        array_push($todos, $todo);
+        }
+
+        $response = array('todos' => $todos, 'type' => 'insert');
+
+        // encodo l'array in JSON
+        echo json_encode($response);
 	}
 
 /*	function updateData() {
