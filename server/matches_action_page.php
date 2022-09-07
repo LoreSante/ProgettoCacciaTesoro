@@ -9,7 +9,7 @@
 
 	switch($action) {
 		case "load" :
-			loadData();
+			loadGame();
 		break;
 		case "insert" :
 			insertGame();
@@ -21,35 +21,26 @@
 			deleteData();
 		break;
 	}
-/*
-	function loadData() {
-		$query_string = 'SELECT * FROM to_do ORDER BY date DESC';
+
+	function loadGame() {
+		$query_string = 'SELECT * FROM matches ORDER BY id DESC';
 		$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
-
-    	// esegui la query
 		$result = $mysqli->query($query_string);
+		$keys = array();
 
-    	$todos = array();
+        while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
+        $id = $row['id'];
+        $key = array('id' => $id);
+        array_push($keys, $key);
+        }
 
-    	// cicla sul risultato
-		while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
+        $response = array('keys' => $keys, 'type' => 'load');
 
-			$todo_id = $row['id'];
-			$todo_text = $row['text'];
-			$to_do_completed = $row['completed'];
-			$todo_date = $row['date'];
-
-			$todo = array('id' => $todo_id,'text' =>$todo_text, 'completed' => $to_do_completed, 'date' => $todo_date);
-			array_push($todos, $todo);
-		}
-
-    	$response = array('todos' => $todos, 'type' => 'load');
-
-		// encodo l'array in JSON
-		echo json_encode($response);
+        // encodo l'array in JSON
+        echo json_encode($response);
 
 }
-*/
+
 /*
 	function insertData() {
 
@@ -102,19 +93,18 @@
     	$query_string = 'SELECT * FROM matches WHERE id="' . $mysqli->insert_id .'"';
 		$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
 		$result=$mysqli->query($query_string);
+		$query_string = 'SELECT * FROM matches ORDER BY id DESC';
+		$result=$mysqli->query($query_string);
 		$response =$result;
 		$todos = array();
-
         // cicla sul risultato
+        $keys = array();
         while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
-
-        $todo_id = $row['id'];
-        $todo = array('id' => $todo_id);
-        array_push($todos, $todo);
+        $id = $row['id'];
+        $key = array('id' => $id);
+        array_push($keys, $key);
         }
-
-        $response = array('todos' => $todos, 'type' => 'insert');
-
+        $response = array('keys' => $keys, 'type' => 'load');
         // encodo l'array in JSON
         echo json_encode($response);
 	}

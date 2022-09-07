@@ -76,23 +76,42 @@
     <!-- FINESTRA DI DIALOGO -->
     <div class="container-fluid" id="formWrapper">
         <div class="container" id="paintForm">
-            <div class="row container-fluid">
+            <div class="row container-fluid height2">
                 <div class="col-11"></div>
                 <div class="col-1">
                     <span class="material-symbols-outlined" id="closeButton">close</span>
                 </div>
             </div>
-            <div class="row container-fluid">
-                <div class="col-5">
-                    <div class="formPaintPicture"><img src="https://via.placeholder.com/150x250/#e0e0e0"> </div>
+            <div class="container-fluid"> <!-- height100 -->
+                <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 ">
+                    <div class="col-sm-12 col-md-12 col-lg-5 text-center "> <!-- height100 -->
+                        <div class="formPaintPicture"><img src="https://via.placeholder.com/150x250/#e0e0e0"> </div> <!-- height100 -->
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-7">
+                        <div class="row title formText">
+                            <div class="col-2"><h1>Titolo</h1></div>
+                            <div class="col-8"></div>
+                            <div class="col-2"><span class="material-symbols-outlined">edit</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2"><h5>Autore</h5></div>
+                            <div class="col-8"></div>
+                            <div class="col-2"><span class="material-symbols-outlined">edit</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2"><h5>Tecnica</h5></div>
+                            <div class="col-8"></div>
+                            <div class="col-2"><span class="material-symbols-outlined">edit</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2"><h5>Descrizione</h5></div>
+                            <div class="col-8"></div>
+                            <div class="col-2"><span class="material-symbols-outlined">edit</span></div>
+                        </div>
+                        <div class="row formText">  lorem ipsium dolor sit amet</div>
+                    </div>
                 </div>
-                <div class="col-7">
-                    <div class="row title"><h1>Titolo</h1></div>
-                    <div class="row"><h5>Autore</h5></div>
-                    <div class="row"><h5>Tecnica</h5></div>
-                    <div class="row"><h5>Descrizione</h5></div>
-                    <div class="row">lorem ipsium dolor sit amet</div>
-                </div>
+
             </div>
         </div>
     </div>

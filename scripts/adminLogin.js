@@ -36,8 +36,6 @@ let arrayLength;
                 dataType: "json",
                 success: function( data ) {
                     console.log( data.keys[0].password);
-
-
                 }
             })
 

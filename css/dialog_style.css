@@ -16,8 +16,8 @@
 /* Modal Content/Box */
 #paintForm {
     background-color: #ffb053;
-    border: 1px solid black;
-    margin: 3% auto;
+    border: 3px solid black;
+    margin: 4% auto;
 
 }
 
@@ -43,9 +43,9 @@
    /* height:100%;
     width: 100%;
 
-    margin:2%;
-
-    */
-    width:auto;
-    height:auto;
+    border: #ba5100 5px solid;
+    width:80%;
+    margin: auto;
+    min-width:300px;
+    height:80%
 }

@@ -46,12 +46,6 @@
         		// encodo l'array in JSON
         		echo json_encode($response);
 
-
-
-
-
         }
-
-
 
 ?>

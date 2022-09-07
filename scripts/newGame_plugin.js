@@ -1,3 +1,4 @@
+let idArray=0;
 
 (function($) {
     console.log("JQUERY: " + $);
@@ -18,7 +19,7 @@
         });
 
         function sendGame($el) {
-            let $this = $el;
+            let $this=$el;
             console.log("sendGame");
             let request_type = "insert";
             let request = $.ajax({
@@ -27,15 +28,22 @@
                 data: {"action": request_type},
                 dataType: "json",
             });
-            console.log(request.responseJSON)
-            if ($playerName.length > 2) {
-                let request = $.ajax({
+
+            request.done(function(data) {
+                //idArray=data.keys[0].id;
+                console.log("REQUEST.DONE: " + data.keys[0].id);
+                let game=data.keys[0].id;
+                //document.getElementById("matchID").innerText= game;
+                console.log("TEST "+game);
+                let request2 = $.ajax({
                     url: options.serverURL2,
                     type: "POST",
-                    data: {"text": $playerName, "game": 2, "action": request_type},
+                    data: {"text": $playerName, "game": game , "action": request_type},
                     dataType: "json",
                 });
-            }
+                location.href="newGame.html";
+            });
+
         }
     }
 })(jQuery);

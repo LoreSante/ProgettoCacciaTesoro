@@ -32,11 +32,10 @@ let $playerName= "guest";
 
             $submitButton.on("click", function () {
                 $playerName=$this.parent().find(".fname").val();
-                sendName($this); //fixme sposta sendName dove dovrebbe stare, ovvero nella funzione collegata ai pulsanti CreaPartita EntraInPartita
-                //alert("To Do Submitted"); //fixme cancella questo commento
+                //sendName($this);
             });
         });
-        function sendName($el){
+        /*function sendName($el){
             console.log($el);
             let $this = $el;
             console.log("sendName");
@@ -62,7 +61,7 @@ let $playerName= "guest";
 
             }
 
-        }
+        }*/
 
     }
 

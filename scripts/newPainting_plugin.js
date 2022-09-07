@@ -17,16 +17,6 @@
             modal.style.display = "none";
         }
 
-
-
-
-
-
-
-
-
-
-
         function sendPainting($el){
             console.log($el);
             let $this = $el;
