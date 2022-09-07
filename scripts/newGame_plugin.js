@@ -19,7 +19,7 @@
 
         function sendGame($el) {
             let $this = $el;
-            console.log("sendGame"); //fixme continua da qui
+            console.log("sendGame");
             let request_type = "insert";
             let request = $.ajax({
                 url: options.serverURL,

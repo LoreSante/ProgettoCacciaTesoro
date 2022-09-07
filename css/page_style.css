@@ -175,6 +175,7 @@ body{
     height: 90px;
 }
 
+
 @media (max-height: 1100px){  /*media query per il form di inserimento Nome Giocatore */
     .fname{
         height:85%;
@@ -203,10 +204,24 @@ body{
     height: 50%;
     background-color: #ffb053;
     margin-bottom: 50px;
-
 }
 
+.paintings{
+    height: 100%;
+    margin-bottom: 50px;
+    background-color: #ffb053;
+}
 
+.wrap{
+    height: 100%;
 
-
-
+}
+.material-symbols-outlined.md-96 {
+    font-size: 96px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);;
+}
