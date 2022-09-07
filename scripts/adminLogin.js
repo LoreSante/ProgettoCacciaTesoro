@@ -54,7 +54,7 @@ let arrayLength;
                 alert( "Request failed: " + textStatus );
             });
 
-            console.log(request.responseText);
+           //  console.log(request.responseText);
 
 
 
