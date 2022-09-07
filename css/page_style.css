@@ -228,7 +228,7 @@ body{
     transform: translate(-50%, -50%);;
 }
 
-#addPaintButton:hover,#closeButton:hover{
+#addPaintButton:hover{
     cursor: pointer;
 }
 

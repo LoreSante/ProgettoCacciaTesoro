@@ -14,11 +14,38 @@
 }
 
 /* Modal Content/Box */
-.paintForm {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    z-index: 1;
+#paintForm {
+    background-color: #ffb053;
+    border: 1px solid black;
+    margin: 3% auto;
+
+}
+
+#closeButton:hover{
+    cursor: pointer;
+}
+
+#closeButton{
+    right:0;
+    margin-left:75%;
+
+}
+
+.formPaintPicture{
+    /*
+    width:100%;
+    heigth: 100%;
+
+     */
+}
+
+.formPaintPicture img{
+   /* height:100%;
+    width: 100%;
+
+    margin:2%;
+
+    */
+    width:auto;
+    height:auto;
 }
