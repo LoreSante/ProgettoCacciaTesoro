@@ -30,10 +30,8 @@ let idArray=0;
             });
 
             request.done(function(data) {
-                //idArray=data.keys[0].id;
                 console.log("REQUEST.DONE: " + data.keys[0].id);
                 let game=data.keys[0].id;
-                //document.getElementById("matchID").innerText= game;
                 console.log("TEST "+game);
                 let request2 = $.ajax({
                     url: options.serverURL2,

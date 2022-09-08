@@ -5,8 +5,6 @@
 	$action = $_POST['action'];
 	$query_string = "";
 
-
-
 	switch($action) {
 		case "load" :
 			//loadData();
@@ -23,7 +21,7 @@
 	}
 
 	function insertPainting() {
-    	if (isset($_POST['title']) && isset($_POST['author']) && isset($_POST['year']) && isset($_POST['technique']) && isset($_POST['position'])&& isset($_POST['description']) && isset($_POST['url'])) {
+    	if (isset($_POST['title']) && isset($_POST['author']) && isset($_POST['year']) && isset($_POST['technique']) && isset($_POST['position'])&& isset($_POST['description']) && isset($_POST['url']) && isset($_POST['riddle'])) {
     		$title = $_POST['title'];
     		$author = $_POST['author'];
     		$year = $_POST['year'];
@@ -31,12 +29,13 @@
     		$position = $_POST['position'];
     		$description = $_POST['description'];
     		$url = $_POST['url'];
+    		$riddle = $_POST['riddle'];
     	} else {
     		echo "you didn't specify an attribute";
     		return;
     	}
     	$mysqli = new mysqli(DB_HOST,DB_USER, DB_PASSWORD,DB_DATABASE);
-    	$query_string = 'INSERT INTO  paintings(title, author, year, technique, position, description, url) VALUES ("' .$title .'", "' .$author .'", "' .$year .'", "' .$technique .'","' .$position .'","' .$description.'", "' .$url.'")';
+    	$query_string = 'INSERT INTO  paintings(title, author, year, technique, position, description, url, riddle) VALUES ("' .$title .'", "' .$author .'", "' .$year .'", "' .$technique .'","' .$position .'","' .$description.'", "' .$url.'", "' .$riddle.'")';
     	$result=$mysqli->query($query_string);
        	$query_string = 'SELECT * FROM paintings WHERE id="' . $mysqli->insert_id .'"';
    		$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);

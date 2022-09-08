@@ -46,15 +46,16 @@
          -->
         <div class="container-fluid text-center paintings">
             <div class="row row-cols-xs-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-6 paintings">
-                <div class="col paintings">
-                    <div class="wrap">
-                        <span class="material-symbols-outlined md-96" id="addPaintButton" style="background-color: gray; color:white">
-                            add
-                        </span>
+                <div class="col-xs-12 paintings ">
+                    <span class="material-symbols-outlined md-96" id="addPaintButton" style="background-color: gray; color:white">
+                        add
+                    </span>
+                </div>
+                <div class="col-xs-12 paintings">
+                    <div class="columnPicture">
+                        <img  src="https://via.placeholder.com/150x250/#e0e0e0">
                     </div>
                 </div>
-
-                <div class="col-xs-12 paintings">Column</div>
                 <div class="col-xs-12 paintings">Column</div>
                 <div class="col-xs-12 paintings">Column</div>
                 <div class="col-xs-12 paintings">Column</div>
@@ -67,59 +68,106 @@
 
             </div>
         </div>
-       <div class="newPainting">
-
-           <!--<button class="addPainting" type="button" onclick="location.href=''">+</button>-->
-        </div>
-
-
     </div>
-    <div class="wall"></div>
 
+    <div class="wall"></div>
     <!-- FINESTRA DI DIALOGO -->
     <div class="container-fluid" id="formWrapper">
         <div class="container" id="paintForm">
-            <div class="row container-fluid height2">
-                <div class="col-11"></div>
-                <div class="col-1">
-                    <span class="material-symbols-outlined" id="closeButton">close</span>
+
+            <div class="container-fluid">
+                <div class="row row-cols-3 row-cols-sm-3 row-cols-md-3 row-cols-lg-3 height2">
+                    <div class="col-1 col-sm-2 col-md-2 col-lg-1" id="urlButton"><span class="material-symbols-outlined">edit</span></div>
+                    <div class="col-7 col-sm-7 col-md-5 col-lg-7">
+                        <textarea type="text" id="urlInput" class="inputStyle" name="urlInput" rows="1"></textarea>
+                        <label for="urlInput"></label>
+                    </div>
+                    <div class="col-1 col-sm-2 col-md-2 col-lg-1">
+                        <span class="material-symbols-outlined" id="closeButton">close</span>
+                    </div>
                 </div>
             </div>
-            <div class="container-fluid"> <!-- height100 -->
-                <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 ">
+
+            <div class="container-fluid newPainting"> <!-- height100 -->
+                <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2">
                     <div class="col-sm-12 col-md-12 col-lg-5 text-center "> <!-- height100 -->
-                        <div class="formPaintPicture"><img src="https://via.placeholder.com/150x250/#e0e0e0"> </div> <!-- height100 -->
+                        <div class="formPaintPicture"><img id="paintingImage" src="https://via.placeholder.com/150x250/#e0e0e0"> </div> <!-- height100 -->
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-7">
                         <div class="row title formText">
-                            <div class="col-2"><h1>Titolo</h1></div>
-                            <div class="col-8"></div>
-                            <div class="col-2"><span class="material-symbols-outlined">edit</span></div>
+                            <div class="col-6" >
+                                <h1 class="title" id="title">Titolo</h1>
+                                <textarea type="text" id="titleInput" class="inputStyle" name="titleInput" rows="2"></textarea>
+                                <label for="titleInput"></label>
+                            </div>
+                            <div class="col-4"></div>
+                            <div class="col-2" id="titleButton"><span class="material-symbols-outlined">edit</span></div>
                         </div>
                         <div class="row">
                             <div class="col-2"><h5>Autore</h5></div>
-                            <div class="col-8"></div>
-                            <div class="col-2"><span class="material-symbols-outlined">edit</span></div>
+                            <div class="col-8">
+                                <h5 id="author"></h5>
+                                <textarea type="text" id="authorInput" class="inputStyle" name="authorInput" rows="2"></textarea>
+                                <label for="authorInput"></label>
+                            </div>
+                            <div class="col-2" id="authorButton"><span class="material-symbols-outlined">edit</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2"><h5>Anno</h5></div>
+                            <div class="col-8">
+                                <h5 id="year"></h5>
+                                <textarea type="text" id="yearInput" class="inputStyle" name="yearInput" rows="2"></textarea>
+                                <label for="yearInput"></label>
+                            </div>
+                            <div class="col-2" id="yearButton"><span class="material-symbols-outlined">edit</span></div>
                         </div>
                         <div class="row">
                             <div class="col-2"><h5>Tecnica</h5></div>
-                            <div class="col-8"></div>
-                            <div class="col-2"><span class="material-symbols-outlined">edit</span></div>
+                            <div class="col-8">
+                                <h5 id="technique"></h5>
+                                <textarea type="text" id="techniqueInput" class="inputStyle" name="techniqueInput" rows="2"></textarea>
+                                <label for="techniqueInput"></label>
+                            </div>
+                            <div class="col-2" id="techniqueButton"><span class="material-symbols-outlined">edit</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2"><h5>Posizione</h5></div>
+                            <div class="col-8">
+                                <h5 id="position"></h5>
+                                <textarea type="text" id="positionInput" class="inputStyle" name="positionInput" rows="2"></textarea>
+                                <label for="positionInput"></label>
+                            </div>
+                            <div class="col-2" id="positionButton"><span class="material-symbols-outlined">edit</span></div>
                         </div>
                         <div class="row">
                             <div class="col-2"><h5>Descrizione</h5></div>
                             <div class="col-8"></div>
-                            <div class="col-2"><span class="material-symbols-outlined">edit</span></div>
+                            <div class="col-2" id="descriptionButton"><span class="material-symbols-outlined">edit</span></div>
                         </div>
-                        <div class="row formText">  lorem ipsium dolor sit amet</div>
+                        <div class="row">
+                            <textarea type="text" id="descriptionInput" class="inputStyle" name="descriptionInput" rows="2"></textarea>
+                            <label for="descriptionInput"></label>
+                            <div class="col-12" id="description">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2"><h5>Indovinello</h5></div>
+                            <div class="col-8">
+                                <h5 id="riddle"></h5>
+                                <textarea type="text" id="riddleInput" class="inputStyle" name="riddleInput" rows="2"></textarea>
+                                <label for="riddleInput"></label>
+                            </div>
+                            <div class="col-2" id="riddleButton"><span class="material-symbols-outlined">edit</span></div>
+                        </div>
                     </div>
                 </div>
-
             </div>
             <div class="row container-fluid height2">
-                <div class="col-10"></div>
-                <div class="col-1 text-center"><span class="material-symbols-outlined">save</span></div>
-                <div class="col-1 text-center"><span class="material-symbols-outlined">delete</span></div>
+                <div class="col-4"></div>
+
+                <div class="col-5"></div>
+                <div class="col-1 text-center"><span class="material-symbols-outlined save">save</span></div>
+                <div class="col-1 text-center"><span class="material-symbols-outlined" id="delete">delete</span></div>
             </div>
 
         </div>
