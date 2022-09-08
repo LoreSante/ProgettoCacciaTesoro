@@ -20,9 +20,9 @@
 			deleteData();
 		break;
 	}
-/*
-	function loadData() {
-		$query_string = 'SELECT * FROM to_do ORDER BY date DESC';
+
+	function loadData() {  //FIXME: verifica che funzioni la funzione
+		$query_string = 'SELECT * FROM players';
 		$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
 
     	// esegui la query
@@ -33,22 +33,22 @@
     	// cicla sul risultato
 		while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
 
-			$todo_id = $row['id'];
-			$todo_text = $row['text'];
-			$to_do_completed = $row['completed'];
-			$todo_date = $row['date'];
+			$player_id = $row['id'];
+			$player_nickname = $row['nickname'];
+			$player_game = $row['game'];
+			$player_points = $row['points'];
 
-			$todo = array('id' => $todo_id,'text' =>$todo_text, 'completed' => $to_do_completed, 'date' => $todo_date);
-			array_push($todos, $todo);
+			$player = array('id' => $player_id,'nickname' =>$player_nickname, 'game' => $player_game, 'points' => $player_points);
+			array_push($players, $player);
 		}
 
-    	$response = array('todos' => $todos, 'type' => 'load');
+    	$response = array('players' => $players, 'type' => 'load');
 
 		// encodo l'array in JSON
 		echo json_encode($response);
 
 }
-*/
+
 /*
 	function insertData() {
 

@@ -19,7 +19,7 @@ let $playerName= "guest";
             let $this = $(this);
 
             $this.wrap('<div class="plugin_wrapper" />')
-            $('<form action=server/actions_page.php method="post">'
+            $('<form action=server/player_actions_page.php method="post">'
                 +'<label title="Nome giocatore">'
                 +'<input type="text" class="fname" id="fname" placeholder="Inserire nome giocatore">'
                 +'</label>'

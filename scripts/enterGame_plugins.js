@@ -1,8 +1,10 @@
 (function($) {
 
-    $.fn.matchIdLoad = function (options) {
+    $.fn.playerNameLoad = function (options) {
 
-        let $matchID = $('.matchID', this.parent());
+
+
+        //let $playerName = $('.playerName', this.parent());
         let request_type="load";
         let request = $.ajax({
             url: options.serverURL,
@@ -13,11 +15,12 @@
 
         request.done(function(data) {
             console.log("REQUEST.DONE: " + data);
-            document.getElementById("matchID").innerText= data.keys[0].id; //fa apparire in matchID l'id dell'ultima partita creata nel DB
+            document.getElementById("enterGamePlayerName").innerText= data.keys[0].nickname;
         });
 
         request.fail(function(jqXHR, textStatus) {
             alert( "Request failed: " + textStatus );
+            document.getElementById("enterGamePlayerName").innerText="Can't connect server";
         });
 
     }

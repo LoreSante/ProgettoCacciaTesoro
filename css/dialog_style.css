@@ -48,7 +48,7 @@
     border: #ba5100 5px solid;
     width:80%;
     margin: auto;
-    min-width:300px;
+    min-width:200px;
     height:80%
 }
 
@@ -57,20 +57,26 @@
 
 @media (min-width: 768px ),(min-height: 1200px) {
     .formPaintPicture img {
-        max-width: 400px;
+        max-width: 200px;
     }
 }
 
 @media (min-width: 992px) {
     .formPaintPicture img {
-        max-width: 500px;
+        max-width: 200px;
 
     }
 }
 
 @media (min-width: 1200px) {
     .formPaintPicture img {
-        max-width: 600px;
+        max-width: 300px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .formPaintPicture img {
+        max-width: 350px;
     }
 }
 
