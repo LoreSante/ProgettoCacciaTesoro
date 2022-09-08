@@ -3,7 +3,6 @@
     $.fn.playerNameLoad = function (options) {
 
 
-
         //let $playerName = $('.playerName', this.parent());
         let request_type="load";
         let request = $.ajax({
