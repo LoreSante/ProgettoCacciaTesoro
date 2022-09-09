@@ -39,15 +39,12 @@ let arrayLength;
                 }
             })
 
-
             request.done(function(data) {
                 passwordArray=data.keys;
                 arrayLength = passwordArray.length;
                 console.log("REQUEST.DONE: " + data);
 
                // var data = $.parseJSON(data);
-
-
             });
 
             request.fail(function(jqXHR, textStatus) {

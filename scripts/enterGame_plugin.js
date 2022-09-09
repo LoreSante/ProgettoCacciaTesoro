@@ -1,7 +1,8 @@
 (function($) {
 
-    $.fn.playerNameLoad = function (options) {
-
+    $.fn.playerNameView = function (options) {
+        //$playerName="guest";
+        document.getElementById("enterGamePlayerName").innerText= $playerName;
 
         //let $playerName = $('.playerName', this.parent());
         let request_type="load";
@@ -11,6 +12,7 @@
             data:{ "action" : request_type },
             dataType: "json",
         })
+
 
         request.done(function(data) {
             console.log("REQUEST.DONE: " + data);
