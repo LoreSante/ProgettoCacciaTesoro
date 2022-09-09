@@ -204,6 +204,7 @@
             let $image=image.src;
             let $riddle=riddle.innerText;
             sendPainting($this, $title, $author,$year,$technique,$position,$description,$image, $riddle);
+            location.href='adminGallery.html';
         });
 
         function sendPainting($el, $t, $a, $y, $te, $p, $d, $i, $r){

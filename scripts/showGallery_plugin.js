@@ -13,9 +13,6 @@
             dataType: "json",
 
         })
-        //-----------------------------------------------
-
-        //-----------------------------------------------
 
         request.done(function(data) {
             console.log("REQUEST.DONE: " + data);
@@ -35,10 +32,46 @@
                 newDiv2.appendChild(newImg);
                 newDiv.appendChild(newDiv2);
                 container.appendChild(newDiv);
+                newImg.addEventListener("click", function(){
+                    loadPaintingInfo(newImg.src);
+                });
             }
-
-
         });
+
+        function loadPaintingInfo(url){
+            console.log("INIZIO FUNZIONE LOAD");
+            console.log(url);
+            let request_type="search";
+            let request = $.ajax({
+                url: options.serverURL,
+                type: "POST",
+                data: {"paintingURL":url,"action": request_type},
+                dataType: "json",
+            })
+            request.done(function(data) {
+                let modal = document.getElementById("formWrapper");
+                let title = document.getElementById("title");
+                let author = document.getElementById("author");
+                let year = document.getElementById("year");
+                let technique= document.getElementById("technique");
+                let position = document.getElementById("position");
+                let description = document.getElementById("description");
+                let riddle = document.getElementById("riddle");
+                let url = document.getElementById("paintingImage");
+                console.log(data);
+                title.innerText=data.painting.title;
+                author.innerText=data.painting.author;
+                year.innerText=data.painting.year;
+                technique.innerText=data.painting.technique;
+                position.innerText=data.painting.position;
+                description.innerText=data.painting.description;
+                riddle.innerText=data.painting.riddle;
+                url.src=data.painting.url;
+                modal.style.display="block";
+                console.log("REQUEST.DONE: " + data);
+            });
+
+        }
 
     }
 })(jQuery);
