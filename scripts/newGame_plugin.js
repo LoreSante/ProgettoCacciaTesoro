@@ -52,4 +52,3 @@ let idArray=0;
     }
 })(jQuery);
 
-
