@@ -1,4 +1,5 @@
 $(document).ready(function() {
-    console.log("INIT PLUGIN Load Player Name");
-    jQuery("#enterGamePlayerName").playerNameLoad({serverURL : "server/player_actions_page.php"});
+    console.log("INIT PLUGIN View Player Name");
+    jQuery("#enterGamePlayerName").playerNameView({serverURL : "server/player_actions_page.php"});
 });
+
