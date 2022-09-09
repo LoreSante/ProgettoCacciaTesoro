@@ -39,8 +39,14 @@ let idArray=0;
                     data: {"text": $playerName, "game": game , "action": request_type},
                     dataType: "json",
                 });
-                location.href="newGame.html";
+
+                request2.done(function (data2){
+                    console.log("DONE: "+ data2);
+                    location.href="newGame.html";
+                });
+
             });
+
 
         }
     }
