@@ -11,6 +11,7 @@
             type: "POST",
             data: {"action": request_type},
             dataType: "json",
+
         })
         //-----------------------------------------------
 
@@ -35,6 +36,7 @@
                 newDiv.appendChild(newDiv2);
                 container.appendChild(newDiv);
             }
+
 
         });
 

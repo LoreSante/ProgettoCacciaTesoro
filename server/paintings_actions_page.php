@@ -9,6 +9,9 @@
 		case "load" :
 			loadData();
 		break;
+		case "search" :
+        	searchData();  //cerca immagine tramite l'url nel DB
+        break;
 		case "insert" :
 			insertPainting();
 		break;
@@ -74,6 +77,38 @@
     		// encodo l'array in JSON
     		echo json_encode($response);
    	}
+
+    function searchData(){
+        if(isset($_POST['paintingURL'])){
+            $paintingURL=$_POST['paintingURL'];
+        }
+        $mysqli = new mysqli(DB_HOST,DB_USER, DB_PASSWORD,DB_DATABASE);
+        $query_string = 'SELECT * FROM paintings WHERE url="' . paintingURL .'"';
+        $result=$mysqli->query($query_string);
+
+        if($row=$result->fetch_array(MYSQLI_ASSOC)){
+
+            $painting_title = $row['title'];
+            $painting_author = $row['author'];
+            $painting_year = $row['year'];
+            $painting_technique = $row['technique'];
+            $painting_position = $row['position'];
+            $painting_description = $row['description'];
+            $painting_url = $row['url'];
+            $painting_riddle = $row['riddle'];
+
+            $painting = array('title' => $painting_title,'author' =>$painting_author, 'year' => $painting_year,
+             'technique' => $painting_technique,  'position' => $painting_position ,
+             'description' => $painting_description, 'url' => $painting_url, 'riddle' => $painting_riddle);
+
+        }
+
+        $response = array('painting' => $painting, 'type' => 'load');
+
+        echo json_encode($response);
+
+
+    }
 
 
 ?>
