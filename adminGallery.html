@@ -9,8 +9,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link href="css/page_style.css" rel="stylesheet" type="text/css">
     <link href="css/dialog_style.css" rel="stylesheet" type="text/css">
+
     <script type="text/javascript" src="scripts/newPainting_plugin_init.js"></script>
     <script type="text/javascript" src="scripts/newPainting_plugin.js"></script>
+
+    <script type="text/javascript" src="scripts/showGallery_plugin.js"></script>
+    <script type="text/javascript" src="scripts/showGallery_plugin_init.js"></script>
+
     <!-- START bootstrap -->
     <script src="scripts/bootstrap.min.js" type="text/javascript"></script>
     <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
@@ -22,9 +27,8 @@
     <!-- END bootstrap -->
 
 </head>
+
 <body>
-
-
     <div class="headerContainer">
         <div class="header">
             <div class="leftIconWrapper">
@@ -45,7 +49,7 @@
         eventualmente creare div grandi e contigui con l*/
          -->
         <div class="container-fluid text-center paintings">
-            <div class="row row-cols-xs-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-6 paintings">
+            <div class="row row-cols-xs-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-6 paintings paintingsContainer" id="paintingsContainer"> <!-- id="paintingsContainer" -->
                 <div class="col-xs-12 paintings ">
                     <span class="material-symbols-outlined md-96" id="addPaintButton" style="background-color: gray; color:white">
                         add

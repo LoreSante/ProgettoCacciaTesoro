@@ -22,13 +22,13 @@
 	}
 
 	function loadData() {  //FIXME: verifica che funzioni la funzione
-		$query_string = 'SELECT * FROM players';
+		$query_string = 'SELECT * FROM players ORDER BY id DESC' ;
 		$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
 
     	// esegui la query
 		$result = $mysqli->query($query_string);
 
-    	$todos = array();
+    	$players = array();
 
     	// cicla sul risultato
 		while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
@@ -108,6 +108,21 @@
     	$query_string = 'SELECT * FROM players WHERE id="' . $mysqli->insert_id .'"';
 		$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
 		$result=$mysqli->query($query_string);
+
+		 // cicla sul risultato
+		 $players = array();
+		 while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
+	           $id = $row['id'];
+               $nickname = $row['nickname'];
+               $game = $row['game'];
+               $points = $row['points'];
+               $player = array('id' => $id,'nickname' => $nickname ,'game' => $game,'points' => $points);
+
+               array_push($players, $player);
+         }
+                $response = array('players' => $players, 'type' => 'insert');
+                // encodo l'array in JSON
+                echo json_encode($response);
 
 	}
 

@@ -66,26 +66,26 @@
 }
 
 @media (min-width: 768px ),(min-height: 1200px) {
-    .formPaintPicture img {
+    .formPaintPicture img, .columnPicture img {
         max-width: 200px;
     }
 }
 
 @media (min-width: 992px) {
-    .formPaintPicture img {
+    .formPaintPicture img, .columnPicture img {
         max-width: 200px;
 
     }
 }
 
 @media (min-width: 1200px) {
-    .formPaintPicture img {
+    .formPaintPicture img, .columnPicture img {
         max-width: 300px;
     }
 }
 
 @media (min-width: 1400px) {
-    .formPaintPicture img {
+    .formPaintPicture img, .columnPicture img {
         max-width: 350px;
     }
 }

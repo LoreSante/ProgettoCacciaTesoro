@@ -100,9 +100,9 @@
         // cicla sul risultato
         $keys = array();
         while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
-        $id = $row['id'];
-        $key = array('id' => $id);
-        array_push($keys, $key);
+            $id = $row['id'];
+            $key = array('id' => $id);
+            array_push($keys, $key);
         }
         $response = array('keys' => $keys, 'type' => 'load');
         // encodo l'array in JSON

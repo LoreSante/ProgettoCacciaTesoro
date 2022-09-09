@@ -7,7 +7,7 @@
 
 	switch($action) {
 		case "load" :
-			//loadData();
+			loadData();
 		break;
 		case "insert" :
 			insertPainting();
@@ -41,4 +41,39 @@
    		$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
    		$result=$mysqli->query($query_string);
    	}
+
+   		function loadData() {
+    		$query_string = 'SELECT * FROM paintings ORDER BY id DESC' ;
+    		$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
+
+        	// esegui la query
+    		$result = $mysqli->query($query_string);
+
+        	$paintings = array();
+
+        	// cicla sul risultato
+    		while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
+
+    			$painting_title = $row['title'];
+    			$painting_author = $row['author'];
+    			$painting_year = $row['year'];
+    			$painting_technique = $row['technique'];
+    			$painting_position = $row['position'];
+    			$painting_description = $row['description'];
+    			$painting_url = $row['url'];
+    			$painting_riddle = $row['riddle'];
+
+
+    			$painting = array('title' => $painting_title,'author' =>$painting_author, 'year' => $painting_year, 'technique' => $painting_technique,
+    			'position' => $painting_position , 'description' => $painting_description, 'url' => $painting_url, 'riddle' => $painting_riddle);
+    			array_push($paintings, $painting);
+    		}
+
+        	$response = array('paintings' => $paintings, 'type' => 'load');
+
+    		// encodo l'array in JSON
+    		echo json_encode($response);
+   	}
+
+
 ?>
