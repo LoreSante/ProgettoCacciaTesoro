@@ -2,8 +2,6 @@
 
     $.fn.playerNameView = function (options) {
         //$playerName="guest";
-        document.getElementById("enterGamePlayerName").innerText= $playerName;
-
         //let $playerName = $('.playerName', this.parent());
         let request_type="load";
         let request = $.ajax({
