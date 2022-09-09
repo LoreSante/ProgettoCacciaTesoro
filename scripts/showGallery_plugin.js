@@ -26,21 +26,11 @@
                 let newDiv2 = document.createElement("div");
                 newDiv2.className="columnPicture";
                 let newImg =document.createElement("img");
-                newImg.src="https://via.placeholder.com/150x250/#e0e0e0";
+                newImg.src=data.paintings[i].url;
                 newImg.alt="";
                 newDiv2.appendChild(newImg);
                 newDiv.appendChild(newDiv2);
                 container.appendChild(newDiv);
-                /*
-                $('<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 paintings ">'
-                        +'<div class="columnPicture">'
-                             +'<img id="paintingImage" src="https://via.placeholder.com/150x250/#e0e0e0" alt="">'
-                        +'</div>'
-                    +'</div>'
-                ).insertAfter($this);
-
-                document.getElementById("paintingImage").innerText= data.paintings[i].url;
-                */
             }
 
         });
