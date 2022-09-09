@@ -19,6 +19,19 @@
             let length=data.paintings.length;
             for(let i=0; i<length ; i++){
 
+                let container = document.getElementById("paintingsContainer");
+                // Take the row headings and make an HTML container out of them
+                let newDiv = document.createElement("div");
+                newDiv.className="col-xs-12 paintings";
+                let newDiv2 = document.createElement("div");
+                newDiv2.className="columnPicture";
+                let newImg =document.createElement("img");
+                newImg.src="https://via.placeholder.com/150x250/#e0e0e0";
+                newImg.alt="";
+                newDiv2.appendChild(newImg);
+                newDiv.appendChild(newDiv2);
+                container.appendChild(newDiv);
+                /*
                 $('<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 paintings ">'
                         +'<div class="columnPicture">'
                              +'<img id="paintingImage" src="https://via.placeholder.com/150x250/#e0e0e0" alt="">'
@@ -27,8 +40,7 @@
                 ).insertAfter($this);
 
                 document.getElementById("paintingImage").innerText= data.paintings[i].url;
-
-
+                */
             }
 
         });

@@ -26,8 +26,6 @@ let arrayLength;
         });
 
         function loadPasswords(){
-            console.log("bolla");
-
             let request_type="load";
             let request = $.ajax({
                 url: options.serverURL,
@@ -106,11 +104,6 @@ let arrayLength;
 
             })
 */
-
-
-
-
-
-        }
+    }
 
 })(jQuery);
