@@ -18,8 +18,11 @@
     background-color: #ffb053;
     border: 3px solid black;
     margin: auto;
+    height: auto;
+}
 
-
+#paintForm div{
+    margin: 10px auto;
 }
 
 @media (max-width: 995px ) {
@@ -48,12 +51,9 @@
 
 .formPaintPicture img{
     border: #ba5100 5px solid;
-    width:80%;
-    margin: auto;
+    width:100%;
     min-width:200px;
-    height:80%
 }
-
 
 .columnPicture{
     height: 100%;
@@ -64,6 +64,15 @@
     border: #ba5100 5px solid;
     width: 65%;
     margin: auto;
+}
+
+.headerDialog{
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+
 }
 
 @media (min-width: 768px ),(min-height: 1200px) {
