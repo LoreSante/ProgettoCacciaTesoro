@@ -16,7 +16,7 @@
 			insertPainting();
 		break;
 		case "update" :
-	   		//updateData();
+	   		updateData();
 		break;
 		case "delete" :
 			//deleteData();
@@ -57,7 +57,7 @@
 
         	// cicla sul risultato
     		while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
-
+                $painting_id = $row['id'];
     			$painting_title = $row['title'];
     			$painting_author = $row['author'];
     			$painting_year = $row['year'];
@@ -95,7 +95,7 @@
 
           if($row=$result->fetch_array(MYSQLI_ASSOC)){
 
-
+               $painting_id = $row['id'];
                $painting_title = $row['title'];
                $painting_author = $row['author'];
                $painting_year = $row['year'];
@@ -120,6 +120,46 @@
 
 
        }
+
+       function updateData() {
+       		if (isset($_POST['id']) && isset($_POST['title']) && isset($_POST['author']) && isset($_POST['year']) && isset($_POST['technique']) && isset($_POST['position'])&& isset($_POST['description']) && isset($_POST['url']) && isset($_POST['riddle']))
+       		{
+       		            $id=$_POST['id'];
+                   		$title = $_POST['title'];
+                   		$author = $_POST['author'];
+                   		$year = $_POST['year'];
+                   		$technique= $_POST['technique'];
+                   		$position = $_POST['position'];
+                   		$description = $_POST['description'];
+                   		$url = $_POST['url'];
+                   		$riddle = $_POST['riddle'];
+               }
+
+       		$query_string = 'UPDATE paintings SET title="'.$title.'" author="'.$author.'" year="'.$year.'"
+                       technique="'.$technique.'" position="'.$position.'" description="'.$description.'" url="'.$url.'" riddle="'.$riddle.'"
+                       WHERE id="'.$id.'"';
+
+       		$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
+
+           	// esegui la query
+       		$result = $mysqli->query($query_string);
+
+       		//echo $query_string;
+
+           	if($mysqli->affected_rows > 0) {
+       		// encodo l'array in JSON
+
+       	  		$response = array('updated' => true, 'id' => $id, 'type' => 'update');
+
+       		} else {
+       	  		$response = array('updated' => false, 'id' => $id, 'type' => 'update');
+       		}
+       		
+       	echo json_encode($response);
+
+       }
+
+
 
 
 ?>

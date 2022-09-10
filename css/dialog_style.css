@@ -113,13 +113,19 @@
 
 
 .title{
-    text-decoration:underline 2px black;
+    font: normal 48px/100% "Times New Roman", serif;
 }
 
-.formText{
-      /*fixme verificane il funzionamento */
-    margin-left:20px;
 
+.formLabel{
+    font-weight: bold;
+}
+
+#description{
+    line-height: 25px;
+    font-size: 17px;
+    text-align:justify;
+    text-justify: auto;
 }
 
 .height100{
@@ -130,3 +136,8 @@
     height:2%;
 }
 
+.dialogBorderBottom{
+    margin-bottom:5px;
+    border-bottom:#ba5100 2px solid;
+
+}

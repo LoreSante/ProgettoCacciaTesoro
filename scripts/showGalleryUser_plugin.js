@@ -34,7 +34,6 @@
                 container.appendChild(newDiv);
                 newImg.addEventListener("click", function(){
                     loadPaintingInfo(newImg.src);
-
                 });
             }
         });
@@ -51,39 +50,33 @@
             })
             request.done(function(data) {
                 let modal = document.getElementById("formWrapper");
-                let id = document.getElementById("paintingId");
                 let title = document.getElementById("title");
                 let author = document.getElementById("author");
                 let year = document.getElementById("year");
                 let technique= document.getElementById("technique");
                 let position = document.getElementById("position");
                 let description = document.getElementById("description");
-                let riddle = document.getElementById("riddle");
                 let url = document.getElementById("paintingImage");
 
-                let $addButton = document.getElementById("add");
-                //let $addButton = $('.add', this.parent());
-                $addButton.style.display="none";
+                let closeButton = document.getElementById("closeButton");
+
                 console.log(data);
-                id.innerText=data.painting.id;
-                console.log(data.painting.id);
                 title.innerText=data.painting.title;
                 author.innerText=data.painting.author;
                 year.innerText=data.painting.year;
                 technique.innerText=data.painting.technique;
                 position.innerText=data.painting.position;
                 description.innerText=data.painting.description;
-                riddle.innerText=data.painting.riddle;
                 url.src=data.painting.url;
                 modal.style.display="block";
                 console.log("REQUEST.DONE: " + data);
 
-
+                closeButton.onclick = function() {
+                    modal.style.display = "none";
+                }
             });
 
         }
 
     }
 })(jQuery);
-
-

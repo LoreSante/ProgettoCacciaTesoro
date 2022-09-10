@@ -33,9 +33,13 @@
 
         let deleteButton = document.getElementById("delete");
         let $this=$(this);
-        let $saveButton = $('.save', this.parent());
+        let $addButton = document.getElementById("add");
+        let $saveButton = document.getElementById("save");
+        let paintingId = document.getElementById("paintingId")
+
 
         openButton.onclick = function() {
+            $addButton.style.display="block";
             modal.style.display = "block";
             $saveButton.style.display = "none";
         }
@@ -48,6 +52,8 @@
             description.innerText="";
             image.src="https://via.placeholder.com/150x250/#e0e0e0";
             urlInput.value="";
+            $addButton.style.display="null";
+            $saveButton.style.display="block";
         }
 
         titleButton.onclick = function (){
@@ -225,7 +231,6 @@
 
         function sendPainting($el, $t, $a, $y, $te, $p, $d, $i, $r){
             console.log("INIZIO FUNZIONE");
-            let $this = $el;
             let request_type = "insert";
             let title = $t;
             let author= $a;
@@ -263,6 +268,47 @@
 
         }
 
+        function updatePainting($el, $t, $a, $y, $te, $p, $d, $i, $r) {
+            console.log("INIZIO FUNZIONE UPDATE");
+            let request_type = "update";
+            let title = $t;
+            let author = $a;
+            let year = $y;
+            let technique = $te;
+            let position = $p;
+            let description = $d;
+            let url = $i;
+            let riddle = $r;
+            let $id=paintingId.innerText;
+            console.log("id:" + $id);
+            console.log("title:" + title);
+            console.log("author:" + author);
+            console.log("year:" + year);
+            console.log("technique:" + technique);
+            console.log("position:" + position);
+            console.log("description:" + description);
+            console.log("url:" + url);
+            console.log("riddle:" + riddle);
+
+            if (title.length > 2) {
+                let request = $.ajax({
+                    url: options.serverURL,
+                    type: "POST",
+                    data: {
+                        "id":$id ,"title": title, "author": author, "year": year, "technique": technique,
+                        "position": position, "description": description, "url": url, "riddle": riddle,
+                        "action": request_type
+                    },
+                    dataType: "json",
+
+                });
+
+                request.done(function (data) {
+                    console.log("REQUEST.DONE UPDATE: " + data)
+                });
+
+            }
+        }
     }
 
 })(jQuery);
