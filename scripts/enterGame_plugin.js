@@ -14,7 +14,14 @@
 
         request.done(function(data) {
             console.log("REQUEST.DONE: " + data);
-            document.getElementById("enterGamePlayerName").innerText= data.players[0].nickname +"_"+ data.players[0].id;
+            if(data.players[0].nickname==="Guest")
+            {
+                document.getElementById("enterGamePlayerName").innerText= data.players[0].nickname+"_"+ data.players[0].id;
+            }
+            else
+                document.getElementById("enterGamePlayerName").innerText= data.players[0].nickname;
+            document.getElementById("playerId").innerText= data.players[0].id;
+            console.log(document.getElementById("playerId").innerText);
         });
 
         request.fail(function(jqXHR, textStatus) {
