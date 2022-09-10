@@ -37,7 +37,7 @@
 
                     request2.done(function(data){
                         console.log("REQUEST.DONE UPDATE GAME PLAYER: " + data);
-                        location.href='newGame.html';
+                        location.href='lobby.html';
                     })
                 }
                 else{

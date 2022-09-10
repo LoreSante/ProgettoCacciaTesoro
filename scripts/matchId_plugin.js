@@ -2,7 +2,6 @@
 
     $.fn.matchIdLoad = function (options) {
 
-
         let request_type="load";
         let request = $.ajax({
             url: options.serverURL,
