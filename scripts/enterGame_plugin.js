@@ -14,7 +14,7 @@
 
         request.done(function(data) {
             console.log("REQUEST.DONE: " + data);
-            document.getElementById("enterGamePlayerName").innerText= data.players[0].nickname;
+            document.getElementById("enterGamePlayerName").innerText= data.players[0].nickname +"_"+ data.players[0].id;
         });
 
         request.fail(function(jqXHR, textStatus) {

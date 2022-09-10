@@ -19,9 +19,12 @@
 		case "delete" :
 			deleteData();
 		break;
+        case "loadDataSearched" :
+            loadDataSearched();
+        break;
 	}
 
-	function loadData() {  //FIXME: verifica che funzioni la funzione
+	function loadData() {
 		$query_string = 'SELECT * FROM players ORDER BY id DESC' ;
 		$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
 
@@ -48,6 +51,37 @@
 		echo json_encode($response);
 
 }
+
+
+ 	function loadDataSearched() {  //FIXME: verifica che funzioni la funzione
+        if(isset($_POST['id']))
+        {
+          $gameId=$_POST['id'];
+        }
+
+
+        $mysqli = new mysqli(DB_HOST,DB_USER, DB_PASSWORD,DB_DATABASE);
+ 	    $query_string = 'SELECT * FROM players WHERE game="'.$gameId.'"';
+ 		$result = $mysqli->query($query_string);
+     	$players = array();
+
+     	// cicla sul risultato
+ 		while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
+ 			$player_id = $row['id'];
+ 			$player_nickname = $row['nickname'];
+ 			$player_game = $row['game'];
+ 			$player_points = $row['points'];
+
+ 			$player = array('id' => $player_id,'nickname' =>$player_nickname, 'game' => $player_game, 'points' => $player_points);
+ 			array_push($players, $player);
+ 		}
+
+     	$response = array('players' => $players, 'type' => 'load');
+
+ 		// encodo l'array in JSON
+ 		echo json_encode($response);
+
+ }
 
 /*
 	function insertData() {

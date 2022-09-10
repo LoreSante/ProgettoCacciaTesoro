@@ -1,5 +1,5 @@
 // JavaScript Document
-let $playerName= "guest";
+let $playerName= "Guest";
 (function($) {
     console.log("JQUERY: " + $);
 
