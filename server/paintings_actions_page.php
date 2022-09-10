@@ -19,7 +19,7 @@
 	   		updateData();
 		break;
 		case "delete" :
-			//deleteData();
+			deleteData();
 		break;
 	}
 
@@ -158,6 +158,31 @@
        	echo json_encode($response);
 
        }
+
+              function deleteData() {
+              		if (isset($_POST['id']))
+              		{$id=$_POST['id'];}
+
+              		$query_string = 'DELETE FROM paintings WHERE id="'.$id.'"';
+              		$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
+                  	// esegui la query
+              		$result = $mysqli->query($query_string);
+
+              		//echo $query_string;
+
+                  	if($mysqli->affected_rows > 0) {
+              		// encodo l'array in JSON
+
+              	  		$response = array('updated' => true, 'id' => $id, 'type' => 'delete');
+
+              		} else {
+              	  		$response = array('updated' => false, 'id' => $id, 'type' => 'delete');
+              		}
+
+              	echo json_encode($response);
+
+              }
+
 
 
 

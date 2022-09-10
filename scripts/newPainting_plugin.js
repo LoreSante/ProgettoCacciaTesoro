@@ -192,12 +192,7 @@
         }
 
         deleteButton.onclick = function (){
-            title.innerText="Titolo";
-            author.innerText="";
-            technique.innerText="";
-            description.innerText="";
-            image.src="https://via.placeholder.com/150x250/#e0e0e0";
-            urlInput.value="";
+            deletePainting();
         }
 
         $saveButton.onclick = function (){
@@ -309,6 +304,27 @@
                 });
 
             }
+        }
+
+        function deletePainting() {
+            console.log("INIZIO FUNZIONE DELETE");
+            let $id = paintingId.innerText;
+            let request_type = "delete";
+            let request = $.ajax({
+                url: options.serverURL,
+                type: "POST",
+                data: {
+                    "id": $id,
+                    "action": request_type
+                },
+                dataType: "json",
+
+            });
+
+            request.done(function (data) {
+                console.log("REQUEST.DONE DELETE: " + data)
+                location.href = 'adminGallery.html';
+            });
         }
     }
 
