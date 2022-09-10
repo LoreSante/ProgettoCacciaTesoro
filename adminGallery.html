@@ -13,12 +13,12 @@
     <script type="text/javascript" src="scripts/newPainting_plugin_init.js"></script>
     <script type="text/javascript" src="scripts/newPainting_plugin.js"></script>
 
-    <script type="text/javascript" src="scripts/showGallery_plugin_init.js"></script>
-    <script type="text/javascript" src="scripts/showGallery_plugin.js"></script>
+    <script type="text/javascript" src="scripts/showGalleryAdmin_plugin_init.js"></script>
+    <script type="text/javascript" src="scripts/showGalleryAdmin_plugin.js"></script>
 
     <!--
-    <script type="text/javascript" src="scripts/showPaintingInfo_plugin.js"></script>
-    <script type="text/javascript" src="scripts/showPaintingInfo_plugin_init.js"></script>
+    <script type="text/javascript" src="scripts/showGalleryUser_plugin.js"></script>
+    <script type="text/javascript" src="scripts/showGalleryUser_plugin_init.js"></script>
     -->
 
 
@@ -94,8 +94,10 @@
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-7">
                         <div class="row title formText">
+
                             <div class="col-6" >
                                 <h1 class="title" id="title">Titolo</h1>
+                                <div class="paintingId" id="paintingId"></div>
                                 <textarea type="text" id="titleInput" class="inputStyle" name="titleInput" rows="2"></textarea>
                                 <label for="titleInput"></label>
                             </div>
@@ -167,7 +169,9 @@
                 <div class="col-4"></div>
 
                 <div class="col-5"></div>
-                <div class="col-1 text-center"><span class="material-symbols-outlined save">save</span></div>
+
+                <div class="col-1 text-center" id="add"><span class="material-symbols-outlined add"  >add</span></div>
+                <div class="col-1 text-center" id="save"><span class="material-symbols-outlined save"  >save</span></div>
                 <div class="col-1 text-center"><span class="material-symbols-outlined" id="delete">delete</span></div>
             </div>
 

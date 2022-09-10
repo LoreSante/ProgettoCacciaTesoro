@@ -37,6 +37,7 @@
 
         openButton.onclick = function() {
             modal.style.display = "block";
+            $saveButton.style.display = "none";
         }
 
         closeButton.onclick = function() {
@@ -193,7 +194,22 @@
             urlInput.value="";
         }
 
-        $saveButton.on("click", function (){
+        $saveButton.onclick = function (){
+            console.log("EVENTO CLICK");
+            let $title=title.innerText;
+            let $author=author.innerText;
+            let $year=year.innerText;
+            let $technique=technique.innerText;
+            let $position=position.innerText;
+            let $description=description.innerText;
+            let $image=image.src;
+            let $riddle=riddle.innerText;
+            updatePainting($this, $title, $author,$year,$technique,$position,$description,$image, $riddle);
+            //location.href='adminGallery.html';
+
+        }
+
+        $addButton.onclick = function (){
             console.log("EVENTO CLICK");
             let $title=title.innerText;
             let $author=author.innerText;
@@ -205,7 +221,7 @@
             let $riddle=riddle.innerText;
             sendPainting($this, $title, $author,$year,$technique,$position,$description,$image, $riddle);
             location.href='adminGallery.html';
-        });
+        }
 
         function sendPainting($el, $t, $a, $y, $te, $p, $d, $i, $r){
             console.log("INIZIO FUNZIONE");

@@ -68,7 +68,7 @@
     			$painting_riddle = $row['riddle'];
 
 
-    			$painting = array('title' => $painting_title,'author' =>$painting_author, 'year' => $painting_year, 'technique' => $painting_technique,
+    			$painting = array('id' => $painting_id,'title' => $painting_title,'author' =>$painting_author, 'year' => $painting_year, 'technique' => $painting_technique,
     			'position' => $painting_position , 'description' => $painting_description, 'url' => $painting_url, 'riddle' => $painting_riddle);
     			array_push($paintings, $painting);
     		}
@@ -105,7 +105,7 @@
                $painting_url = $row['url'];
                $painting_riddle = $row['riddle'];
 
-               $painting = array('title' => $painting_title,'author' =>$painting_author, 'year' => $painting_year,
+               $painting = array('id' => $painting_id, 'title' => $painting_title,'author' =>$painting_author, 'year' => $painting_year,
                 'technique' => $painting_technique,  'position' => $painting_position ,
                 'description' => $painting_description, 'url' => $painting_url, 'riddle' => $painting_riddle);
 

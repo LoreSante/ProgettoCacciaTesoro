@@ -50,6 +50,7 @@
             })
             request.done(function(data) {
                 let modal = document.getElementById("formWrapper");
+                let id = document.getElementById("paintingId");
                 let title = document.getElementById("title");
                 let author = document.getElementById("author");
                 let year = document.getElementById("year");
@@ -59,6 +60,8 @@
                 let riddle = document.getElementById("riddle");
                 let url = document.getElementById("paintingImage");
                 console.log(data);
+                id.innerText=data.painting.id;
+                console.log(data.painting.id);
                 title.innerText=data.painting.title;
                 author.innerText=data.painting.author;
                 year.innerText=data.painting.year;
