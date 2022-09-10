@@ -147,38 +147,79 @@ body{
         position: fixed;
     }
 }
+
 .plugin_wrapper{
     margin:auto;
     width: 100%;
     height: 80%;
 
 }
+
 .plugin_wrapper form{
     width:100%;
     margin: auto;
     text-align: center;
     font-size: 25px;
-    height:80%;
+    height:100%;
 }
 
+.nameSelectedWrapper{
+    width: 100%;
+    margin: 0 auto;
+    height: available;
+}
 
 .nameSelected{
-    margin:auto;
-    width: 25%;
-    height: 95px;
+
+    width: 100%;
     font-size: 25px;
+
+    height: available;
+
+    border-color: black;
+
+    color:white;
+    background-color: #ba5100;
+    border-radius: 15px;
+    cursor:pointer;
+    transition-duration: 0.4s;
+    padding-bottom: 4px;
+    text-align:center;
+}
+/*
+
+*/
+
+
+
+
+
+.fnameWrapper{
+    width:100%;
+    height: available;
+    margin:0 auto 0 auto;
 
 }
 
 .fname{
+    width:100%;
     font-size: 25px;
-    margin:auto;
-    width:70%;
-    height: 90px;
+    height: 100%;
+    border-radius: 15px;
 }
 
+@media (max-width: 767px){
+    .homeButton{
+        font-size-adjust:0.5;
+        line-height: 30px;
+    }
+    .fnameWrapper, .nameSelectedWrapper{
+        margin:5% 1%;
+    }
+}
 
-@media (max-height: 1100px){  /*media query per il form di inserimento Nome Giocatore */
+/*
+@media (max-height: 1100px){
     .fname{
         height:85%;
     }
@@ -187,6 +228,7 @@ body{
     }
 }
 
+*/
 
 /* Inizio elementi grafici dedicati alla gallery */
 

@@ -19,11 +19,11 @@ let $playerName= "guest";
             let $this = $(this);
 
             $this.wrap('<div class="plugin_wrapper" />')
-            $('<form action=server/player_actions_page.php method="post">'
-                +'<label title="Nome giocatore">'
+            $('<form class="row text-center" action=server/player_actions_page.php method="post">'
+                +'<label class="col-12 col-md-8 fnameWrapper" title="Nome giocatore" style="padding-left:0; padding-right:3px;">'
                 +'<input type="text" class="fname" id="fname" placeholder="Inserire nome giocatore">'
                 +'</label>'
-                +'<input type="button" value="Seleziona" class="nameSelected">'
+                +'<input type="button" value="Seleziona" class="nameSelected col-12 col-md-4">'
                 +'</form>'
             ).insertBefore($this);
 
