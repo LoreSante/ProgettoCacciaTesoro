@@ -135,8 +135,8 @@
                    		$riddle = $_POST['riddle'];
                }
 
-       		$query_string = 'UPDATE paintings SET title="'.$title.'" author="'.$author.'" year="'.$year.'"
-                       technique="'.$technique.'" position="'.$position.'" description="'.$description.'" url="'.$url.'" riddle="'.$riddle.'"
+       		$query_string = 'UPDATE paintings SET title="'.$title.'", author="'.$author.'", year="'.$year.'",
+                       technique="'.$technique.'", position="'.$position.'", description="'.$description.'", url="'.$url.'", riddle="'.$riddle.'"
                        WHERE id="'.$id.'"';
 
        		$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);

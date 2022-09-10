@@ -305,6 +305,7 @@
 
                 request.done(function (data) {
                     console.log("REQUEST.DONE UPDATE: " + data)
+                    location.href='adminGallery.html';
                 });
 
             }
