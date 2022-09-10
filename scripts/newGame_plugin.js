@@ -36,7 +36,7 @@ let idArray=0;
                 let request2 = $.ajax({
                     url: options.serverURL2,
                     type: "POST",
-                    data: {"text": $playerName, "game": game , "action": request_type},
+                    data: {"text": $playerName, "game": game , "ishost": 1 , "action": request_type},
                     dataType: "json",
                 });
 

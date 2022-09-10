@@ -40,8 +40,10 @@
 			$player_nickname = $row['nickname'];
 			$player_game = $row['game'];
 			$player_points = $row['points'];
+			$player_isHost = $row['ishost'];
 
-			$player = array('id' => $player_id,'nickname' =>$player_nickname, 'game' => $player_game, 'points' => $player_points);
+
+			$player = array('id' => $player_id,'nickname' =>$player_nickname, 'game' => $player_game, 'points' => $player_points, 'ishost'=> $player_isHost);
 			array_push($players, $player);
 		}
 
@@ -53,7 +55,7 @@
 }
 
 
- 	function loadDataSearched() {  //FIXME: verifica che funzioni la funzione
+ 	function loadDataSearched() {  //Restituisce l'array di giocatori che partecipano a una certa partita
         if(isset($_POST['id']))
         {
           $gameId=$_POST['id'];
@@ -71,8 +73,9 @@
  			$player_nickname = $row['nickname'];
  			$player_game = $row['game'];
  			$player_points = $row['points'];
+ 			$player_isHost = $row['ishost'];
 
- 			$player = array('id' => $player_id,'nickname' =>$player_nickname, 'game' => $player_game, 'points' => $player_points);
+ 			$player = array('id' => $player_id,'nickname' =>$player_nickname, 'game' => $player_game, 'points' => $player_points,'ishost' => $player_isHost);
  			array_push($players, $player);
  		}
 
@@ -135,9 +138,16 @@
 		} else {
 			return;
 		}
+		if(isset($_POST['ishost'])){
+		    $isHost=$_POST['ishost'];
+		}
+		else{
+		    $isHost=0;
+		}
+
 
 		$mysqli = new mysqli(DB_HOST,DB_USER, DB_PASSWORD,DB_DATABASE);
-		$query_string = 'INSERT INTO  players(nickname, game , points) VALUES ("' .$player .'","'.$game.'","0")';
+		$query_string = 'INSERT INTO  players(nickname, game , points, ishost) VALUES ("' .$player .'","'.$game.'","0", "'.$isHost.'" )';
 		$result=$mysqli->query($query_string);
     	$query_string = 'SELECT * FROM players WHERE id="' . $mysqli->insert_id .'"';
 		$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
@@ -150,7 +160,11 @@
                $nickname = $row['nickname'];
                $game = $row['game'];
                $points = $row['points'];
-               $player = array('id' => $id,'nickname' => $nickname ,'game' => $game,'points' => $points);
+               $player_isHost = $row['ishost'];
+
+
+
+               $player = array('id' => $id,'nickname' => $nickname ,'game' => $game,'points' => $points, 'ishost' => $player_isHost);
 
                array_push($players, $player);
          }
@@ -159,14 +173,15 @@
                 echo json_encode($response);
 
 	}
+//aggiorna il codice partita di un certo giocatore, dato il suo ip
 
-/*function updateData() {
+    function updateData() {
 		if (isset($_POST['id'])) $id = $_POST['id'];
-		if (isset($_POST['status'])) $status = $_POST['status'];
+        if (isset($_POST['game'])) $game = $_POST['game'];
 
-		$pieces = explode("_", $id);
 
-		$query_string = 'UPDATE to_do SET completed=' . $status . ' WHERE ID=' . $pieces[1];
+
+		$query_string = 'UPDATE players SET game="'. $game . '" WHERE id="' . $id .'"';
 
 		$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
 
@@ -179,16 +194,13 @@
 		// encodo l'array in JSON
 
 	  		$response = array('updated' => true, 'id' => $id, 'type' => 'update');
-
 		} else {
 	  		$response = array('updated' => false, 'id' => $id, 'type' => 'update');
 		}
+	    echo json_encode($response);
+    }
 
-	echo json_encode($response);
-
-}
-
-
+/*
 	function deleteData() {
 
 		if (isset($_POST['id'])) $id = $_POST['id'];

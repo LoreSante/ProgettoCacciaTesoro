@@ -25,17 +25,19 @@
 
             request2.done(function(data2){
                 console.log("REQUEST.DONE PLAYER: " + data2);
-                let container = document.getElementById("playerNamesWrapper");
-                let divPlayer = document.createElement("div");
-                divPlayer.className = "playerNameSample";
-                console.log("REQUEST.DONE PLAYER: " + data2.players[0].nickname);
-                if(data2.players[0].nickname==="Guest")
-                {
-                    divPlayer.innerText=data2.players[0].nickname+"_"+data2.players[0].id;
+
+                for(let i=0;i<data2.players.length; i++) {
+                    let divPlayer = document.createElement("div");
+                    let container = document.getElementById("playerNamesWrapper");
+                    divPlayer.className = "playerNameSample";
+                    if (data2.players[i].nickname === "Guest") {
+                        divPlayer.innerText = data2.players[i].nickname + "_" + data2.players[i].id;
+                    } else
+                        divPlayer.innerText = data2.players[i].nickname;
+                    console.log("REQUEST.DONE PLAYER: " + data2.players[i].nickname);
+                    container.appendChild(divPlayer);
                 }
-                else
-                    divPlayer.innerText=data2.players[0].nickname;
-                container.appendChild(divPlayer);
+
             })
         });
 

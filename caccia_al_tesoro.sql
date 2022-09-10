@@ -8,6 +8,7 @@ CREATE TABLE `players` (
   `nickname` text NOT NULL,
   `game` int(6) NOT NULL,
   `points` int(2) NOT NULL DEFAULT '0',
+  `ishost` boolean NOT NULL DEFAULT FALSE,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
 
