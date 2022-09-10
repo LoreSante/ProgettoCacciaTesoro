@@ -37,7 +37,6 @@
                     console.log("REQUEST.DONE PLAYER: " + data2.players[i].nickname);
                     container.appendChild(divPlayer);
                 }
-
             })
         });
 
