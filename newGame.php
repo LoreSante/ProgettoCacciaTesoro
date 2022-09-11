@@ -11,7 +11,6 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <title>NewGame</title>
-    <meta http-equiv="refresh" content="3">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="scripts/newGame_plugin.js"></script>
@@ -21,6 +20,10 @@ session_start();
 
     <script type="text/javascript" src="scripts/returnHomeButton_plugin.js"></script>
     <script type="text/javascript" src="scripts/returnHomeButton_plugin_init.js"></script>
+
+    <script type="text/javascript" src="scripts/startGameButton_plugin.js"></script>
+    <script type="text/javascript" src="scripts/startGameButton_plugin_init.js"></script>
+
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link href="css/page_style.css" rel="stylesheet" type="text/css">
@@ -42,9 +45,9 @@ session_start();
             <div class="matchIdWrapper" id="matchIdWrapper"><p class="matchID" id="matchID">00001</p></div>
             <div class="playerNamesWrapper" id="playerNamesWrapper">
             </div>
-            <div class="playerId" id="playerId"><?php echo ($_SESSION["idUser"])?>
+            <div class="playerId" id="playerId">
             </div>
-            <button class="startGameButton" type="button" onclick="location.href='cluePage.php'">Avvia Partita</button>
+            <button class="startGameButton" id="startGameButton" type="button" onclick="location.href='cluePage.php'">Avvia Partita</button>
         </div>
         <div class="adv"><img src="https://via.placeholder.com/50x450"></div>
     </div>

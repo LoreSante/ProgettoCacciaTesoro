@@ -1,6 +1,6 @@
 (function($) {
 
-    $.fn.matchIdLoad = function (options) {
+    $.fn.matchIdLoad = function (options) {//carica nomi giocatori nella lobby di gioco
 
         let playerId;
         let request_type="getIdUser"

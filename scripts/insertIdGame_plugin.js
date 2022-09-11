@@ -4,7 +4,6 @@
                                             //+ reindirizzamento alla pagina newGame.php
         console.log("a");
         let $inputFormIdGame=document.getElementById("inputFormIdGame");
-
         let $joinGameButton=document.getElementById("joinGameButton");
         let playerId;
         let request_type="getIdUser"
