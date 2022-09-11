@@ -35,8 +35,8 @@
                     dataType: "json",
                 })
 
-            request2.done(function(data2){
-                console.log("REQUEST.DONE PLAYER: " + data2);
+                request2.done(function(data2){
+                    console.log("REQUEST.DONE PLAYER: " + data2);
 
                     for(let i=0;i<data2.players.length; i++) {
                         let divPlayer = document.createElement("div");

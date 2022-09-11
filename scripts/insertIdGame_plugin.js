@@ -1,3 +1,5 @@
+
+
 (function($) {
 
     $.fn.insertIdGame = function (options) {
@@ -5,10 +7,22 @@
         let $inputFormIdGame=document.getElementById("inputFormIdGame");
 
         let $joinGameButton=document.getElementById("joinGameButton");
-        let $playerId=document.getElementById("playerId");
+        let playerId;
+        let request_type="getIdUser"
+        let requestSession = $.ajax({
+            url: options.serverURL3,
+            type: "POST",
+            data:{ "action" : request_type },
+            dataType: "json",
+        })
+
+        requestSession.done(function(data){
+            console.log("REQUEST.DONE, User ID: " + data);
+            playerId=data;
+        });
 
         $joinGameButton.onclick=function(){
-            let request_type="load";
+            request_type="load";
             let request = $.ajax({
                 url: options.serverURL,
                 type: "POST",
@@ -21,7 +35,7 @@
                 let idGame=$inputFormIdGame.value;
                 let idArray=data.keys;
                 let length=idArray.length;
-                console.log("PLAYER ID"+$playerId.innerText);
+                console.log("PLAYER ID"+playerId);
                 console.log(idGame);
                 console.log(length);
                 console.log(idArray);
@@ -30,7 +44,7 @@
                     let request2 = $.ajax({
                         url: options.serverURL2,
                         type: "POST",
-                        data:{ "id":$playerId.innerText, "game":idGame, "action" : request_type }, //fixme: completare update in php e implementare indirizzo ip o id giocatore
+                        data:{ "id":playerId, "game":idGame, "action" : request_type },
                         dataType: "json",
                     })
 

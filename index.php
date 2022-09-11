@@ -3,7 +3,9 @@
 session_start();
 
 $_SESSION["idUser"] = "abaco";
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="it">
@@ -46,14 +48,6 @@ $_SESSION["idUser"] = "abaco";
                          <span class="material-symbols-outlined">engineering</span>
                     </a>
                 </div>
-                <!-- TODO @:cancellare l'icona della finestra pop-up, è solo una prova
-                <div>
-                    <a href="javascript:"
-                       onClick="window.open('http://www.html.it', 'titolo', 'width=400, height=200, resizable, status, scrollbars=1, location');">
-                        <span class="material-symbols-outlined">engineering</span>
-                    </a>
-                </div>
-                 TODO @:fino a qui -->
             </div>
 
         </div>

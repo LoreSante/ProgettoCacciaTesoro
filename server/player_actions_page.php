@@ -22,8 +22,11 @@
 		case "delete" :
 			deleteData();
 		break;
-        case "loadDataSearched" :
-            loadDataSearched();
+        case "loadDataSearchedByGame" :
+            loadDataSearchedByGame();
+        break;
+        case "loadDataSearchedByPlayerId" :
+            loadDataSearchedByPlayerId();
         break;
 	}
 
@@ -58,7 +61,7 @@
 }
 
 
- 	function loadDataSearched() {  //Restituisce l'array di giocatori che partecipano a una certa partita
+ 	function loadDataSearchedByGame() {  //Restituisce l'array di giocatori che partecipano a una certa partita
         if(isset($_POST['id']))
         {
           $gameId=$_POST['id'];
@@ -137,6 +140,9 @@
 		$mysqli = new mysqli(DB_HOST,DB_USER, DB_PASSWORD,DB_DATABASE);
 		$query_string = 'INSERT INTO  players(nickname, game , points, ishost) VALUES ("' .$player .'","'.$game.'","0", "'.$isHost.'" )';
 		$result=$mysqli->query($query_string);
+
+        $_SESSION["idUser"]=$mysqli->insert_id;
+
     	$query_string = 'SELECT * FROM players WHERE id="' . $mysqli->insert_id .'"';
 		$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
 		$result=$mysqli->query($query_string);

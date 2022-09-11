@@ -1,3 +1,11 @@
+<?php
+// Start the session
+session_start();
+
+
+?>
+
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -30,7 +38,8 @@
             <div class="matchIdWrapper" id="matchIdWrapper"><p class="matchID" id="matchID">00001</p></div>
             <div class="playerNamesWrapper" id="playerNamesWrapper">
             </div>
-
+            <div class="playerId" id="playerId"><?php echo ($_SESSION["idUser"])?>
+            </div>
             <button class="startGameButton" type="button" onclick="location.href='cluePage.html'">Avvia Partita</button>
         </div>
         <div class="adv"><img src="https://via.placeholder.com/50x450"></div>
