@@ -47,7 +47,7 @@ session_start();
         <div class="adv"><img src="https://via.placeholder.com/50x450"></div>
         <div class="lobbyContainer">
             <div class="codeLabelWrapper"><b class="codeLabel">Codice Partita:</b></div>
-            <div class="matchIdWrapper" id="matchIdWrapper"><p class="matchID" id="matchID">00001</p></div>
+            <div class="matchIdWrapper" id="matchIdWrapper"><p class="matchID" id="matchID">Loading...</p></div>
             <div class="playerNamesWrapper" id="playerNamesWrapper">
             </div>
             <div class="playerId" id="playerId">

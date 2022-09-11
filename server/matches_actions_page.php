@@ -20,6 +20,9 @@
 		case "delete" :
 			deleteData();
 		break;
+        case "search":
+            searchById();
+        break;
 	}
 
 
@@ -43,7 +46,7 @@
         // encodo l'array in JSON
         echo json_encode($response);
 
-}
+    }
 
     function updateStatus() {
         if (isset($_POST['id'])) $id = $_POST['id'];
@@ -91,5 +94,29 @@
         // encodo l'array in JSON
         echo json_encode($response);
 	}
+
+    function searchById() {
+        if(isset($_POST["id"]))
+            $idGame=$_POST["id"];
+
+        $query_string = 'SELECT * FROM matches WHERE id="'.$idGame.'"';
+        $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
+        $result = $mysqli->query($query_string);
+
+
+        if ($row = $result->fetch_array(MYSQLI_ASSOC))
+        {
+            $id = $row['id'];
+            $status = $row ['status'];
+            $game = array('id' => $id, 'status'=>$status);
+
+        }
+
+        $response = array('game' => $game, 'type' => 'search');
+
+        // encodo l'array in JSON
+        echo json_encode($response);
+
+    }
 
 ?>

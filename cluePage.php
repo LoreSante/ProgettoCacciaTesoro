@@ -42,14 +42,7 @@
         </div>
         <div id="playerNamesContainer" class="playerNamesContainer">
             <!-- Todo inserisci uno script per i nomi -->
-            <div class="playerNameSample"><h5 class="playerName">Player</h5><h5 class="playerPoints">0 / 00</h5></div>
-            <div class="playerNameSample"><h5 class="playerName">Player</h5><h5 class="playerPoints">0 / 00</h5></div>
-            <div class="playerNameSample"><h5 class="playerName">Player</h5><h5 class="playerPoints">0 / 00</h5></div>
-            <div class="playerNameSample"><h5 class="playerName">Player</h5><h5 class="playerPoints">0 / 00</h5></div>
-            <div class="playerNameSample"><h5 class="playerName">Player</h5><h5 class="playerPoints">0 / 00</h5></div>
-            <div class="playerNameSample"><h5 class="playerName">Player</h5><h5 class="playerPoints">0 / 00</h5></div>
 
-            <div class="playerNameSample"><h5 class="playerName">Player</h5><h5 class="playerPoints">0 / 00</h5></div>
         </div>
 
 
