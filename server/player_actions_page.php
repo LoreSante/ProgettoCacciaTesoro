@@ -1,4 +1,7 @@
 <?php
+
+    session_start();
+
 	header('Content-Type: text/json');
 	include("configuration.php");
 	$action = $_POST['action'];
@@ -86,51 +89,36 @@
 
  }
 
-/*
-	function insertData() {
+     function  loadDataSearchedByPlayerId(){
 
-		if (isset($_POST['text'])) {
-			$to_do_text = $_POST['text'];
-		} else {
-			echo "you didn't specify a text";
-			return;
-		}
-
-		$query_string = "INSERT INTO to_do (text) values ('". htmlspecialchars($to_do_text) . "')";
-		$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
-
-    	// esegui la query per inserire il to do nel db
-		$result = $mysqli->query($query_string);
+        if (isset($_POST['id'])) $id = $_POST['id'];
 
 
-    	$query_string = 'SELECT * FROM to_do WHERE ID=' . $mysqli->insert_id;
+        $mysqli = new mysqli(DB_HOST,DB_USER, DB_PASSWORD,DB_DATABASE);
+        $query_string = 'SELECT * FROM players WHERE id="' . $id .'"';
+        $result = $mysqli->query($query_string);
+         //$players = array();
 
-		//$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
+         // cicla sul risultato
+         if ($row = $result->fetch_array(MYSQLI_ASSOC)) {
 
-    	// esegui la query per rileggere il record inserito
-		$result = $mysqli->query($query_string);
+             $player_id = $row['id'];
+             $player_nickname = $row['nickname'];
+             $player_game = $row['game'];
+             $player_points = $row['points'];
+             $player_isHost = $row['ishost'];
 
-    	$todos = array();
+             $player = array('id' => $player_id,'nickname' =>$player_nickname, 'game' => $player_game, 'points' => $player_points,'ishost' => $player_isHost);
+            // array_push($players, $player);
+         }
 
-    	// cicla sul risultato
-		while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
+         $response = array('player' => $player, 'type' => 'loadDataSearchedByPlayerId');
 
-			$todo_id = $row['id'];
-  			$todo_text = $row['text'];
-			$to_do_completed = $row['completed'];
-  			$todo_date = $row['date'];
+         // encodo l'array in JSON
+         echo json_encode($response);
 
-			$todo = array('id' => $todo_id,'text' =>$todo_text, 'completed' => $to_do_completed, 'date' => $todo_date);
-			array_push($todos, $todo);
-		}
+     }
 
-    	$response = array('todos' => $todos, 'type' => 'insert');
-
-		// encodo l'array in JSON
-		echo json_encode($response);
-
-	}
-*/
 	function insertName() {
 		if (isset($_POST['text']) && isset($_POST['game'])) {
 			$player = $_POST['text'];

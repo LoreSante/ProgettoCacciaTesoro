@@ -42,7 +42,7 @@ let idArray=0;
 
                 request2.done(function (data2){
                     console.log("DONE: "+ data2);
-                    location.href="newGame.html";
+                    location.href="newGame.php";
                 });
 
             });

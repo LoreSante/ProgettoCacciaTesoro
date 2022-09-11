@@ -16,7 +16,7 @@ let arrayLength;
             let password = window.prompt("Inserisci chiave di accesso");
 
             if(isInArray(passwordArray,password)){
-                location.href='adminGallery.html';
+                location.href='adminGallery.php';
             }
             else{
                 window.alert("CHIAVE ERRATA");
@@ -99,7 +99,7 @@ let arrayLength;
 
                 if(password==="leonardodavinci"){
 
-                    location.href='adminGallery.html';
+                    location.href='adminGallery.php';
                 }
 
             })

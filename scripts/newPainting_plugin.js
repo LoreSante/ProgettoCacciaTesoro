@@ -206,7 +206,7 @@
             let $image=image.src;
             let $riddle=riddle.innerText;
             updatePainting($this, $title, $author,$year,$technique,$position,$description,$image, $riddle);
-            //location.href='adminGallery.html';
+            //location.href='adminGallery.php';
 
         }
 
@@ -221,7 +221,7 @@
             let $image=image.src;
             let $riddle=riddle.innerText;
             sendPainting($this, $title, $author,$year,$technique,$position,$description,$image, $riddle);
-            location.href='adminGallery.html';
+            location.href='adminGallery.php';
         }
 
         function sendPainting($el, $t, $a, $y, $te, $p, $d, $i, $r){
@@ -300,7 +300,7 @@
 
                 request.done(function (data) {
                     console.log("REQUEST.DONE UPDATE: " + data)
-                    location.href='adminGallery.html';
+                    location.href='adminGallery.php';
                 });
 
             }
@@ -323,7 +323,7 @@
 
             request.done(function (data) {
                 console.log("REQUEST.DONE DELETE: " + data)
-                location.href = 'adminGallery.html';
+                location.href = 'adminGallery.php';
             });
         }
     }

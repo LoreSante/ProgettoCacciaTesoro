@@ -22,7 +22,7 @@
     <div class="headerContainer">
         <div class="header">
             <div class="leftIconWrapper">
-                <div><a href="index.html"><span class="material-symbols-outlined">home</span></a></div>
+                <div><a href="index.php"><span class="material-symbols-outlined">home</span></a></div>
             </div>
         </div>
     </div>

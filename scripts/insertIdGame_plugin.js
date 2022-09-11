@@ -1,7 +1,7 @@
 (function($) {
 
     $.fn.insertIdGame = function (options) {
-
+        console.log("a");
         let $inputFormIdGame=document.getElementById("inputFormIdGame");
 
         let $joinGameButton=document.getElementById("joinGameButton");
@@ -26,7 +26,6 @@
                 console.log(length);
                 console.log(idArray);
                 if(isInIdArray(idGame, idArray, length)){
-
                     request_type="update"
                     let request2 = $.ajax({
                         url: options.serverURL2,
@@ -37,7 +36,7 @@
 
                     request2.done(function(data){
                         console.log("REQUEST.DONE UPDATE GAME PLAYER: " + data);
-                        location.href='lobby.html';
+                        location.href='lobby.php';
                     })
                 }
                 else{

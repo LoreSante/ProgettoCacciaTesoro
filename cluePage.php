@@ -16,13 +16,12 @@
 
 </head>
 <body>
-
     <div class="headerContainer">
         <div  class="header">
             <div class="leftIconWrapper">
-                <div><a href="index.html"><span class="material-symbols-outlined">home</span></a></div>
-                <div><a href="gallery.html"><span class="material-symbols-outlined">panorama</span></a></div>
-                <div><a href="index.html"><span class="material-symbols-outlined">cancel</span></a></div>
+                <div><a href="index.php"><span class="material-symbols-outlined">home</span></a></div>
+                <div><a href="gallery.php"><span class="material-symbols-outlined">panorama</span></a></div>
+                <div><a href="index.php"><span class="material-symbols-outlined">cancel</span></a></div>
             </div>
         </div>
     </div>

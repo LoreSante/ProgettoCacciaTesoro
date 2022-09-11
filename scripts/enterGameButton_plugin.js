@@ -20,7 +20,7 @@
             });
             request.done(function(data) {
                 console.log("REQUEST.DONE: " + data);
-                location.href='enterGame.html';
+                location.href='enterGame.php';
             });
 
             request.fail(function(jqXHR, textStatus) {

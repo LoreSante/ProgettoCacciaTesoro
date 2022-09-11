@@ -1,5 +1,5 @@
 <?php
-
+        session_start();
     	header('Content-Type: text/json');
     	include("configuration.php");
     	$action = $_POST['action'];

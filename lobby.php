@@ -6,8 +6,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="scripts/newGame_plugin.js"></script>
-    <script type="text/javascript" src="scripts/matchId_plugin.js"></script>
-    <script type="text/javascript" src="scripts/matchId_plugin_init.js"></script>
+    <script type="text/javascript" src="scripts/gameLobby_plugin.js"></script>
+    <script type="text/javascript" src="scripts/gameLobby_plugin_init.js"></script>
     <script type="text/javascript" src="scripts/newGame_plugin_init.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link href="css/page_style.css" rel="stylesheet" type="text/css">
@@ -18,7 +18,7 @@
 <div class="headerContainer">
     <div class="header">
         <div class="leftIconWrapper">
-            <div><a href="index.html"><span class="material-symbols-outlined">home</span></a></div>
+            <div><a href="index.php"><span class="material-symbols-outlined">home</span></a></div>
         </div>
     </div>
 </div>
