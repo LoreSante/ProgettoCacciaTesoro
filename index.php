@@ -13,7 +13,7 @@ $_SESSION["idUser"] = "abaco";
     <meta charset="UTF-8">
     <title>Caccia al Tesoro</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <link href="css/page_style.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="scripts/newGame_plugin.js"></script>
@@ -61,7 +61,7 @@ $_SESSION["idUser"] = "abaco";
             <div class="inputName"></div>
             <div class="sub-container"><button class="homeButton newGameButton" id="newGameButton" type="button" >Crea Nuova Partita</button></div>
             <div class="sub-container"><button class="homeButton enterGameButton" type="button">Entra in Partita</button></div>
-            <div class="sub-container"><button class="galleryHomeButton" type="button" onclick="location.href='gallery.html'">Galleria</button></div>
+            <div class="sub-container"><button class="galleryHomeButton" type="button" onclick="location.href='gallery.php'">Galleria</button></div>
             <div class="sub-container"><button class="homeButton" type="button" onclick="location.href=''">Crediti</button></div>
         </div>
 </body>

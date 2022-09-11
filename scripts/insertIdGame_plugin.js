@@ -50,7 +50,7 @@
 
                     request2.done(function(data){
                         console.log("REQUEST.DONE UPDATE GAME PLAYER: " + data);
-                        location.href='lobby.php';
+                        location.href='newGame.php';
                     })
                 }
                 else{

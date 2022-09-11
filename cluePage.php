@@ -12,7 +12,15 @@
     <link href="css/gameStyle.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
+    <script type="text/javascript" src="scripts/playerList_plugin.js"></script>
+    <script type="text/javascript" src="scripts/playerList_plugin_init.js"></script>
 
+
+    <!-- inizio Bootstrap link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <!-- fine Bootstrap link -->
 
 </head>
 <body>
@@ -32,13 +40,18 @@
             <div class="paintPicture"><img src="https://via.placeholder.com/150x250/#e0e0e0"> </div>
             <div class="selectPaint">menu a tendina</div> <!-- script menu a tendina -->
         </div>
-        <div class="playerNamesContainer">
-            <div class="playerNameSample">Player</div>
-            <div class="playerNameSample">Player</div>
-            <div class="playerNameSample">Player</div>
-            <div class="playerNameSample">Player</div>
+        <div id="playerNamesContainer" class="playerNamesContainer">
             <!-- Todo inserisci uno script per i nomi -->
+            <div class="playerNameSample"><h5 class="playerName">Player</h5><h5 class="playerPoints">0 / 00</h5></div>
+            <div class="playerNameSample"><h5 class="playerName">Player</h5><h5 class="playerPoints">0 / 00</h5></div>
+            <div class="playerNameSample"><h5 class="playerName">Player</h5><h5 class="playerPoints">0 / 00</h5></div>
+            <div class="playerNameSample"><h5 class="playerName">Player</h5><h5 class="playerPoints">0 / 00</h5></div>
+            <div class="playerNameSample"><h5 class="playerName">Player</h5><h5 class="playerPoints">0 / 00</h5></div>
+            <div class="playerNameSample"><h5 class="playerName">Player</h5><h5 class="playerPoints">0 / 00</h5></div>
+
+            <div class="playerNameSample"><h5 class="playerName">Player</h5><h5 class="playerPoints">0 / 00</h5></div>
         </div>
+
 
 
     </div>

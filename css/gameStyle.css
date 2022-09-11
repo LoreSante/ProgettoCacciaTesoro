@@ -58,16 +58,22 @@
 .playerNamesWrapper{
     display:flex;
     flex-direction: column;
-    width:80%;
-    height: available;
+    min-width:80%;
+    max-height: available;
     margin:10px;
 }
 .playerNameSample{ /*todo classe esempio, cambiare nome o rimuovere quando vera inserito il plugin */
+    display:flex;
+    flex-direction:row;
     width: 100%;
-    height: 8%;
+    height:8%;
+    max-height:available;
+
     background-color:white;
     border: black 1px solid;
     border-radius: 5px;
+    justify-content:space-around;
+    align-content:center;
     text-align: center;
     text-justify: distribute;
     margin-top:5px;
@@ -80,6 +86,12 @@
           -->risolvere questi problemi
    */
 
+}
+.playerName{
+    margin:auto;
+}
+.playerPoints{
+   margin:auto;
 }
 .startGameButton{
     position:relative;
@@ -106,8 +118,9 @@
 .playerNamesContainer{
     min-height:86%;
     width: 20%;
-    margin-top:30px;
+    margin-top:50px;
     margin-right: 10px;
+    overflow: auto;
 }
 
 .cluePageWrapper{

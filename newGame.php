@@ -2,7 +2,6 @@
 // Start the session
 session_start();
 
-
 ?>
 
 
@@ -40,7 +39,7 @@ session_start();
             </div>
             <div class="playerId" id="playerId"><?php echo ($_SESSION["idUser"])?>
             </div>
-            <button class="startGameButton" type="button" onclick="location.href='cluePage.html'">Avvia Partita</button>
+            <button class="startGameButton" type="button" onclick="location.href='cluePage.php'">Avvia Partita</button>
         </div>
         <div class="adv"><img src="https://via.placeholder.com/50x450"></div>
     </div>
