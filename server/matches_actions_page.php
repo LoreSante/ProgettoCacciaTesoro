@@ -14,13 +14,15 @@
 		case "insert" :
 			insertGame();
 		break;
-		case "update" :
-	   		updateData();
+		case "updateStatus" :
+            updateStatus();
 		break;
 		case "delete" :
 			deleteData();
 		break;
 	}
+
+
 
 	function loadGame() {
 		$query_string = 'SELECT * FROM matches ORDER BY id DESC';
@@ -28,9 +30,11 @@
 		$result = $mysqli->query($query_string);
 		$keys = array();
 
-        while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
+        while ($row = $result->fetch_array(MYSQLI_ASSOC))
+        {
         $id = $row['id'];
-        $key = array('id' => $id);
+        $status = $row ['status'];
+        $key = array('id' => $id, 'status'=>$status);
         array_push($keys, $key);
         }
 
@@ -41,51 +45,32 @@
 
 }
 
-/*
-	function insertData() {
-
-		if (isset($_POST['text'])) {
-			$to_do_text = $_POST['text'];
-		} else {
-			echo "you didn't specify a text";
-			return;
-		}
-
-		$query_string = "INSERT INTO to_do (text) values ('". htmlspecialchars($to_do_text) . "')";
-		$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
-
-    	// esegui la query per inserire il to do nel db
-		$result = $mysqli->query($query_string);
+    function updateStatus() {
+        if (isset($_POST['id'])) $id = $_POST['id'];
+        if (isset($_POST['status'])) $status = $_POST['status'];
 
 
-    	$query_string = 'SELECT * FROM to_do WHERE ID=' . $mysqli->insert_id;
 
-		//$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
+        $query_string = 'UPDATE matches SET status="'. $status . '" WHERE id="' . $id .'"';
 
-    	// esegui la query per rileggere il record inserito
-		$result = $mysqli->query($query_string);
+        $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
 
-    	$todos = array();
+        // esegui la query
 
-    	// cicla sul risultato
-		while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
+        $result = $mysqli->query($query_string);
 
-			$todo_id = $row['id'];
-  			$todo_text = $row['text'];
-			$to_do_completed = $row['completed'];
-  			$todo_date = $row['date'];
+        //echo $query_string;
 
-			$todo = array('id' => $todo_id,'text' =>$todo_text, 'completed' => $to_do_completed, 'date' => $todo_date);
-			array_push($todos, $todo);
-		}
+        if($mysqli->affected_rows > 0) {
+            // encodo l'array in JSON
 
-    	$response = array('todos' => $todos, 'type' => 'insert');
+            $response = array('updated' => true, 'id' => $id, 'type' => 'update');
+        } else {
+            $response = array('updated' => false, 'id' => $id, 'type' => 'update');
+        }
+        echo json_encode($response);
+    }
 
-		// encodo l'array in JSON
-		echo json_encode($response);
-
-	}
-*/
 	function insertGame() {
 	    $mysqli = new mysqli(DB_HOST,DB_USER, DB_PASSWORD,DB_DATABASE);
 	    $query_string = 'INSERT INTO matches(id) VALUES("0") ';
@@ -95,8 +80,6 @@
 		$result=$mysqli->query($query_string);
 		$query_string = 'SELECT * FROM matches ORDER BY id DESC';
 		$result=$mysqli->query($query_string);
-		$response =$result;
-		$todos = array();
         // cicla sul risultato
         $keys = array();
         while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
@@ -108,61 +91,5 @@
         // encodo l'array in JSON
         echo json_encode($response);
 	}
-
-/*	function updateData() {
-		if (isset($_POST['id'])) $id = $_POST['id'];
-		if (isset($_POST['status'])) $status = $_POST['status'];
-
-		$pieces = explode("_", $id);
-
-		$query_string = 'UPDATE to_do SET completed=' . $status . ' WHERE ID=' . $pieces[1];
-
-		$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
-
-    	// esegui la query
-		$result = $mysqli->query($query_string);
-
-		//echo $query_string;
-
-    	if($mysqli->affected_rows > 0) {
-		// encodo l'array in JSON
-
-	  		$response = array('updated' => true, 'id' => $id, 'type' => 'update');
-
-		} else {
-	  		$response = array('updated' => false, 'id' => $id, 'type' => 'update');
-		}
-
-	echo json_encode($response);
-
-}
-
-
-	function deleteData() {
-
-		if (isset($_POST['id'])) $id = $_POST['id'];
-
-			$pieces = explode("_", $id);
-
-			$query_string = 'DELETE FROM to_do WHERE ID=' . $pieces[1];
-
-			$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
-
-    		// esegui la query
-			$result = $mysqli->query($query_string);
-
-    		if($mysqli->affected_rows > 0) {
-
-				// encodo l'array in JSON
-	  			$response = array('deleted' => true, 'id' => $id, 'type' => 'delete');
-			} else {
-	  			$response = array('deleted' => false, 'id' => $id, 'type' => 'delete');
-	  		}
-
-			echo json_encode($response);
-	}
-*/
-
-
 
 ?>

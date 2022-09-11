@@ -24,6 +24,11 @@ session_start();
     <script type="text/javascript" src="scripts/startGameButton_plugin.js"></script>
     <script type="text/javascript" src="scripts/startGameButton_plugin_init.js"></script>
 
+    <script type="text/javascript" src="scripts/statusGame_plugin.js"></script>
+    <script type="text/javascript" src="scripts/statusGame_plugin_init.js"></script>
+
+    <script type="text/javascript" src="scripts/checkStatusGame.js"></script>
+    <script type="text/javascript" src="scripts/checkStatusGame_init.js"></script>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link href="css/page_style.css" rel="stylesheet" type="text/css">
@@ -47,7 +52,7 @@ session_start();
             </div>
             <div class="playerId" id="playerId">
             </div>
-            <button class="startGameButton" id="startGameButton" type="button" onclick="location.href='cluePage.php'">Avvia Partita</button>
+            <button class="startGameButton" id="startGameButton" type="button" ">Avvia Partita</button>
         </div>
         <div class="adv"><img src="https://via.placeholder.com/50x450"></div>
     </div>
