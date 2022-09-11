@@ -28,6 +28,8 @@
         case "loadDataSearchedByPlayerId" :
             loadDataSearchedByPlayerId();
         break;
+        case "deleteDataSearchedByPlayerId" :
+            deleteDataSearchedByPlayerId();
 	}
 
 	function loadData() {
@@ -219,7 +221,25 @@
 			echo json_encode($response);
 	}
 */
+function  deleteDataSearchedByPlayerId(){
 
+    if (isset($_POST['id'])) $id = $_POST['id'];
+    $mysqli = new mysqli(DB_HOST,DB_USER, DB_PASSWORD,DB_DATABASE);
+    $query_string = 'DELETE FROM players WHERE id="' . $id .'"';
+    $mysqli = new mysqli(DB_HOST,DB_USER, DB_PASSWORD,DB_DATABASE);
+    //$players = array();
+    $result = $mysqli->query($query_string);
+    // cicla sul risultato
+    if ($mysqli->affected_rows > 0) {
 
+        $response = array('deleted' => true, 'id' => $id, 'type' => 'delete');
+        // array_push($players, $player);
+    }
+    else
+        $response = array('deleted' => false, 'id' => $id, 'type' => 'delete');
+    // encodo l'array in JSON
+    echo json_encode($response);
+
+}
 
 ?>

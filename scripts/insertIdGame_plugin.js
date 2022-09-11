@@ -1,8 +1,7 @@
-
-
 (function($) {
 
-    $.fn.insertIdGame = function (options) {
+    $.fn.insertIdGame = function (options) {//script per l'ìnserimento dell'id partita all'interno della colonna game in tabella player
+                                            //+ reindirizzamento alla pagina newGame.php
         console.log("a");
         let $inputFormIdGame=document.getElementById("inputFormIdGame");
 

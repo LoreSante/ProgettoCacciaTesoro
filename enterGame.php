@@ -41,7 +41,7 @@ session_start();
             <div><h2 class="enterGameLabel"> Inserisci il codice partita </h2></div>
             <label for="inputFormIdGame"></label>
             <input type="text" placeholder="Inserire codice partita" id="inputFormIdGame" class="inputForm">
-            <div class="enterButton"><button  type="button" id="joinGameButton" onclick="location.href=''">Entra</button></div>
+            <div class="enterButton"><button  type="button" id="joinGameButton">Entra</button></div>
         </div>
     </div>
 
