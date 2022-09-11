@@ -18,6 +18,9 @@
     <script type="text/javascript" src="scripts/showGalleryUser_plugin_init.js"></script>
 
 
+    <script type="text/javascript" src="scripts/returnHomeButton_plugin.js"></script>
+    <script type="text/javascript" src="scripts/returnHomeButton_plugin_init.js"></script>
+
 
     <!-- START bootstrap -->
     <script src="scripts/bootstrap.min.js" type="text/javascript"></script>
@@ -36,7 +39,7 @@
     <div class="headerContainer">
         <div class="header">
             <div class="leftIconWrapper">
-                <div><a href="index.php"><span class="material-symbols-outlined">home</span></a></div>
+                <div><a href="index.php"><span class="material-symbols-outlined" style="cursor:pointer">home</span></a></div>
                 <div><a href="cluePage.php"><span class="material-symbols-outlined">chat_bubble</span></a></div>
                 <div><a href="index.php"><span class="material-symbols-outlined">cancel</span></a></div>
             </div>
