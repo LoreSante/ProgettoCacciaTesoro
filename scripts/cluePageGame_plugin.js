@@ -13,12 +13,38 @@
         })
 
         request.done(function(data) {
-            console.log("REQUEST.DONE: " + data);
+            console.log("REQUEST DONE GET ALL PAINTINGS: " + data);
             generateSelect(data);
-            copyPaintingArray(data.paintings);
-            console.log("array copy: "+ paintingArray);
-            shufflePaintingsArray();
-            console.log("array shuffled: "+ paintingArray);
+            paintingArray=data.paintings;
+
+
+
+            request_type="getPaintingsArray";
+            let requestGetPaintings= $.ajax({
+                url: options.serverURL2,
+                type: "POST",
+                data: { "action": request_type},
+                dataType: "json",
+            })
+
+            requestGetPaintings.done(function(data){
+                console.log("REQUESTGetPaintings DONE: " + data);
+                if(data.length==0){
+                    generatePaintingsArray();
+                }else{
+                    paintingArray=data;
+                    console.log("Array is already setted:  " + data);
+                }
+
+            });
+
+            request.fail(function(jqXHR, textStatus) {
+                alert( "RequestGetPaintings failed: " + textStatus );
+            });
+
+
+
+
         });
 
         request.fail(function(jqXHR, textStatus) {
@@ -35,11 +61,36 @@
             }
         }
 
+        function generatePaintingsArray(){
+            shufflePaintingsArray();
+            console.log("array shuffled: "+ paintingArray);
+
+            let request_type="setPaintingsArray";
+            let requestSetPaintings= $.ajax({
+                url: options.serverURL2,
+                type: "POST",
+                data: { "paintingsArray": paintingArray, "action": request_type},
+                dataType: "json",
+            })
+
+            requestSetPaintings.done(function(data){
+                console.log("REQUESTSetPaintings DONE: " + data);
+            });
+
+            request.fail(function(jqXHR, textStatus) {
+                alert( "Request failed: " + textStatus );
+            });
+
+        }
+
+        /* Funzione superflua
+
         function copyPaintingArray(array){ //copia l'array di quadri in paintingArray
             for(let i=0; i<array.length; i++){
                 paintingArray[i]=array[i];
             }
         }
+        */
 
         function shufflePaintingsArray(){
             let randIndex;
@@ -53,9 +104,14 @@
 
 
 
+        //TODO: valutare se è meglio creare una permutazione di indici e
+        // scorrere l'array attravero il punteggio (Forse è meglio in effetti).
+        // .Capire inoltre se l'array deve essere una variabile di sessione o no, per permettere la navigazione tra le pagine
+        //
 
+    }
 
-
+})(jQuery);
 
 
 /*
@@ -75,17 +131,6 @@
         }
 
  */
-        //TODO: valutare se è meglio creare una permutazione di indici e
-        // scorrere l'array attravero il punteggio (Forse è meglio in effetti).
-        // .Capire inoltre se l'array deve essere una variabile di sessione o no, per permettere la navigazione tra le pagine
-        //
-
-
-
-
-    }
-
-})(jQuery);
 
 /*
         for(let i=0;i<data2.players.length; i++)

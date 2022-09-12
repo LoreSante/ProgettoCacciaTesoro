@@ -1,3 +1,12 @@
+<?php
+// Start the session
+session_start();
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +24,8 @@
     <script type="text/javascript" src="scripts/playerList_plugin.js"></script>
     <script type="text/javascript" src="scripts/playerList_plugin_init.js"></script>
 
-    <script type="text/javascript" src="scripts/cluePageGame_Select_plugin.js"></script>
-    <script type="text/javascript" src="scripts/cluePageGame_Select_plugin_init.js"></script>
+    <script type="text/javascript" src="scripts/cluePageGame_plugin.js"></script>
+    <script type="text/javascript" src="scripts/cluePageGame_plugin_init.js"></script>
 
 
     <!-- inizio Bootstrap link -->
