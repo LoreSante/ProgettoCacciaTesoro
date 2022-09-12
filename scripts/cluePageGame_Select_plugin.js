@@ -1,7 +1,8 @@
 (function($) {
 
     $.fn.cluePageGame = function (options) {
-        const paintingsExtracted = [];
+        let paintingArray = [];
+
 
         let request_type="load";
         let request = $.ajax({
@@ -14,7 +15,10 @@
         request.done(function(data) {
             console.log("REQUEST.DONE: " + data);
             generateSelect(data);
-           // choosePainting(data);
+            copyPaintingArray(data.paintings);
+            console.log("array copy: "+ paintingArray);
+            shufflePaintingsArray();
+            console.log("array shuffled: "+ paintingArray);
         });
 
         request.fail(function(jqXHR, textStatus) {
@@ -30,6 +34,30 @@
                 select.appendChild(option);
             }
         }
+
+        function copyPaintingArray(array){ //copia l'array di quadri in paintingArray
+            for(let i=0; i<array.length; i++){
+                paintingArray[i]=array[i];
+            }
+        }
+
+        function shufflePaintingsArray(){
+            let randIndex;
+            for(let i=paintingArray.length-1; i>0; i--){
+                randIndex=Math.floor(Math.random()*(i+1));
+                let temp= paintingArray[i];
+                paintingArray[i]=paintingArray[randIndex];
+                paintingArray[randIndex]=temp;
+            }
+        }
+
+
+
+
+
+
+
+
 /*
         function choosePainting(data){
             //sceglie casualmente un indice tra quelli ancora non scelti FIXME: non funzione (non importa tanto non serve)
