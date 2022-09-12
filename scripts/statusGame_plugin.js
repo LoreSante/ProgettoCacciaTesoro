@@ -1,6 +1,6 @@
 (function($) {
 
-    $.fn.statusGame = function (options) {//
+    $.fn.statusGame = function (options) {//aggiorna status partita da 0 a 1 che viene fatta iniziare a partire dal click del pulsante startGameButton
         let $startGameButton = document.getElementById("startGameButton");
         $startGameButton.onclick = function (){
             updateStatus();
@@ -19,7 +19,6 @@
 
             request.done(function (data){
                 console.log("DONE UPDATE STATUS");
-                location.href="cluePage.php";
             });
         }
     }

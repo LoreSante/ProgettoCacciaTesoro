@@ -30,6 +30,8 @@
         break;
         case "deleteDataSearchedByPlayerId" :
             deleteDataSearchedByPlayerId();
+        case "updateIsHost" :
+            updateIsHost();
 	}
 
 	function loadData() {
@@ -87,7 +89,7 @@
  			array_push($players, $player);
  		}
 
-     	$response = array('players' => $players, 'type' => 'load');
+     	$response = array('players' => $players, 'type' => 'loadDataSearchedByGame');
 
  		// encodo l'array in JSON
  		echo json_encode($response);
@@ -216,6 +218,27 @@ function  deleteDataSearchedByPlayerId(){
     // encodo l'array in JSON
     echo json_encode($response);
 
+}
+
+function updateIsHost() {
+    if (isset($_POST['id'])) $id = $_POST['id'];
+    $query_string = 'UPDATE players SET isHost="'. 1 . '" WHERE id="' . $id .'"';
+
+    $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
+
+    // esegui la query
+    $result = $mysqli->query($query_string);
+
+    //echo $query_string;
+
+    if($mysqli->affected_rows > 0) {
+        // encodo l'array in JSON
+
+        $response = array('updated' => true, 'id' => $id, 'type' => 'updateIsHost');
+    } else {
+        $response = array('updated' => false, 'id' => $id, 'type' => 'updateIsHost');
+    }
+    echo json_encode($response);
 }
 
 ?>

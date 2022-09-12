@@ -65,7 +65,7 @@
             })
 
             request.done(function(data) {
-                console.log("REQUEST.DONE: WEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE " + data);
+                console.log("REQUEST.DONE:  " + data);
                 if(data.game.status==1){
                     location.href='cluePage.php';
                 }
