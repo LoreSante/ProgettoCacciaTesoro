@@ -67,8 +67,10 @@
 
             request.done(function(data) {
                 console.log("REQUEST.DONE:  " + data);
-                if(data.game.status==1){
-                    location.href='cluePage.php';
+                if(data.game) {
+                    if (data.game.status == 1) {
+                        location.href = 'cluePage.php';
+                    }
                 }
 
             });
