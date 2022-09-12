@@ -2,6 +2,7 @@
 
     $.fn.checkGameStatus = function (options) {//
         let idGame;
+
         getId();
 
         function  getId(){ //si occupa di fare la chiamata per ottenere lo userId e poi chiama gatStatus() in loop
