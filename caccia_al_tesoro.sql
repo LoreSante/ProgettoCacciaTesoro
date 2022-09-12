@@ -27,6 +27,7 @@ CREATE TABLE `paintings` (
 
 CREATE TABLE `matches` (
   `id` int(5) NOT NULL AUTO_INCREMENT,
+  `status` tinyint(4) NOT NULL DFAULT 0,
    PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
 
