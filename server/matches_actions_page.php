@@ -23,6 +23,9 @@
         case "search":
             searchById();
         break;
+        case "deleteById":
+            deleteById();
+        break;
 	}
 
 
@@ -52,24 +55,15 @@
         if (isset($_POST['id'])) $id = $_POST['id'];
         if (isset($_POST['status'])) $status = $_POST['status'];
 
-
-
         $query_string = 'UPDATE matches SET status="'. $status . '" WHERE id="' . $id .'"';
-
         $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
-
-        // esegui la query
-
         $result = $mysqli->query($query_string);
-
-        //echo $query_string;
-
         if($mysqli->affected_rows > 0) {
             // encodo l'array in JSON
 
-            $response = array('updated' => true, 'id' => $id, 'type' => 'update');
+            $response = array('updated' => true, 'id' => $id, 'status' => $status, 'type' => 'update');
         } else {
-            $response = array('updated' => false, 'id' => $id, 'type' => 'update');
+            $response = array('updated' => false, 'id' => $id,  'status' => $status,  'type' => 'update');
         }
         echo json_encode($response);
     }
@@ -118,5 +112,22 @@
         echo json_encode($response);
 
     }
+
+    function deleteById() {
+    if(isset($_POST["id"])) $id=$_POST["id"];
+
+    $query_string = 'DELETE FROM matches WHERE id="'.$id.'"';
+    $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
+    $result = $mysqli->query($query_string);
+    if($mysqli->affected_rows > 0) {
+        $response = array('deleted' => true, 'id' => $id, 'type' => 'deleteById');
+    }
+    else {
+        $response = array('deleted' => false, 'id' => $id, 'type' => 'deleteById');
+    }
+    echo json_encode($response);
+
+    }
+
 
 ?>

@@ -30,8 +30,10 @@
         break;
         case "deleteDataSearchedByPlayerId" :
             deleteDataSearchedByPlayerId();
+            break;
         case "updateIsHost" :
             updateIsHost();
+            break;
 	}
 
 	function loadData() {
@@ -105,7 +107,6 @@
         $query_string = 'SELECT * FROM players WHERE id="' . $id .'"';
         $result = $mysqli->query($query_string);
          //$players = array();
-
          // cicla sul risultato
          if ($row = $result->fetch_array(MYSQLI_ASSOC)) {
 
@@ -202,20 +203,19 @@
 function  deleteDataSearchedByPlayerId(){
 
     if (isset($_POST['id'])) $id = $_POST['id'];
-    $mysqli = new mysqli(DB_HOST,DB_USER, DB_PASSWORD,DB_DATABASE);
     $query_string = 'DELETE FROM players WHERE id="' . $id .'"';
     $mysqli = new mysqli(DB_HOST,DB_USER, DB_PASSWORD,DB_DATABASE);
-    //$players = array();
+
     $result = $mysqli->query($query_string);
     // cicla sul risultato
     if ($mysqli->affected_rows > 0) {
 
-        $response = array('deleted' => true, 'id' => $id, 'type' => 'delete');
-        // array_push($players, $player);
+        $response = array('deleted' => true, 'id' => $id, 'type' => 'deleteDataSearchedByPlayerId');
+
     }
     else
-        $response = array('deleted' => false, 'id' => $id, 'type' => 'delete');
-    // encodo l'array in JSON
+        $response = array('deleted' => false, 'id' => $id, 'type' => 'deleteDataSearchedByPlayerId');
+
     echo json_encode($response);
 
 }
