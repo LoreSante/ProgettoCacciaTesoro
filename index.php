@@ -66,7 +66,6 @@ $_SESSION["idUser"] = "abaco";
         </div>
 </body>
 <footer>
-
     <div class="footerContainer">
         <div class="header3"></div>
         <div class="header2"></div>

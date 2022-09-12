@@ -156,3 +156,13 @@
 }
 
 /*fixme da rivedere e da ricontrollare le regole della cluePage.php */
+
+@media (max-width: 850px){
+    .adv{
+        display: none;
+    }
+
+    .newGamePageWrapper{
+
+    }
+}

@@ -50,11 +50,6 @@
         </div>
     </div>
     <div class="wall">
-        <!--
-        /* FIXME inserire qui dentro i quadri tramite script  */
-        /* trovare un modo per creare il giusto numero di wall per come sono disposti i quadri,
-        eventualmente creare div grandi e contigui con l*/
-        -->
         <div class="container-fluid text-center paintingsGallery">
             <div class="row row-cols-xs-1 row-cols-sm-2 row-cols-md-4 paintingsGallery paintingContainer" id="paintingsContainer">
 

@@ -1,0 +1,23 @@
+.header6{
+    display: block;
+    position: relative;
+    background-color: #870c0c;
+    height: 3px;
+}
+
+.header7{
+    background-color: #870c0c;
+    height: 10px;
+    position:relative;
+
+}
+
+.textRedContainer{
+    margin: auto ;
+    text-align: center;
+    width: 100%;
+    padding: 80px;
+    border: 7px solid #870c0c;
+    border-radius: 10px;
+    background-color: #3f51b5;
+}
