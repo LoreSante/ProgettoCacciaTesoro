@@ -18,7 +18,9 @@
 
             request.done(function(data) {
                 console.log("REQUEST.DONE: " + data);
-                //setInterval(getMatch,
+                //playerId=data;
+                //setInterval(getMatch,2000)
+
                 getMatch(data);
             });
 
@@ -74,6 +76,9 @@
                     if(data.game.status == 2) {
                         if(player.points<victoryPoints){
                             location.href='defeatPage.php';
+                        }
+                        else{
+                            location.href='victoryPage.php';
                         }
                         else{
                             location.href='victoryPage.php';
