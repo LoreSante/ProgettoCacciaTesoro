@@ -40,9 +40,6 @@ session_start();
     <script type="text/javascript" src="scripts/goToEndPage_plugin.js"></script>
     <script type="text/javascript" src="scripts/goToEndPage_plugin_init.js"></script>
 
-    <script type="text/javascript" src="scripts/returnHomeButton_plugin.js"></script>
-    <script type="text/javascript" src="scripts/returnHomeButton_plugin_init.js"></script>
-
 
         <!-- inizio Bootstrap link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
