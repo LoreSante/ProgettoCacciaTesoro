@@ -52,7 +52,8 @@
                     console.log("Array is already setted:  " + data);
                 }
                 //TODO Continua da qui
-                setInterval(showCurrentRiddle, 1000);
+                showCurrentRiddle();
+                setInterval(showCurrentRiddle, 5000);
                 //showCurrentRiddle();
 
 
@@ -185,7 +186,6 @@
             if (selectText===paintingArrayText) {
                 console.log("RISPOSTA CORRETTA")
                 showPainting();
-
                 playerPoints++;
                 let request_type = "updatePoints";
                 let requestUpdatePoints = $.ajax({
@@ -198,7 +198,7 @@
 
                 requestUpdatePoints.done(function (data) {
                     console.log("REQUEST DONE _ NEW POINTS: " + data);
-                    setTimeout(resetPaintingImage, 2000);
+                    setTimeout(resetPaintingImage, 2500);
                 });
                 requestUpdatePoints.fail(function (jqXHR, textStatus) {
                     alert("RequestUpdatePoints failed: " + textStatus);

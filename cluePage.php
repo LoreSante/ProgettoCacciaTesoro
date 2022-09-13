@@ -30,7 +30,18 @@ session_start();
     <script type="text/javascript" src="scripts/confirmPaintingButton_plugin.js"></script>
     <script type="text/javascript" src="scripts/confirmPaintingButton_plugin_init.js"></script>
 -->
-    <!-- inizio Bootstrap link -->
+    <script type="text/javascript" src="scripts/endGame_plugin.js"></script>
+    <script type="text/javascript" src="scripts/endGame_plugin_init.js"></script>
+
+
+    <script type="text/javascript" src="scripts/headerPoints_plugin.js"></script>
+    <script type="text/javascript" src="scripts/headerPoints_plugin_init.js"></script>
+
+    <script type="text/javascript" src="scripts/g_plugin.js"></script>
+    <script type="text/javascript" src="scripts/headerPoints_plugin_init.js"></script>
+
+
+        <!-- inizio Bootstrap link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">

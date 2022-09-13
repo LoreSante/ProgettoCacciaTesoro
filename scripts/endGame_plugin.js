@@ -1,6 +1,6 @@
 (function($) {
 
-    $.fn.checkGameStatus = function (options) {//
+    $.fn.endGame = function (options) {//
         let idGame;
         let player;
         let victoryPoints=10;
@@ -71,10 +71,7 @@
             request.done(function(data) {
                 console.log("REQUEST.DONE:  " + data);
                 if(data.game) {
-                    if (data.game.status == 1) {
-                        location.href = 'cluePage.php';
-                    }
-                    else if(data.game.status == 2) {
+                    if(data.game.status == 2) {
                         if(player.points==victoryPoints){
                             location.href='victoryPage.php';
                         }
