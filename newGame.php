@@ -47,8 +47,11 @@ $_SESSION["paintingsArray"]=[];
     <div class="newGamePageWrapper">
         <div class="adv"><img src="https://via.placeholder.com/50x450"></div>
         <div class="lobbyContainer">
-            <div class="codeLabelWrapper"><b class="codeLabel">Codice Partita:</b></div>
-            <div class="matchIdWrapper" id="matchIdWrapper"><p class="matchID" id="matchID">Loading...</p></div>
+            <div class="codeLabelWrapper matchIdWrapper" id="matchIdWrapper">
+                <p class="codeLabel">Codice Partita:</p>
+                <p class="matchID" id="matchID">Loading...</p>
+            </div>
+
             <div class="playerNamesWrapper" id="playerNamesWrapper">
             </div>
             <div class="playerId" id="playerId">
@@ -57,9 +60,6 @@ $_SESSION["paintingsArray"]=[];
         </div>
         <div class="adv"><img src="https://via.placeholder.com/50x450"></div>
     </div>
-
-    <div class="footerContainer"></div>
-
 </body>
 <footer>
     <div class="footerContainer"></div>

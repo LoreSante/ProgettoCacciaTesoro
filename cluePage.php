@@ -40,10 +40,15 @@ session_start();
 <body>
     <div class="headerContainer">
         <div  class="header">
-            <div class="leftIconWrapper">
+            <div class="iconClueWrapper">
                 <div><a href="index.php"><span class="material-symbols-outlined">home</span></a></div>
                 <div><a href="gallery.php"><span class="material-symbols-outlined">panorama</span></a></div>
                 <div><a href="index.php"><span class="material-symbols-outlined">cancel</span></a></div>
+            </div>
+            <div id="headerProgress">
+                <p class="points">0/10</p>
+            </div>
+            <div class="rightClueIconWrapper">
             </div>
         </div>
     </div>
@@ -53,15 +58,18 @@ session_start();
             <div class="clueText" id="clueText">Loading</div>
             <div  class="paintPicture"><img id="paintImage" src="https://via.placeholder.com/150x250/#e0e0e0"></div>
             <button id="confirmButton" class="homeButton confirmButton" type="button"">Conferma</button>
-            <select title="Seleziona quadro" id="selectPaint" class="selectPaint"></select> <!--TODO script menu a tendina -->
-             <!-- TODO modificare CSS e inserire script per conferma del quadro-->
-
-                 <!--TODO script menu a tendina -->
-
+            <select title="Seleziona quadro" id="selectPaint" class="selectPaint"></select>
         </div>
         <div id="playerNamesContainer" class="playerNamesContainer">
         </div>
     </div>
 
 </body>
+<footer>
+    <div class="footerCluePage">
+        <div id="footerProgress" >
+            <p class="points">0/10</p>
+        </div>
+    </div>
+</footer>
 </html>

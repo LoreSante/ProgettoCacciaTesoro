@@ -11,15 +11,7 @@
     		case "load" :
     			loadData();
     		break;
-    		case "insert" :
 
-    		break;
-    		case "update" :
-
-    		break;
-    		case "delete" :
-
-    		break;
     	}
 
 

@@ -40,7 +40,7 @@
     background-color: white;
     text-align: start;
     border-radius:10px;
-    border: black 1px solid;
+    border: #002984 3px solid;
 }
 .enterButton{
     width: 20%;
@@ -52,19 +52,22 @@
     font-size:25px;
     color:white;
     background-color: #002984;
-    border-radius: 5px ;
+    border-radius: 8px ;
     border:black 1px solid;
     cursor:pointer;
     transition-duration: 0.4s;
 }
 
 .enterButton button:hover{
-    background-color: #ba5100;
+    color: black;
+    background-color: white;
+    border:#ffb053 3px solid;
 }
 
 .playerName, .enterGameLabel, .inputForm, .enterButton {
     margin: 20px;
 }
+
 
 @media (max-width: 1000px)
 {

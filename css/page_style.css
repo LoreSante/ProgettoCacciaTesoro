@@ -60,6 +60,8 @@ body{
 
 .menuButton{
     width: 100%;
+    color: antiquewhite;
+    background-color: #002984;
 }
 
 
@@ -67,16 +69,17 @@ body{
 .homeButton {
     border-color: black;
     font-size: 25px;
-    color: antiquewhite;
-    background-color: #002984;
     height: 100%;
     border-radius: 15px;
     cursor:pointer;
     transition-duration: 0.4s;
 }
 
-.homeButton:hover{
-    background-color: #757de8;
+.menuButton:hover{
+
+    border: #ffb053 4px solid;
+    background-color:white;
+    color:black;
 }
 
 .galleryHomeButton {
@@ -92,7 +95,8 @@ body{
 }
 
 .galleryHomeButton:hover{
-    background-color: #ba5100;
+    border: #ba5100 4px solid;
+    background-color: white;
 }
 
 
@@ -173,21 +177,27 @@ body{
 }
 
 .nameSelected{
-
     width: 100%;
     font-size: 25px;
-
     height: available;
-
-    border-color: black;
-
     color:white;
-    background-color: #ba5100;
+    background-color: #002984;
     border-radius: 15px;
     cursor:pointer;
     transition-duration: 0.4s;
     padding-bottom: 4px;
     text-align:center;
+}
+
+.nameSelected:hover{
+    border: #ffb053 4px solid;
+    background-color:white;
+    color:black;
+}
+
+.nameSelected:active{
+    background-color:#ffb053;
+
 }
 /*
 

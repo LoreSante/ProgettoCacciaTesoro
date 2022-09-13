@@ -36,7 +36,7 @@ session_start();
         </p>
         <br>
         <p id="secondText">
-            Hai risolto tutti gli indizi prima degli altri giocatori
+            Un altro giocatore ha risolto tutti gli indovinelli prima di te...
         </p>
         <button class="finishGameButton" id="finishGameButton" type="button" ">Ritorna al menù principale</button>
     </div>

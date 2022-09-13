@@ -35,6 +35,7 @@
     min-height: 90%;
     border-radius:20px;
     background-color: #757de8;
+
 }
 /* deprecato
 
@@ -65,11 +66,11 @@
     display:flex;
     flex-direction:row;
     width: 100%;
-    height:8%;
     max-height:available;
-
+    padding-top:8px;
+    padding-bottom: 8px;
     background-color:white;
-    border: black 1px solid;
+    border: 2px solid #ffb053;
     border-radius: 20px;
     justify-content:space-around;
     align-content:center;
@@ -77,10 +78,20 @@
     text-justify: distribute;
     margin-top:5px;
     margin-bottom:5px;
+    font-size: 20px;
 
 }
 
+.matchIdWrapper{
+    margin-top: 3%;
+}
+
+.matchIdWrapper p{
+    display: inline-block;
+}
+
 .playerNameSample h5{
+
     line-height: 2;
     display: block;
     vertical-align: middle;
@@ -93,31 +104,41 @@
    margin:auto;
 }
 .startGameButton{
+    margin-top:50px;
     position:relative;
     bottom:0;
     width: 40%;
     height: 100%;
-    min-height:40px;
+    padding-top:12px;
+    padding-bottom: 12px;
     font-size:18px;
     color:white;
     background-color: #002984;
-    border-radius: 5px ;
-    border:black 1px solid;
+    border-radius: 10px ;
     cursor:pointer;
     transition-duration: 0.4s;
 }
 
 .startGameButton:hover{
-    background-color:#ffb053;
+    border: #ffb053 4px solid;
+    background-color:white;
     color:black;
 }
 
 /* regole esclusive della pagina dell'indizio: cluepage.html */
 
 .confirmButton{
+    color:white;
+    background-color: #002984;
     width: 40%;
     height: 50px;
     margin-bottom: 3%;
+}
+
+.confirmButton:hover{
+    color:black;
+    background-color: white;
+    border: #ffb053 4px solid;
 }
 
 .playerNamesContainer{
@@ -148,8 +169,9 @@
 
 .paintPicture{
     border:#ba5100 3px solid;
-    margin:5%;
+    margin-bottom:5%;
     border-radius: 3px;
+    width: 20%;
 }
 
 .selectPaint{
@@ -160,6 +182,75 @@
 
 }
 
+#paintImage{
+    width: 100%;
+}
+
+#headerProgress{
+    text-align: center;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    width: 10%;
+    height: 50%;
+}
+
+#headerProgress p{
+    font-size: 30px;
+    height: 100%;
+    margin:0;
+    padding: 10px;
+    border: #ffb053 3px solid;
+    border-radius: 6px;
+}
+
+#footerProgress{
+    text-align: center;
+    margin: 3% auto;
+    background-color: white;
+    border-radius: 10px;
+    width: 20%;
+    height: 50%;
+}
+
+#footerProgress p{
+    font-size: 30px;
+    height: 100%;
+    margin:0;
+    padding: 4px;
+    border: #ffb053 3px solid;
+    border-radius: 6px;
+}
+
+.footerCluePage{
+    background-color: #3f51b5;
+    width:100%;
+    height:7%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+.iconClueWrapper{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    width:162px;
+}
+
+
+.iconClueWrapper div a span{
+    color: white;
+    margin: 15px;
+}
+
+.rightClueIconWrapper{
+    width:162px;
+}
+
+
+
 /*media queries relative alla createGame*/
 
 
@@ -168,30 +259,31 @@
         display: none;
     }
 
-}
-
-@media  (max-width: 1700px)
-{
-    .lobbyContainer{
-        min-width: 50%;
-    }
 
 }
 
 @media (max-width: 500px)
 {
     .lobbyContainer{
-        min-width: 60%;
+        width: 90%;
+    }
+
+}
+
+@media  (max-width: 1500px){
+
+    .lobbyContainer{
+        width: 80%;
     }
 
 }
 
 /*media queries relative alla cluePage*/
 
-@media (max-width: 850px)
+@media (max-width: 1700px)
 {
-    .playerNameSample h5{
-        font-size: 15px;
+    .adv{
+        display: none;
     }
 
     .clueText{
@@ -208,31 +300,90 @@
         margin: auto;
         width: 80%;
     }
-    .playerNamesContainer{
-        margin: auto;
-        width: 80%;
-    }
-
-    .playerNameSample{
-        font-size: 13px;
-    }
 
     .confirmButton{
         font-size: 18px;
         width: 70%;
     }
 
-    .selectPaint{
-        width: 70%;
-    }
 
     .lobbyContainer, .clueContainer{
         margin-top:5%;
     }
+
+    .playerNamesContainer{
+        margin: auto;
+        width: 70%;
+    }
+
 }
 
-@media (min-width: 851px) and (max-width: 1500px){
-    .confirmButton{
+
+
+@media (min-width: 851px) and (max-width: 1700px ){
+    .paintPicture{
         width: 30%;
     }
+}
+
+@media (max-width: 850px){
+    .paintPicture{
+        width: 60%;
+    }
+
+    .selectPaint{
+        width: 70%;
+    }
+
+    .confirmButton{
+        width: 70%;
+    }
+
+    .playerNameSample h5{
+        font-size: 18px;
+    }
+
+    #headerProgress{
+        display: none;
+    }
+
+    #footerProgress{
+        display: block;
+    }
+
+    .footerCluePage{
+        display: block;
+    }
+
+    .iconClueWrapper{
+        margin: auto;
+        width: 100%;
+    }
+
+    .iconClueWrapper div{
+        margin: auto;
+        width: 30%;
+    }
+
+    .rightClueIconWrapper{
+        display: none;
+    }
+
+}
+
+@media (min-width: 851px){
+    #headerProgress{
+        display: block;
+    }
+
+    #footerProgress{
+        display: none;
+    }
+
+    .footerCluePage{
+        display: none;
+    }
+
+
+
 }
