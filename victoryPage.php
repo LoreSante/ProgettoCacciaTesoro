@@ -37,7 +37,9 @@ session_start();
         <p id="firstText">
             HAI VINTO!
         </p>
-
+        <p id="secondText">
+            Complimenti! Hai risolto tutti gli indovinelli prima degli altri giocatori.
+        </p>
         <button class="finishGameButton" id="finishGameButton" type="button" ">Menù principale</button>
     </div>
 </div>

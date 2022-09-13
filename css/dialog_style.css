@@ -1,4 +1,9 @@
+*{
 
+    font: normal 19px "Georgia", sans-serif;
+
+
+}
 /* The Modal (background) */
 #formWrapper{
     display: none; /* Hidden by default */
@@ -113,7 +118,7 @@
 
 
 .title{
-    font: normal 48px/100% "Times New Roman", serif;
+    font: normal 48px/100% "Georgia", sans-serif;
 }
 
 
@@ -122,8 +127,8 @@
 }
 
 #description{
-    line-height: 25px;
-    font-size: 17px;
+    line-height: 28px;
+    font-size: 20px;
     text-align:justify;
     text-justify: auto;
 }

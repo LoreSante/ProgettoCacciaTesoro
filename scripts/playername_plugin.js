@@ -31,7 +31,8 @@ let $playerName= "Guest";
             let $submitButton = $('.nameSelected', $this.parent());
 
             $submitButton.on("click", function () {
-                $playerName=$this.parent().find(".fname").val();
+                if($this.parent().find(".fname").val()!="")
+                    $playerName=$this.parent().find(".fname").val();
                 //sendName($this);
             });
         });

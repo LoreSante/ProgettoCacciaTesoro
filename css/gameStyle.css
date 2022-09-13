@@ -9,6 +9,10 @@
 
 }
 
+.advClue{
+    flex:1;
+}
+
 .adv{
     display: flex;
     justify-content: space-around;
@@ -24,6 +28,8 @@
 
 }
 
+
+
 .lobbyContainer, .clueContainer{
     align-self: center;
     justify-self: center;
@@ -35,7 +41,7 @@
     min-height: 90%;
     border-radius:20px;
     background-color: #757de8;
-
+    padding-bottom: 1%;
 }
 /* deprecato
 
@@ -127,6 +133,16 @@
 
 /* regole esclusive della pagina dell'indizio: cluepage.html */
 
+.headerCluePage{
+    height: 100px;
+    background-color: #3f51b5;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+
+}
+
 .confirmButton{
     color:white;
     background-color: #002984;
@@ -154,6 +170,7 @@
 }
 
 .clueContainer{
+    flex:7;
     width:60%;
     margin-right:5px;
 }
@@ -192,8 +209,9 @@
     background-color: white;
     border-radius: 10px;
     width: 10%;
-    height: 50%;
+    height: 50px;
     border: #ffb053 3px solid;
+
 }
 
 #headerProgress p{
@@ -218,11 +236,9 @@
 }
 
 #footerProgress p{
-
     height: 100%;
     margin:0;
     padding: 4px;
-
     border-radius: 6px;
 }
 
@@ -294,28 +310,28 @@
         font-size: 20px;
     }
     .cluePageWrapper{
-
         display: block;
         flex-direction: column;
     }
 
     .clueContainer{
-
         margin: auto;
         width: 80%;
     }
 
     .confirmButton{
         font-size: 18px;
-        width: 70%;
+        width: 40%;
     }
 
 
-    .lobbyContainer, .clueContainer{
-        margin-top:5%;
+    .clueContainer{
+        margin-top: 5%;
+        padding-bottom: 3%;
     }
 
     .playerNamesContainer{
+        display: block;
         margin: auto;
         width: 70%;
     }
@@ -323,6 +339,7 @@
 }
 
 @media (max-width: 500px){
+
     #footerProgress p{
         padding:10px;
     }
@@ -345,6 +362,10 @@
 }
 
 @media (max-width: 850px){
+    .headerCluePage{
+        height: 100%;
+    }
+    
     .paintPicture{
         width: 60%;
     }

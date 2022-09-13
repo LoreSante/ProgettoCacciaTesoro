@@ -4,7 +4,7 @@
 
 session_start();
 
-$_SESSION["idUser"] = "abaco";
+$_SESSION["idUser"] = "";
 
 ?>
 
@@ -51,14 +51,14 @@ $_SESSION["idUser"] = "abaco";
                     </a>
                 </div>
             </div>
-
         </div>
         <div class="header2"></div>
         <div class="header3"></div>
     </div>
         <div class="indexContainer menuContainer">
             <div class="logo">
-                <img src="https://via.placeholder.com/150" alt="logo">
+                <div> Gallery </div>
+                <!--<img src="https://via.placeholder.com/150" alt="logo">-->
             </div>
             <div class="inputName"></div>
             <div class="sub-container"><button class="homeButton newGameButton menuButton" id="newGameButton" type="button" >Crea Nuova Partita</button></div>

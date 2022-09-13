@@ -1,8 +1,10 @@
 *{
     margin:0;
-    font: normal 16px/100% "Helvetica Neue", sans-serif;
+    font: normal 16px "Georgia", sans-serif;
     color: #000;
+
 }
+
 
 html{
     height: 100%;
@@ -20,7 +22,7 @@ body{
     background-color: #3f51b5;
     width:100%;
     position: sticky; /**/
-    height:7%;
+    height: 7%;
     z-index: 2;
 }
 
@@ -58,10 +60,15 @@ body{
     }
 }
 
+.logo div{
+    font-size: 150px;
+}
+
 .menuButton{
     width: 100%;
     color: antiquewhite;
     background-color: #002984;
+
 }
 
 
@@ -307,4 +314,23 @@ body{
 
 #titleButton{
     cursor: pointer;
+}
+
+/* logo */
+@media (max-width: 1000px) {
+    .logo div{
+        font-size: 100px;
+    }
+}
+
+@media(max-width: 600px){
+    .logo div{
+        font-size: 80px;
+    }
+}
+
+@media(max-height: 1000px){
+    .logo div{
+        font-size: 90px;
+    }
 }

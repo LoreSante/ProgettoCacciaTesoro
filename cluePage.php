@@ -50,7 +50,7 @@ session_start();
 </head>
 <body>
     <div class="headerContainer">
-        <div  class="header">
+        <div  class="headerCluePage">
             <div class="iconClueWrapper">
                 <div><a href="index.php"><span class="material-symbols-outlined">home</span></a></div>
                 <div><a href="gallery.php"><span class="material-symbols-outlined">panorama</span></a></div>
@@ -64,7 +64,7 @@ session_start();
         </div>
     </div>
     <div class="cluePageWrapper">
-        <div class="adv"><img src="https://via.placeholder.com/50x450"></div>
+        <div class="adv advClue" ><img src="https://via.placeholder.com/50x450"></div>
         <div class="clueContainer">
             <div class="clueText" id="clueText">Loading</div>
             <div  class="paintPicture"><img id="paintImage" src="https://via.placeholder.com/150x250/#e0e0e0"></div>

@@ -21,6 +21,8 @@
     <script type="text/javascript" src="scripts/returnHomeButton_plugin.js"></script>
     <script type="text/javascript" src="scripts/returnHomeButton_plugin_init.js"></script>
 
+    <script type="text/javascript" src="scripts/cluePageButton_plugin.js"></script>
+    <script type="text/javascript" src="scripts/cluePageButton_plugin_init.js"></script>
 
     <!-- START bootstrap -->
     <script src="scripts/bootstrap.min.js" type="text/javascript"></script>
@@ -39,8 +41,8 @@
     <div class="headerContainer">
         <div class="header">
             <div class="leftIconWrapper">
-                <div><a href="index.php"><span class="material-symbols-outlined" style="cursor:pointer">home</span></a></div>
-                <div><a href="cluePage.php"><span class="material-symbols-outlined">chat_bubble</span></a></div>
+                <div><a><span class="material-symbols-outlined" id="returnHomeButton" style="cursor:pointer">home</span></a></div>
+                <div><a href="cluePage.php"><span class="material-symbols-outlined" id="cluePageButton">chat_bubble</span></a></div>
                 <div><a href="index.php"><span class="material-symbols-outlined">cancel</span></a></div>
             </div>
             <div class="rightIconWrapper">
