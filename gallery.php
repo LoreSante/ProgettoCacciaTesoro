@@ -51,8 +51,7 @@
     </div>
     <div class="wall">
         <div class="container-fluid text-center paintingsGallery">
-            <div class="row row-cols-xs-1 row-cols-sm-2 row-cols-md-4 paintingsGallery paintingContainer" id="paintingsContainer">
-
+            <div class="row row-cols-xs-1 row-cols-sm-2 row-cols-md-3 paintingsGallery paintingContainer" id="paintingsContainer">
             </div>
         </div>
     </div>

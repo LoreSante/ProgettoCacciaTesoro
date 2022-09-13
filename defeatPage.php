@@ -14,6 +14,9 @@ session_start();
     <link href="css/dialog_style.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <script type="text/javascript" src="scripts/finishGameButton_plugin.js"></script>
+    <script type="text/javascript" src="scripts/finishGameButton_plugin_init.js"></script>
     <!--
     <script type="text/javascript" src="scripts/ipAddress_plugin.js"></script>
     <script type="text/javascript" src="scripts/ipAddress_plugin_init.js"></script>

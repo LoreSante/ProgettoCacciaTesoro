@@ -26,7 +26,7 @@
                 })
 
                 request.done(function (data){
-
+                    let $idGame= data.player.game;
                     let request_type="deleteDataSearchedByPlayerId";
                     let request2 = $.ajax({
                         url: options.serverURL,
@@ -43,11 +43,12 @@
                      request = $.ajax({
                         url: options.serverURL3,
                         type: "POST",
-                        data:{ "id": data.players[0].game, "action" : request_type },
+                        data:{ "id": $idGame, "action" : request_type },
                         dataType: "json",
                     })
                     request.done(function (data){
                         console.log("CANCELLAZIONE PARTITA EFFETTUATA");
+                        location.href="index.php";
                     })
                 });
 

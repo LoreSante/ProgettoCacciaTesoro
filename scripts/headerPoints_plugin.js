@@ -23,9 +23,10 @@
                     dataType: "json",
                 })
                 request2.done(function (data){
-                    console.log("PUNTI GIOCATOREEEEEEEEEEEEEEE");
+                    console.log("PUNTI GIOCATOREEEEEEEEEEEEEEE"+data.player.points);
                     let $points=document.getElementsByClassName("points");
-                    $points.innerText=data.player.points;
+                    $points[0].innerText=data.player.points+" / "+victoryPoints;
+                    $points[1].innerText=data.player.points+" / "+victoryPoints;
                 });
 
                 request2.fail(function(jqXHR, textStatus) {
