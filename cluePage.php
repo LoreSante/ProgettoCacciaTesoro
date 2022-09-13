@@ -40,6 +40,9 @@ session_start();
     <script type="text/javascript" src="scripts/goToEndPage_plugin.js"></script>
     <script type="text/javascript" src="scripts/goToEndPage_plugin_init.js"></script>
 
+    <script type="text/javascript" src="scripts/returnHomeButton_plugin.js"></script>
+    <script type="text/javascript" src="scripts/returnHomeButton_plugin_init.js"></script>
+
 
         <!-- inizio Bootstrap link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -52,9 +55,8 @@ session_start();
     <div class="headerContainer">
         <div  class="headerCluePage">
             <div class="iconClueWrapper">
-                <div><a href="index.php"><span class="material-symbols-outlined">home</span></a></div>
+                <div><a><span class="material-symbols-outlined" id="returnHomeButton">home</span></a></div>
                 <div><a href="gallery.php"><span class="material-symbols-outlined">panorama</span></a></div>
-                <div><a href="index.php"><span class="material-symbols-outlined">cancel</span></a></div>
             </div>
             <div id="headerProgress">
                 <p class="points">0/10</p>
