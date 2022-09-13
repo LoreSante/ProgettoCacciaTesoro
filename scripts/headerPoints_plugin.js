@@ -1,6 +1,8 @@
 (function($) {
 
-    $.fn.headerPoints = function (options) {
+    $.fn.headerPoints = function (options) {//stampa il punteggio del giocatore in tempo reale nell'header di cluepage
+
+        let victoryPoints=10;
 
         setInterval(updatePoints, 1000 );
 
@@ -15,11 +17,13 @@
 
             request.done(function(data) {
                 console.log("REQUEST.DONE: " + data);
-                let request_type=" loadDataSearchedByPlayerId";
+                let playerId=data;
+                console.log("PLAYER ID [header points] " + playerId);
+                let request_type="loadDataSearchedByPlayerId";
                 let request2 = $.ajax({
                     url: options.serverURL2,
                     type: "POST",
-                    data:{ "id": data, "action" : request_type },
+                    data:{ "id": playerId, "action" : request_type },
                     dataType: "json",
                 })
                 request2.done(function (data){

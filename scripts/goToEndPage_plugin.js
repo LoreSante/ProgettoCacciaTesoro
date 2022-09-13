@@ -1,8 +1,9 @@
 (function($) {
 
     $.fn.setEndedStatus = function (options) { ////cambia lo stato della partita in concluso quando un giocatore vince
-        let victoryPoints=10;
+        let victoryPoints=3;
         let playerId;
+        let matchId;
 
         getId();
 
@@ -17,6 +18,7 @@
 
             request.done(function(data) {
                 console.log("REQUEST.DONE: " + data);
+                playerId=data;
                 setInterval(getPlayerInfo, 2000);
 
             });
@@ -30,7 +32,7 @@
         function getPlayerInfo(){ //ottiene le info sul giocatore
             let request_type="loadDataSearchedByPlayerId";
             let requestPoints=$.ajax({
-                url: options.serverURL3,
+                url: options.serverURL2,
                 type: "POST",
                 data: { "id": playerId, "action": request_type},
                 dataType: "json",
@@ -38,6 +40,7 @@
 
             requestPoints.done(function (data) {
                 console.log("REQUESTE DONE:" +data);
+                matchId=data.player.game;
                 checkPoints(data.player.points);
 
             });
@@ -47,19 +50,19 @@
         }
 
         function checkPoints(points){ //controlla se il giocatore ha raggiunto il numero di punti per vincere
+            console.log("PARTITA QUASI FINITAAAAAAA")
             if(points>=victoryPoints){
                 updateStatus();
             }
         }
 
         function updateStatus(){  //cambia lo status della partita in "conclusa" --> 2
-            let $matchID= document.getElementById("matchID").innerText;
-            console.log($matchID);
+            console.log("PARTITA FINITAAAAAAA")
             let request_type = "updateStatus";
             let request = $.ajax({
-                url: options.serverURL,
+                url: options.serverURL3,
                 type: "POST",
-                data: {"id": $matchID, "status": 2, "action": request_type},
+                data: {"id": matchId, "status": 2, "action": request_type},
                 dataType: "json",
             })
 

@@ -55,7 +55,6 @@
             </div>
         </div>
     </div>
-    <div class="wall"></div>
 
 
     <!-- FINESTRA DI DIALOGO -->

@@ -37,8 +37,8 @@ session_start();
     <script type="text/javascript" src="scripts/headerPoints_plugin.js"></script>
     <script type="text/javascript" src="scripts/headerPoints_plugin_init.js"></script>
 
-    <script type="text/javascript" src="scripts/g_plugin.js"></script>
-    <script type="text/javascript" src="scripts/headerPoints_plugin_init.js"></script>
+    <script type="text/javascript" src="scripts/goToEndPage_plugin.js"></script>
+    <script type="text/javascript" src="scripts/goToEndPage_plugin_init.js"></script>
 
 
         <!-- inizio Bootstrap link -->

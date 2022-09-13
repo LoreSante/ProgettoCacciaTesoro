@@ -3,7 +3,7 @@
     $.fn.endGame = function (options) {//
         let idGame;
         let player;
-        let victoryPoints=10;
+        let victoryPoints=3;
 
         getId();
 
@@ -18,7 +18,7 @@
 
             request.done(function(data) {
                 console.log("REQUEST.DONE: " + data);
-
+                //setInterval(getMatch,
                 getMatch(data);
             });
 
@@ -72,11 +72,11 @@
                 console.log("REQUEST.DONE:  " + data);
                 if(data.game) {
                     if(data.game.status == 2) {
-                        if(player.points==victoryPoints){
-                            location.href='victoryPage.php';
+                        if(player.points<victoryPoints){
+                            location.href='defeatPage.php';
                         }
                         else{
-                            location.href='defeatPage.php';
+                            location.href='victoryPage.php';
                         }
 
                     }
