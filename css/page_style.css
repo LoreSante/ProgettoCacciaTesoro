@@ -334,3 +334,12 @@ body{
         font-size: 90px;
     }
 }
+
+.headerButton{
+    font-size:48px;
+}
+
+.headerButton:hover{
+    font-size:50px;
+    cursor:pointer;
+}

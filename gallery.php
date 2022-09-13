@@ -41,12 +41,13 @@
     <div class="headerContainer">
         <div class="header">
             <div class="leftIconWrapper">
-                <div><a><span class="material-symbols-outlined" id="returnHomeButton" style="cursor:pointer">home</span></a></div>
-                <div><a href="cluePage.php"><span class="material-symbols-outlined" id="cluePageButton">chat_bubble</span></a></div>
+                <div><a><span class="material-symbols-outlined headerButton" id="returnHomeButton" style="cursor:pointer">home</span></a></div>
+                <div><a href="cluePage.php"><span class="material-symbols-outlined headerButton" id="cluePageButton">chat_bubble</span></a></div>
+                <!--
                 <div><a href="index.php"><span class="material-symbols-outlined">cancel</span></a></div>
+                -->
             </div>
             <div class="rightIconWrapper">
-                <div><a href="#"><span class="material-symbols-outlined">groups</span></a></div>
             </div>
 
         </div>

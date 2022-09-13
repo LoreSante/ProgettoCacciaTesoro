@@ -120,7 +120,12 @@
 .title{
     font: normal 48px/100% "Georgia", sans-serif;
 }
-
+@media (max-width: 800px){
+    .title{
+        font-size:6vw;
+        font-family: "Georgia", sans-serif;
+    }
+}
 
 .formLabel{
     font-weight: bold;
@@ -145,4 +150,13 @@
     margin-bottom:5px;
     border-bottom:#ba5100 2px solid;
 
+}
+
+.dialogButton{
+    font-size:30px;
+}
+
+.dialogButton:hover{
+    font-size:36px;
+    cursor:pointer;
 }

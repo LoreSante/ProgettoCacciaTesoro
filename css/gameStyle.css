@@ -143,6 +143,10 @@
 
 }
 
+
+
+
+
 .confirmButton{
     color:white;
     background-color: #002984;
@@ -254,7 +258,7 @@
 .footerCluePage{
     background-color: #3f51b5;
     width:100%;
-    height:80px;
+    height:70px;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -372,7 +376,9 @@
 
 @media (max-width: 850px){
     .headerCluePage{
-        height: 100%;
+
+        height:70px;
+
     }
 
     .paintPicture{
@@ -451,5 +457,11 @@
 
     .points{
         font-size: 20px;
+    }
+}
+
+@media screen and (max-width:470px){
+    #footerProgress{
+        width:30%;
     }
 }

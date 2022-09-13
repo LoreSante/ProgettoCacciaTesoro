@@ -93,7 +93,7 @@
                     <div class="col-sm-12 col-md-12 col-lg-7">
                         <div class="row title formText">
 
-                            <div class="col-6" >
+                            <div class="col-12 col-md-7" >
                                 <h1 class="title text-center text-md-start" id="title">Titolo</h1>
                                 <div class="paintingId" id="paintingId"></div>
                                 <textarea type="text" id="titleInput" class="inputStyle" name="titleInput" rows="2"></textarea>
@@ -131,7 +131,7 @@
                         </div>
                         <div class="row dialogBorderBottom">
                             <div class="col-xs-12 col-md-2 text-center text-md-start"><h5 class="formLabel">Posizione:</h5></div>
-                            <div class="col-12 col-md-8">
+                            <div class="col-12 col-md-7">
                                 <h5 class="text-center text-md-start" id="position"></h5>
                                 <textarea type="text" id="positionInput" class="inputStyle" name="positionInput" rows="2"></textarea>
                                 <label for="positionInput"></label>
