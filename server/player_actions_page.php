@@ -34,6 +34,10 @@
         case "updateIsHost" :
             updateIsHost();
             break;
+        case "updatePoints" :
+            updatePoints();
+        break;
+
 	}
 
 	function loadData() {
@@ -240,5 +244,28 @@ function updateIsHost() {
     }
     echo json_encode($response);
 }
+
+    function updatePoints(){
+        if (isset($_POST['id'])) $id = $_POST['id'];
+        if (isset($_POST['points'])) $points = $_POST['points'];
+
+        $query_string = 'UPDATE players SET points ="'. $points . '" WHERE id="' . $id .'"';
+
+        $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
+
+        // esegui la query
+        $result = $mysqli->query($query_string);
+
+        //echo $query_string;
+
+        if($mysqli->affected_rows > 0) {
+            // encodo l'array in JSON
+
+            $response = array('updated' => true, 'id' => $id, 'type' => 'updatePoints');
+        } else {
+            $response = array('updated' => false, 'id' => $id, 'type' => 'updatePoints');
+        }
+        echo json_encode($response);
+    }
 
 ?>

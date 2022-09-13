@@ -48,10 +48,10 @@ session_start();
     <div class="cluePageWrapper">
         <div class="adv"><img src="https://via.placeholder.com/50x450"></div>
         <div class="clueContainer">
-            <div class="clueText">Indovino indovinello che script si deve mettere qui bello bello?</div>
+            <div class="clueText" id="clueText">Indovino indovinello che script si deve mettere qui bello bello?</div>
             <div class="paintPicture"><img src="https://via.placeholder.com/150x250/#e0e0e0"></div>
             <select title="Seleziona quadro" id="selectPaint" class="selectPaint"></select> <!--TODO script menu a tendina -->
-            <button class="homeButton" type="button"">Conferma</button> <!-- TODO modificare CSS e inserire script per conferma del quadro-->
+            <button id="confirmButton" class="homeButton" type="button"">Conferma</button> <!-- TODO modificare CSS e inserire script per conferma del quadro-->
 
         </div>
 

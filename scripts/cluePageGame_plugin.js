@@ -2,9 +2,26 @@
 
     $.fn.cluePageGame = function (options) {
         let paintingArray = [];
+        let playerId;
+        let playerPoints;
+
+        let request_type="getIdUser";
+        let requestPlayerId = $.ajax({
+            url: options.serverURL2,
+            type: "POST",
+            data: { "action": request_type},
+            dataType: "json",
+        })
+        requestPlayerId.done(function (data) {
+            playerId=data;
+            console.log("REQUEST DONE---: "+ data);
+        });
+        requestPlayerId.fail(function(jqXHR, textStatus) {
+            alert( "RequestGetPaintings failed: " + textStatus );
+        });
 
 
-        let request_type="load";
+        request_type="load";
         let request = $.ajax({
             url: options.serverURL,
             type: "POST",
@@ -16,7 +33,6 @@
             console.log("REQUEST DONE GET ALL PAINTINGS: " + data);
             generateSelect(data);
             paintingArray=data.paintings;
-
 
 
             request_type="getPaintingsArray";
@@ -35,6 +51,11 @@
                     paintingArray=data;
                     console.log("Array is already setted:  " + data);
                 }
+                //TODO Continua da qui
+                setInterval(showCurrentRiddle, 2000);
+                //showCurrentRiddle();
+
+
 
             });
 
@@ -52,6 +73,10 @@
         });
 
 
+
+        //FUNZIONI
+
+
         function generateSelect(data){  //genera il menu select
             for(let i=0; i<data.paintings.length; i++){
                 let option = document.createElement("option");
@@ -62,6 +87,7 @@
         }
 
         function generatePaintingsArray(){
+
             shufflePaintingsArray();
             console.log("array shuffled: "+ paintingArray);
 
@@ -83,14 +109,6 @@
 
         }
 
-        /* Funzione superflua
-
-        function copyPaintingArray(array){ //copia l'array di quadri in paintingArray
-            for(let i=0; i<array.length; i++){
-                paintingArray[i]=array[i];
-            }
-        }
-        */
 
         function shufflePaintingsArray(){
             let randIndex;
@@ -102,6 +120,58 @@
             }
         }
 
+        function showCurrentRiddle(){
+            let request_type="loadDataSearchedByPlayerId";
+            let requestPoints=$.ajax({
+                url: options.serverURL3,
+                type: "POST",
+                data: { "id": playerId, "action": request_type},
+                dataType: "json",
+            })
+
+            requestPoints.done(function (data) {
+                console.log("POINTS:"+data.player.points+ "/10");
+                let $riddle=document.getElementById("clueText");
+                $riddle.innerText=paintingArray[data.player.points].riddle;
+                playerPoints=data.player.points;
+                //confirmPaintingButton();
+            });
+            requestPoints.fail(function(jqXHR, textStatus) {
+                alert( "RequestPoints failed: " + textStatus );
+            });
+
+        }
+/*
+        function confirmPaintingButton(){
+            let $confirmButton=document.getElementById("confirmButton");
+            let $select=document.getElementById("selectPaint");
+            $confirmButton.onclick=function(){
+                if($select.value==paintingArray[playerPoints].title){
+                    console.log("RISPOSTA CORRETTA")
+                    playerPoints++;
+                    let request_type="updatePoints";
+                    let requestUpdatePoints=$.ajax({
+                        url: options.serverURL3,
+                        type: "POST",
+                        data: { "id": playerId, "points": playerPoints , "action": request_type},
+                        dataType: "json",
+                    })
+
+                    requestUpdatePoints.done(function (data) {
+                        console.log("REQUEST DONE _ NEW POINTS: " + data);
+                    })
+                    requestUpdatePoints.fail(function(jqXHR, textStatus) {
+                        alert( "RequestUpdatePoints failed: " + textStatus );
+                    });
+
+                }
+            }
+
+        }
+
+*/
+
+
 
 
         //TODO: valutare se è meglio creare una permutazione di indici e
@@ -112,6 +182,15 @@
     }
 
 })(jQuery);
+
+/* Funzione superflua
+
+       function copyPaintingArray(array){ //copia l'array di quadri in paintingArray
+           for(let i=0; i<array.length; i++){
+               paintingArray[i]=array[i];
+           }
+       }
+       */
 
 
 /*
