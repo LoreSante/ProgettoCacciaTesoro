@@ -80,9 +80,6 @@
                         else{
                             location.href='victoryPage.php';
                         }
-                        else{
-                            location.href='victoryPage.php';
-                        }
 
                     }
                 }
