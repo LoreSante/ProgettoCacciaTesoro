@@ -6,7 +6,7 @@
     height:86%;
     justify-content: space-around;
     align-content: center;
-    top: 7%;
+
 }
 
 .adv{
@@ -35,7 +35,6 @@
     min-height: 90%;
     border-radius:20px;
     background-color: #757de8;
-
 }
 /* deprecato
 
@@ -62,7 +61,7 @@
     max-height: available;
     margin:10px;
 }
-.playerNameSample{ /*todo classe esempio, cambiare nome o rimuovere quando vera inserito il plugin */
+.playerNameSample{ /
     display:flex;
     flex-direction:row;
     width: 100%;
@@ -71,22 +70,22 @@
 
     background-color:white;
     border: black 1px solid;
-    border-radius: 5px;
+    border-radius: 20px;
     justify-content:space-around;
     align-content:center;
     text-align: center;
     text-justify: distribute;
     margin-top:5px;
     margin-bottom:5px;
-    /* FIXME _questa classe presenta alcuni problemi:
-         1) i rettangoli contenti i nomi dei giocatori sono troppo piccoli
-         2) se si va oltre lo schermo con molti giocatori non è possibile fare lo scroll
-               fino al raggiungimento del pulsante "Avvia Partita
-          -
-          -->risolvere questi problemi
-   */
 
 }
+
+.playerNameSample h5{
+    line-height: 2;
+    display: block;
+    vertical-align: middle;
+}
+
 .playerName{
     margin:auto;
 }
@@ -114,6 +113,12 @@
 }
 
 /* regole esclusive della pagina dell'indizio: cluepage.html */
+
+.confirmButton{
+    width: 40%;
+    height: 50px;
+    margin-bottom: 3%;
+}
 
 .playerNamesContainer{
     min-height:86%;
@@ -148,21 +153,86 @@
 }
 
 .selectPaint{
-    width: 50%;
-    height: 30px;
+    width: 40%;
+    height: 50px;
     background-color: white;
     border-radius: 5px;
-    margin-bottom: 5%;
+
 }
 
-/*fixme da rivedere e da ricontrollare le regole della cluePage.php */
+/*media queries relative alla createGame*/
+
 
 @media (max-width: 850px){
     .adv{
         display: none;
     }
 
-    .newGamePageWrapper{
+}
 
+@media  (max-width: 1700px)
+{
+    .lobbyContainer{
+        min-width: 50%;
+    }
+
+}
+
+@media (max-width: 500px)
+{
+    .lobbyContainer{
+        min-width: 60%;
+    }
+
+}
+
+/*media queries relative alla cluePage*/
+
+@media (max-width: 850px)
+{
+    .playerNameSample h5{
+        font-size: 15px;
+    }
+
+    .clueText{
+        font-size: 20px;
+    }
+    .cluePageWrapper{
+
+        display: block;
+        flex-direction: column;
+    }
+
+    .clueContainer{
+
+        margin: auto;
+        width: 80%;
+    }
+    .playerNamesContainer{
+        margin: auto;
+        width: 80%;
+    }
+
+    .playerNameSample{
+        font-size: 13px;
+    }
+
+    .confirmButton{
+        font-size: 18px;
+        width: 70%;
+    }
+
+    .selectPaint{
+        width: 70%;
+    }
+
+    .lobbyContainer, .clueContainer{
+        margin-top:5%;
+    }
+}
+
+@media (min-width: 851px) and (max-width: 1500px){
+    .confirmButton{
+        width: 30%;
     }
 }

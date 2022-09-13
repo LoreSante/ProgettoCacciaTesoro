@@ -61,10 +61,10 @@ $_SESSION["idUser"] = "abaco";
                 <img src="https://via.placeholder.com/150" alt="logo">
             </div>
             <div class="inputName"></div>
-            <div class="sub-container"><button class="homeButton newGameButton" id="newGameButton" type="button" >Crea Nuova Partita</button></div>
-            <div class="sub-container"><button class="homeButton enterGameButton" type="button">Entra in Partita</button></div>
+            <div class="sub-container"><button class="homeButton newGameButton menuButton" id="newGameButton" type="button" >Crea Nuova Partita</button></div>
+            <div class="sub-container"><button class="homeButton enterGameButton menuButton" type="button">Entra in Partita</button></div>
             <div class="sub-container"><button class="galleryHomeButton" type="button" onclick="location.href='gallery.php'">Galleria</button></div>
-            <div class="sub-container"><button class="homeButton" type="button" onclick="location.href=''">Crediti</button></div>
+            <div class="sub-container"><button class="homeButton menuButton" type="button" onclick="location.href=''">Crediti</button></div>
         </div>
 </body>
 <footer>

@@ -12,6 +12,7 @@ $_SESSION["paintingsArray"]=[];
     <meta charset="UTF-8">
     <title>NewGame</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="scripts/newGame_plugin.js"></script>
     <script type="text/javascript" src="scripts/gameLobby_plugin.js"></script>

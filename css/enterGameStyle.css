@@ -33,6 +33,7 @@
     color:white;
 }
 
+
 .inputForm{
     width: 80%;
     height: 10%;
@@ -63,4 +64,36 @@
 
 .playerName, .enterGameLabel, .inputForm, .enterButton {
     margin: 20px;
+}
+
+@media (max-width: 1000px)
+{
+    .lightBlueContainer{
+        width: 80%;
+    }
+
+}
+
+@media (max-width: 650px)
+{
+
+    .playerName{
+        font-size: 21px;
+    }
+
+    .enterGameLabel{
+        font-size: 18px;
+    }
+
+    .enterButton button{
+        font-size:18px;
+    }
+
+}
+
+@media (max-width: 400px){
+    .enterButton button{
+        font-size:14px;
+    }
+
 }
