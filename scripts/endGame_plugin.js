@@ -2,8 +2,9 @@
 
     $.fn.endGame = function (options) {//
         let idGame;
-        let player;
-        let victoryPoints=3;
+        let playerId;
+        let victoryPoints=10;
+        let playerInfo;
 
         getId();
 
@@ -18,10 +19,10 @@
 
             request.done(function(data) {
                 console.log("REQUEST.DONE: " + data);
-                //playerId=data;
-                //setInterval(getMatch,2000)
+                playerId=data;
+                setInterval(getMatch,2000)
 
-                getMatch(data);
+                //getMatch(data);
             });
 
             request.fail(function(jqXHR, textStatus) {
@@ -31,7 +32,7 @@
         }
 
 
-        function getMatch(playerId){ //ottiene le info sull'utente e passa l'id della partita a
+        function getMatch(){ //ottiene le info sull'utente e passa l'id della partita a
 
 
             /*
@@ -50,8 +51,8 @@
             request.done(function(data) {
                 console.log("REQUEST.DONE: " + data);
                 idGame=data.player.game;
-                player=data.player;
-                setInterval(getStatus, 2000);
+                playerInfo=data.player;
+                getStatus();
 
 
             });
@@ -74,7 +75,7 @@
                 console.log("REQUEST.DONE:  " + data);
                 if(data.game) {
                     if(data.game.status == 2) {
-                        if(player.points<victoryPoints){
+                        if(playerInfo.points<victoryPoints){
                             location.href='defeatPage.php';
                         }
                         else{

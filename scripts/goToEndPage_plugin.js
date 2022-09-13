@@ -1,7 +1,7 @@
 (function($) {
 
     $.fn.setEndedStatus = function (options) { ////cambia lo stato della partita in concluso quando un giocatore vince
-        let victoryPoints=3;
+        let victoryPoints=10;
         let playerId;
         let matchId;
 
