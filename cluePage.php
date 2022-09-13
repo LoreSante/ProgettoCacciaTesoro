@@ -26,10 +26,10 @@ session_start();
 
     <script type="text/javascript" src="scripts/cluePageGame_plugin.js"></script>
     <script type="text/javascript" src="scripts/cluePageGame_plugin_init.js"></script>
-
+<!--
     <script type="text/javascript" src="scripts/confirmPaintingButton_plugin.js"></script>
     <script type="text/javascript" src="scripts/confirmPaintingButton_plugin_init.js"></script>
-
+-->
     <!-- inizio Bootstrap link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -50,8 +50,8 @@ session_start();
     <div class="cluePageWrapper">
         <div class="adv"><img src="https://via.placeholder.com/50x450"></div>
         <div class="clueContainer">
-            <div class="clueText" id="clueText">Indovino indovinello che script si deve mettere qui bello bello?</div>
-            <div class="paintPicture"><img src="https://via.placeholder.com/150x250/#e0e0e0"></div>
+            <div class="clueText" id="clueText">Loading</div>
+            <div  class="paintPicture"><img id="paintImage" src="https://via.placeholder.com/150x250/#e0e0e0"></div>
             <button id="confirmButton" class="homeButton confirmButton" type="button"">Conferma</button>
             <select title="Seleziona quadro" id="selectPaint" class="selectPaint"></select> <!--TODO script menu a tendina -->
              <!-- TODO modificare CSS e inserire script per conferma del quadro-->

@@ -52,7 +52,7 @@
                     console.log("Array is already setted:  " + data);
                 }
                 //TODO Continua da qui
-                setInterval(showCurrentRiddle, 2000);
+                setInterval(showCurrentRiddle, 1000);
                 //showCurrentRiddle();
 
 
@@ -135,42 +135,86 @@
                 $riddle.innerText=paintingArray[data.player.points].riddle;
                 playerPoints=data.player.points;
                 //confirmPaintingButton();
+                //TEST //////////////////////////////////////////////////
+                setInterval(createButton,1000);
+
+                ////////////////////////////////////////////////////////
             });
             requestPoints.fail(function(jqXHR, textStatus) {
                 alert( "RequestPoints failed: " + textStatus );
             });
 
         }
-/*
-        function confirmPaintingButton(){
+
+        function createButton(){
             let $confirmButton=document.getElementById("confirmButton");
-            let $select=document.getElementById("selectPaint");
-            $confirmButton.onclick=function(){
-                if($select.value==paintingArray[playerPoints].title){
-                    console.log("RISPOSTA CORRETTA")
-                    playerPoints++;
-                    let request_type="updatePoints";
-                    let requestUpdatePoints=$.ajax({
-                        url: options.serverURL3,
-                        type: "POST",
-                        data: { "id": playerId, "points": playerPoints , "action": request_type},
-                        dataType: "json",
-                    })
-
-                    requestUpdatePoints.done(function (data) {
-                        console.log("REQUEST DONE _ NEW POINTS: " + data);
-                    })
-                    requestUpdatePoints.fail(function(jqXHR, textStatus) {
-                        alert( "RequestUpdatePoints failed: " + textStatus );
-                    });
-
-                }
+            $confirmButton.onclick = function () {
+                confirmPaintingButton();
             }
-
         }
 
-*/
 
+        function confirmPaintingButton() {
+            //let $confirmButton=document.getElementById("confirmButton"); TODO:SPOSTARE
+
+            request_type = "loadDataSearchedByPlayerId";
+            let requestGetPoints = $.ajax({
+                url: options.serverURL3,
+                type: "POST",
+                data: {"id": playerId, "action": request_type},
+                dataType: "json",
+            })
+
+            requestGetPoints.done(function (data) {
+                playerPoints = data.player.points;
+                console.log("REQUEST GET POINTS [BUTTON] DONE---: " + data.player.points);
+                updatePoints();
+
+            });
+
+            requestGetPoints.fail(function (jqXHR, textStatus) {
+                alert("RequestGetPoints failed: " + textStatus);
+            });
+        }
+
+
+        function updatePoints() {
+            let $select = document.getElementById("selectPaint");
+            let selectText=$select.value;
+            let paintingArrayText=paintingArray[playerPoints].title.replace(/\n/g, '');
+            if (selectText===paintingArrayText) {
+                console.log("RISPOSTA CORRETTA")
+                showPainting();
+
+                playerPoints++;
+                let request_type = "updatePoints";
+                let requestUpdatePoints = $.ajax({
+                    url: options.serverURL3,
+                    type: "POST",
+                    data: {"id": playerId, "points": playerPoints, "action": request_type},
+                    dataType: "json",
+                })
+
+
+                requestUpdatePoints.done(function (data) {
+                    console.log("REQUEST DONE _ NEW POINTS: " + data);
+                    setTimeout(resetPaintingImage, 2000);
+                });
+                requestUpdatePoints.fail(function (jqXHR, textStatus) {
+                    alert("RequestUpdatePoints failed: " + textStatus);
+                });
+            }
+        }
+
+        function showPainting(){
+            let $paintingImage=document.getElementById("paintImage");
+            $paintingImage.src=paintingArray[playerPoints].url;
+        }
+
+        function resetPaintingImage(){
+            let $paintingImage=document.getElementById("paintImage");
+            $paintingImage.src="https://via.placeholder.com/150x250/#e0e0e0";
+        }
 
 
 
