@@ -51,7 +51,6 @@ $_SESSION["paintingsArray"]=[];
                 <p class="codeLabel">Codice Partita:</p>
                 <p class="matchID" id="matchID">Loading...</p>
             </div>
-
             <div class="playerNamesWrapper" id="playerNamesWrapper">
             </div>
             <div class="playerId" id="playerId">

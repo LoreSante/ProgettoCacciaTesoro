@@ -6,30 +6,31 @@
             returnHomeButton();
         }
         function returnHomeButton() {
-            if (confirm("Sicuro di voler uscire?")) {//ottenimento id user
-                console.log("click");
-                let playerId;
-                let request_type = "getIdUser";
-                let requestSession = $.ajax({
-                    url: options.serverURL2,
-                    type: "POST",
-                    data: {"action": request_type},
-                    dataType: "json",
-                })
+         //ottenimento id user
+            console.log("click");
+            let playerId;
+            let request_type = "getIdUser";
+            let requestSession = $.ajax({
+                url: options.serverURL2,
+                type: "POST",
+                data: {"action": request_type},
+                dataType: "json",
+            })
 
-                requestSession.done(function (data) {//ottenimento player per avere id game
-                    playerId = data;
-                    console.log("REQUEST.DONE 1 OTTENIMENTO ID: " + playerId);
-                    request_type = "loadDataSearchedByPlayerId";
-                    let request2 = $.ajax({
-                        url: options.serverURL,
-                        type: "POST",
-                        data: {"id": playerId, "action": request_type},
-                        dataType: "json",
-                    })
+            requestSession.done(function (data) {//ottenimento player per avere id game
+                if(data!=""){
+                    if (confirm("Sicuro di voler uscire?")){
+                        playerId = data;
+                        console.log("REQUEST.DONE 1 OTTENIMENTO ID: " + playerId);
+                        request_type = "loadDataSearchedByPlayerId";
+                        let request2 = $.ajax({
+                            url: options.serverURL,
+                            type: "POST",
+                            data: {"id": playerId, "action": request_type},
+                            dataType: "json",
+                        })
 
-                    request2.done(function (data){ //ottenimento altri player tramite id game
-                        if(data.player){
+                        request2.done(function (data){ //ottenimento altri player tramite id game
                             gameId= data.player.game;
                             let request_type = "loadDataSearchedByGame";
                             console.log("REQUEST.DONE 2 OTTENIMENTO ALTRI PLAYER: " + data.player.game);
@@ -75,18 +76,18 @@
                                     deleteGame();
                                     location.href = "index.php";
                                 });
+
+                                request.fail(function (data){
+                                    console.log("REQUEST.FAIL " + data);
+                                });
                             });
-
-                        }
-                        else
-                        {
-                            location.href = "index.php";
-                        }
-                    });
-
-                });
-
-            }
+                        });
+                    }
+                }
+                else{
+                    location.href = "index.php";
+                }
+            });
         }
 
         function deleteGame() {
@@ -100,7 +101,7 @@
             })
 
             request3.done(function(data){
-                console.log("ARRAY GIOCATORI: " +data.players.length);
+                console.log("ARRAY GIOCATORI: ");
                 if(data.players.length===0){
                     console.log("ENTRATO IN IF" );
                     console.log("ID PARTITA DA CANCELLARE: " +gameId);
@@ -118,6 +119,9 @@
                         alert("Request failed delete game: " + textStatus);
                     });
                 }
+            });
+            request3.fail(function (jqXHR, textStatus){
+                console.log("FAIL FUNZIONE DELETE PARTITA");
             });
         }
     }
