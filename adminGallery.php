@@ -42,7 +42,7 @@
                 <div><a href="index.php"><span class="material-symbols-outlined headerButton">home</span></a></div>
             </div>
             <div class="rightIconWrapper">
-                <div><a href="#"><span class="material-symbols-outlined">groups</span></a></div>
+
             </div>
 
         </div>
@@ -72,7 +72,7 @@
         <div class="container" id="paintForm">
             <div class="container-fluid">
                 <div class="row row-cols-3 row-cols-sm-3 row-cols-md-3 row-cols-lg-3 height2">
-                    <div class="col-3 col-sm-3 col-md-3 col-lg-1" id="urlButton"><span class="material-symbols-outlined">edit</span><h5>Modifica Immagine</h5></div>
+                    <div class="col-3 col-sm-3 col-md-3 col-lg-1" id="urlButton"><span class="material-symbols-outlined dialogButton">edit</span><h5>Modifica Immagine</h5></div>
                     <div class="col-7 col-sm-7 col-md-5 col-lg-7">
                         <textarea type="text" id="urlInput" class="inputStyle" name="urlInput" rows="1" ></textarea>
                         <label for="urlInput"></label>
@@ -98,7 +98,7 @@
                                 <label for="titleInput"></label>
                             </div>
                             <div class="col-4"></div>
-                            <div class="col-2 text-right" id="titleButton"><span class="material-symbols-outlined">edit</span></div>
+                            <div class="col-2 text-right" id="titleButton"><span class="material-symbols-outlined dialogButton">edit</span></div>
                         </div>
                         <div class="row dialogBorderBottom">
                             <div class="col-xs-12 col-md-3 text-center text-md-start"><h5 class="formLabel">Autore:</h5></div>
@@ -107,7 +107,7 @@
                                 <textarea type="text" id="authorInput" class="inputStyle" name="authorInput" rows="2"></textarea>
                                 <label for="authorInput"></label>
                             </div>
-                            <div class="col-xs-12 col-md-2 text-right" id="authorButton"><span class="material-symbols-outlined">edit</span></div>
+                            <div class="col-xs-12 col-md-2 text-right" id="authorButton"><span class="material-symbols-outlined dialogButton">edit</span></div>
                         </div>
                         <div class="row dialogBorderBottom">
                             <div class="col-xs-12 col-md-3 text-center text-md-start"><h5 class="formLabel">Anno:</h5></div>
@@ -116,7 +116,7 @@
                                 <textarea type="text" id="yearInput" class="inputStyle" name="yearInput" rows="2"></textarea>
                                 <label for="yearInput"></label>
                             </div>
-                            <div class="col-xs-12 col-md-2 text-right" id="yearButton"><span class="material-symbols-outlined">edit</span></div>
+                            <div class="col-xs-12 col-md-2 text-right" id="yearButton"><span class="material-symbols-outlined dialogButton">edit</span></div>
                         </div>
                         <div class="row dialogBorderBottom">
                             <div class="col-xs-12 col-md-3 text-center text-md-start"><h5 class="formLabel">Tecnica:</h5></div>
@@ -125,7 +125,7 @@
                                 <textarea type="text" id="techniqueInput" class="inputStyle" name="techniqueInput" rows="2"></textarea>
                                 <label for="techniqueInput"></label>
                             </div>
-                            <div class="col-xs-12 col-md-2 text-right" id="techniqueButton"><span class="material-symbols-outlined">edit</span></div>
+                            <div class="col-xs-12 col-md-2 text-right" id="techniqueButton"><span class="material-symbols-outlined dialogButton">edit</span></div>
                         </div>
                         <div class="row dialogBorderBottom">
                             <div class="col-xs-12 col-md-3 text-center text-md-start"><h5 class="formLabel">Posizione:</h5></div>
@@ -134,7 +134,7 @@
                                 <textarea type="text" id="positionInput" class="inputStyle" name="positionInput" rows="2"></textarea>
                                 <label for="positionInput"></label>
                             </div>
-                            <div class="col-xs-12 col-md-2 text-right" id="positionButton"><span class="material-symbols-outlined">edit</span></div>
+                            <div class="col-xs-12 col-md-2 text-right" id="positionButton"><span class="material-symbols-outlined dialogButton">edit</span></div>
                         </div>
                         <div class="row dialogBorderBottom">
                             <div class="col-xs-12 col-md-12 text-center text-md-start text-lg-start"><h5 class="formLabel">Descrizione:</h5></div>
@@ -147,7 +147,7 @@
                             <textarea type="text" id="descriptionInput" class="inputStyle" name="descriptionInput" rows="2"></textarea>
                             <label for="descriptionInput"></label>
                             <div class="col-12 col-md-10" id="description"></div>
-                            <div class="col-xs-12 col-md-2 text-right" id="descriptionButton"><span class="material-symbols-outlined">edit</span></div>
+                            <div class="col-xs-12 col-md-2 text-right" id="descriptionButton"><span class="material-symbols-outlined dialogButton">edit</span></div>
                         </div>
                         <div class="row dialogBorderBottom">
                             <div class="col-12 col-md-3 text-center text-md-start"><h5 class="formLabel">Indovinello:</h5></div>
@@ -156,7 +156,7 @@
                                 <textarea type="text" id="riddleInput" class="inputStyle" name="riddleInput" rows="2"></textarea>
                                 <label for="riddleInput"></label>
                             </div>
-                            <div class="col-xs-12 col-md-2 text-right" id="riddleButton"><span class="material-symbols-outlined">edit</span></div>
+                            <div class="col-xs-12 col-md-2 text-right" id="riddleButton"><span class="material-symbols-outlined dialogButton">edit</span></div>
                         </div>
                     </div>
                 </div>

@@ -11,9 +11,11 @@
 
 .advClue{
     flex:1;
+
 }
 
 .adv{
+
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -21,10 +23,13 @@
     height:100%;
     margin-left:6%;
     margin-right:6%;
+
+
 }
 .adv img{
     margin: 10px;
     height:90%;
+
 
 }
 
@@ -173,13 +178,22 @@
 }
 
 .cluePageWrapper{
+
     justify-content: center;
+
+
 }
 
+
+
 .clueContainer{
+  /*
     flex:7;
+   */
     width:60%;
+
     margin-right:5px;
+
 
     /*
     display: -webkit-box;
@@ -265,12 +279,18 @@
 
 #footerProgress p{
     height: 100%;
+    /*
     margin:auto;
+     */
     /*
     margin:0;
      */
     padding: 3%;
     border-radius: 6px;
+}
+
+.points{
+    margin:auto;
 }
 
 .footerCluePage{
@@ -331,7 +351,50 @@
 
 /*media queries relative alla cluePage*/
 
-@media (max-width: 1700px)
+@media(max-width:1200px) and (min-width: 920px){
+    .adv{
+        display:none;
+    }
+    .clueContainer{
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        width:65%;
+    }
+    .playerNameSample{
+        border-top-right-radius:0;
+        border-bottom-right-radius:0;
+    }
+    .playerNamesContainer{
+        margin-right:0;
+        width:35%;
+    }
+
+
+}
+
+@media(max-width:1400px) and (min-width: 920px) and (orientation: portrait){
+    .adv{
+        display:none;
+    }
+    .clueContainer{
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        width:65%;
+    }
+    .playerNameSample{
+        border-top-right-radius:0;
+        border-bottom-right-radius:0;
+    }
+    .playerNamesContainer{
+        margin-right:0;
+        width:35%;
+    }
+
+
+}
+
+
+@media (max-width: 920px)
 {
     .adv{
         display: none;
@@ -372,7 +435,9 @@
 @media (max-width: 500px){
 
     #footerProgress p{
+        /*
         padding:10px;
+         */
     }
 
 }
@@ -387,7 +452,9 @@
 
 @media (min-width: 501px) and (max-width: 850px){
     #footerProgress p{
+       /*
         padding:10px;
+        */
     }
 
 }
@@ -483,3 +550,35 @@
         width:30%;
     }
 }
+
+@media (orientation: landscape) and (max-height:900px){
+    .headerButton{
+        font-size: 30px;
+    }
+    .headerButton:hover{
+        font-size: 32px;
+    }
+    #headerProgress{
+        height:90%;
+    }
+    .points{
+        margin:auto;
+
+    }
+    .headerContainer{
+        min-height:60px;
+    }
+    .clueContainer{
+        margin-top: auto;
+    }
+
+
+}
+/*
+@media (min-height:900px){
+    .clueContainer{
+        margin-top: auto;
+    }
+}
+
+ */

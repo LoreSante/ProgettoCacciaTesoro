@@ -45,7 +45,7 @@ $_SESSION["paintingsArray"]=[];
        </div>
     </div>
     <div class="newGamePageWrapper">
-        <div class="adv"><img src="https://via.placeholder.com/50x450"></div>
+        <div class="adv"><img src="https://via.placeholder.com/50x450?text=adv"></div>
         <div class="lobbyContainer">
             <div class="codeLabelWrapper matchIdWrapper" id="matchIdWrapper">
                 <p class="codeLabel">Codice Partita:</p>
@@ -58,7 +58,7 @@ $_SESSION["paintingsArray"]=[];
             </div>
             <button class="startGameButton" id="startGameButton" type="button" ">Avvia Partita</button>
         </div>
-        <div class="adv"><img src="https://via.placeholder.com/50x450"></div>
+        <div class="adv"><img src="https://via.placeholder.com/50x450?text=adv"></div>
     </div>
 </body>
 <footer>

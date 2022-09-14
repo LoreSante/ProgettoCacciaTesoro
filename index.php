@@ -66,8 +66,11 @@ $_SESSION["idUser"] = "";
             <div class="sub-container"><button class="homeButton newGameButton menuButton" id="newGameButton" type="button" >Crea Nuova Partita</button></div>
             <div class="sub-container"><button class="homeButton enterGameButton menuButton" type="button">Entra in Partita</button></div>
             <div class="sub-container"><button class="galleryHomeButton" type="button" onclick="location.href='gallery.php'">Galleria</button></div>
-            <div class="sub-container"><button class="homeButton menuButton" type="button" onclick="location.href=''">Crediti</button></div>
+
+            <div class="sub-container"><button class="homeButton menuButton" type="button" onclick="location.href=''" style="display: none">Crediti</button></div>
+
         </div>
+
 </body>
 <footer>
     <div class="footerContainer">

@@ -69,7 +69,7 @@ session_start();
         </div>
     </div>
     <div class="cluePageWrapper">
-        <div class="adv advClue" ><img src="https://via.placeholder.com/50x450"></div>
+        <div class="adv advClue" ><img src="https://via.placeholder.com/50x450?text=adv"></div>
         <div class="clueContainer">
             <div class="clueText" id="clueText">Loading</div>
                 <div  class="paintPicture"><img id="paintImage" src="http://www.dapasserella.com/wp-content/uploads/2018/07/Moschino-punto-interrogativo.jpg"></div>
