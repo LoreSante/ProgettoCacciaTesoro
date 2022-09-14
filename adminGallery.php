@@ -76,7 +76,7 @@
                 <div class="row row-cols-3 row-cols-sm-3 row-cols-md-3 row-cols-lg-3 height2">
                     <div class="col-3 col-sm-3 col-md-3 col-lg-1" id="urlButton"><span class="material-symbols-outlined">edit</span><h5>Modifica Immagine</h5></div>
                     <div class="col-7 col-sm-7 col-md-5 col-lg-7">
-                        <textarea type="text" id="urlInput" class="inputStyle" name="urlInput" rows="1"></textarea>
+                        <textarea type="text" id="urlInput" class="inputStyle" name="urlInput" rows="1" ></textarea>
                         <label for="urlInput"></label>
                     </div>
                     <div class="col-1 col-sm-2 col-md-2 col-lg-4 text-right">
@@ -95,7 +95,7 @@
 
                             <div class="col-12 col-md-7" >
                                 <h1 class="title text-center text-md-start" id="title">Titolo</h1>
-                                <div class="paintingId" id="paintingId"></div>
+                                <div class="paintingId" id="paintingId" style="display: none;"></div>
                                 <textarea type="text" id="titleInput" class="inputStyle" name="titleInput" rows="2"></textarea>
                                 <label for="titleInput"></label>
                             </div>

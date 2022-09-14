@@ -314,7 +314,10 @@ body{
 
 #titleButton{
     cursor: pointer;
+
 }
+
+
 
 /* logo */
 @media (max-width: 1000px) {

@@ -14,8 +14,6 @@
             console.log(data);
             if(data==="")
                 $cluePageButton.style.display="none";
-            else
-                $cluePageButton.style.display="block";
 
         });
         requestPlayerId.fail(function(jqXHR, textStatus) {
