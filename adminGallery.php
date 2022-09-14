@@ -88,7 +88,7 @@
             <div class="container-fluid newPainting"> <!-- height100 -->
                 <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2">
                     <div class="col-sm-12 col-md-12 col-lg-5 text-center"> <!-- height100 -->
-                        <div class="formPaintPicture"><img id="paintingImage" src="https://via.placeholder.com/150x250/#e0e0e0"> </div> <!-- height100 -->
+                        <div class="formPaintPicture"><img id="paintingImage" src="https://i.pinimg.com/564x/11/cc/4a/11cc4aca0d1bedf0fc2038b618098526.jpg"> </div> <!-- height100 -->
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-7">
                         <div class="row title formText">
@@ -103,8 +103,8 @@
                             <div class="col-2 text-right" id="titleButton"><span class="material-symbols-outlined">edit</span></div>
                         </div>
                         <div class="row dialogBorderBottom">
-                            <div class="col-xs-12 col-md-2 text-center text-md-start"><h5 class="formLabel">Autore:</h5></div>
-                            <div class="col-12 col-md-8">
+                            <div class="col-xs-12 col-md-3 text-center text-md-start"><h5 class="formLabel">Autore:</h5></div>
+                            <div class="col-12 col-md-7">
                                 <h5 class="text-center text-md-start" id="author"></h5>
                                 <textarea type="text" id="authorInput" class="inputStyle" name="authorInput" rows="2"></textarea>
                                 <label for="authorInput"></label>
@@ -112,8 +112,8 @@
                             <div class="col-xs-12 col-md-2 text-right" id="authorButton"><span class="material-symbols-outlined">edit</span></div>
                         </div>
                         <div class="row dialogBorderBottom">
-                            <div class="col-xs-12 col-md-2 text-center text-md-start"><h5 class="formLabel">Anno:</h5></div>
-                            <div class="col-12 col-md-8">
+                            <div class="col-xs-12 col-md-3 text-center text-md-start"><h5 class="formLabel">Anno:</h5></div>
+                            <div class="col-12 col-md-7">
                                 <h5 class="text-center text-md-start" id="year"></h5>
                                 <textarea type="text" id="yearInput" class="inputStyle" name="yearInput" rows="2"></textarea>
                                 <label for="yearInput"></label>
@@ -121,8 +121,8 @@
                             <div class="col-xs-12 col-md-2 text-right" id="yearButton"><span class="material-symbols-outlined">edit</span></div>
                         </div>
                         <div class="row dialogBorderBottom">
-                            <div class="col-xs-12 col-md-2 text-center text-md-start"><h5 class="formLabel">Tecnica:</h5></div>
-                            <div class="col-12 col-md-8">
+                            <div class="col-xs-12 col-md-3 text-center text-md-start"><h5 class="formLabel">Tecnica:</h5></div>
+                            <div class="col-12 col-md-7">
                                 <h5 class="text-center text-md-start" id="technique"></h5>
                                 <textarea type="text" id="techniqueInput" class="inputStyle" name="techniqueInput" rows="2"></textarea>
                                 <label for="techniqueInput"></label>
@@ -130,9 +130,9 @@
                             <div class="col-xs-12 col-md-2 text-right" id="techniqueButton"><span class="material-symbols-outlined">edit</span></div>
                         </div>
                         <div class="row dialogBorderBottom">
-                            <div class="col-xs-12 col-md-2 text-center text-md-start"><h5 class="formLabel">Posizione:</h5></div>
+                            <div class="col-xs-12 col-md-3 text-center text-md-start"><h5 class="formLabel">Posizione:</h5></div>
                             <div class="col-12 col-md-7">
-                                <h5 class="text-center text-md-start" id="position"></h5>
+                                <h5 class="text-center text-md-start margin-left-md" id="position"></h5>
                                 <textarea type="text" id="positionInput" class="inputStyle" name="positionInput" rows="2"></textarea>
                                 <label for="positionInput"></label>
                             </div>

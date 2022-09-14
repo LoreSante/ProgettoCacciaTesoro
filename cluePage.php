@@ -70,10 +70,10 @@ session_start();
         <div class="adv advClue" ><img src="https://via.placeholder.com/50x450"></div>
         <div class="clueContainer">
             <div class="clueText" id="clueText">Loading</div>
-            <div  class="paintPicture"><img id="paintImage" src="https://via.placeholder.com/150x250/#e0e0e0"></div>
-            <button id="confirmButton" class="homeButton confirmButton" type="button"">Conferma</button>
-            <select title="Seleziona quadro" id="selectPaint" class="selectPaint"></select>
-        </div>
+                <div  class="paintPicture"><img id="paintImage" src="http://www.dapasserella.com/wp-content/uploads/2018/07/Moschino-punto-interrogativo.jpg"></div>
+                <button id="confirmButton" class="homeButton confirmButton" type="button">Conferma</button>
+                <select title="Seleziona quadro" id="selectPaint" class="selectPaint"></select>
+            </div>
         <div id="playerNamesContainer" class="playerNamesContainer">
         </div>
     </div>

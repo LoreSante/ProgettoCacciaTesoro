@@ -213,7 +213,7 @@
 
         function resetPaintingImage(){
             let $paintingImage=document.getElementById("paintImage");
-            $paintingImage.src="https://via.placeholder.com/150x250/#e0e0e0";
+            $paintingImage.src="http://www.dapasserella.com/wp-content/uploads/2018/07/Moschino-punto-interrogativo.jpg";
         }
 
 
@@ -239,7 +239,7 @@
 
 /*
         function choosePainting(data){
-            //sceglie casualmente un indice tra quelli ancora non scelti FIXME: non funzione (non importa tanto non serve)
+            //sceglie casualmente un indice tra quelli ancora non scelti  (non importa tanto non serve)
 
             let oldPaintingFlag=data.paintings.length;
             while(oldPaintingFlag){

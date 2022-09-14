@@ -72,7 +72,7 @@
                         <label for="urlInput"></label>
                     </div>
                     <div class="col-1 col-sm-2 col-md-2 col-lg-4 text-right">
-                        <span class="material-symbols-outlined" id="closeButton">close</span>
+                        <span class="material-symbols-outlined headerButton" id="closeButton">close</span>
                     </div>
                 </div>
             </div>
