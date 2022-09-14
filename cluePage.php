@@ -14,12 +14,14 @@ session_start();
     <title>CluePage</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/page_style.css" rel="stylesheet" type="text/css">
+
     <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="scripts/playername_plugin_init.js"></script>
     <script type="text/javascript" src="scripts/playername_plugin.js"></script>
+
     <link href="css/gameStyle.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link href="css/page_style.css" rel="stylesheet" type="text/css">
 
     <script type="text/javascript" src="scripts/playerList_plugin.js"></script>
     <script type="text/javascript" src="scripts/playerList_plugin_init.js"></script>

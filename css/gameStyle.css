@@ -134,7 +134,10 @@
 /* regole esclusive della pagina dell'indizio: cluepage.html */
 
 .headerCluePage{
+    /*
     height: 100px;
+     */
+    height:100%;
     background-color: #3f51b5;
     display: flex;
     flex-direction: row;

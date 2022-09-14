@@ -16,13 +16,15 @@ $_SESSION["idUser"] = "";
     <title>Caccia al Tesoro</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
-    <link href="css/page_style.css" rel="stylesheet" type="text/css">
+
     <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="scripts/newGame_plugin.js"></script>
     <script type="text/javascript" src="scripts/newGame_plugin_init.js"></script>
     <script type="text/javascript" src="scripts/playername_plugin_init.js"></script>
     <script type="text/javascript" src="scripts/playername_plugin.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link href="css/page_style.css" rel="stylesheet" type="text/css">
+
     <script type="text/javascript" src="scripts/adminLogin_init.js"></script>
     <script type="text/javascript" src="scripts/adminLogin.js"></script>
     <script type="text/javascript" src="scripts/enterGameButton_plugin.js"></script>
@@ -47,7 +49,7 @@ $_SESSION["idUser"] = "";
             <div class="rightIconWrapper">
                 <div>
                     <a class="loginButton" href="#">
-                         <span class="material-symbols-outlined">engineering</span>
+                         <span class="headerButton material-symbols-outlined">engineering</span>
                     </a>
                 </div>
             </div>
