@@ -35,7 +35,7 @@ session_start();
     <div class="headerContainer">
         <div class="header">
             <div class="leftIconWrapper">
-                <div><a><span class="material-symbols-outlined" id="returnHomeButton" style="cursor:pointer">home</span></a></div>
+                <div><a><span class="material-symbols-outlined headerButton" id="returnHomeButton" style="cursor:pointer">home</span></a></div>
             </div>
         </div>
     </div>

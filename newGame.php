@@ -40,11 +40,8 @@ $_SESSION["paintingsArray"]=[];
     <div class="headerContainer">
        <div class="header">
           <div class="leftIconWrapper">
-              <div><a><span class="material-symbols-outlined" id="returnHomeButton" style="cursor:pointer">home</span></a></div>
+              <div><a><span class="material-symbols-outlined headerButton" id="returnHomeButton" style="cursor:pointer">home</span></a></div>
           </div>
-           <div class="headerLogo">
-               <div>Gallery</div>
-           </div>
        </div>
     </div>
     <div class="newGamePageWrapper">

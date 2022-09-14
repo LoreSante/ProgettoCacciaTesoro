@@ -19,8 +19,8 @@ session_start();
     <script type="text/javascript" src="scripts/playername_plugin_init.js"></script>
     <script type="text/javascript" src="scripts/playername_plugin.js"></script>
 
-    <link href="css/gameStyle.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link href="css/gameStyle.css" rel="stylesheet" type="text/css">
     <link href="css/page_style.css" rel="stylesheet" type="text/css">
 
     <script type="text/javascript" src="scripts/playerList_plugin.js"></script>
@@ -58,8 +58,8 @@ session_start();
     <div class="headerContainer">
         <div  class="headerCluePage">
             <div class="iconClueWrapper">
-                <div><a><span class="material-symbols-outlined" id="returnHomeButton">home</span></a></div>
-                <div><a href="gallery.php"><span class="material-symbols-outlined">panorama</span></a></div>
+                <div><a><span class="material-symbols-outlined headerButton" id="returnHomeButton">home</span></a></div>
+                <div><a href="gallery.php"><span class="material-symbols-outlined headerButton">panorama</span></a></div>
             </div>
             <div id="headerProgress">
                 <p class="points">0/10</p>

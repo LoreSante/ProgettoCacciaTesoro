@@ -39,9 +39,7 @@
     <div class="headerContainer">
         <div class="header">
             <div class="leftIconWrapper">
-                <div><a href="index.php"><span class="material-symbols-outlined">home</span></a></div>
-                <div><a href="cluePage.php"><span class="material-symbols-outlined">chat_bubble</span></a></div>
-                <div><a href="index.php"><span class="material-symbols-outlined">cancel</span></a></div>
+                <div><a href="index.php"><span class="material-symbols-outlined headerButton">home</span></a></div>
             </div>
             <div class="rightIconWrapper">
                 <div><a href="#"><span class="material-symbols-outlined">groups</span></a></div>
@@ -80,7 +78,7 @@
                         <label for="urlInput"></label>
                     </div>
                     <div class="col-1 col-sm-2 col-md-2 col-lg-4 text-right">
-                        <span class="material-symbols-outlined" id="closeButton">close</span>
+                        <span class="material-symbols-outlined headerButton" id="closeButton">close</span>
                     </div>
                 </div>
             </div>
@@ -168,9 +166,9 @@
 
                 <div class="col-5"></div>
 
-                <div class="col-1 text-center" id="add"><span class="material-symbols-outlined add"  >add</span></div>
-                <div class="col-1 text-center" id="save"><span class="material-symbols-outlined save"  >save</span></div>
-                <div class="col-1 text-center"><span class="material-symbols-outlined" id="delete">delete</span></div>
+                <div class="col-1 text-center" id="add"><span class="material-symbols-outlined add headerButton"  >add</span></div>
+                <div class="col-1 text-center" id="save"><span class="material-symbols-outlined save headerButton"  >save</span></div>
+                <div class="col-1 text-center"><span class="material-symbols-outlined headerButton" id="delete">delete</span></div>
             </div>
 
         </div>
