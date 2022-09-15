@@ -21,6 +21,9 @@ session_start();
     <script type="text/javascript" src="scripts/ipAddress_plugin.js"></script>
     <script type="text/javascript" src="scripts/ipAddress_plugin_init.js"></script>
     -->
+    <script type="text/javascript" src="scripts/endGamePaintingList.js"></script>
+    <script type="text/javascript" src="scripts/endGamePaintingList_init.js"></script>
+
     <!-- START bootstrap -->
     <script src="scripts/bootstrap.min.js" type="text/javascript"></script>
     <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
@@ -40,6 +43,15 @@ session_start();
         <p id="secondText">
             Complimenti! Hai risolto tutti gli indovinelli prima degli altri giocatori.
         </p>
+
+        <div class="endGamePaintingsContainer container" id="endGamePaintingsContainer">
+            <div class="paintingWrapper row align-content-center">
+                <img class="paintingImage col-12 col-md-4" src="http://www.dapasserella.com/wp-content/uploads/2018/07/Moschino-punto-interrogativo.jpg">
+                <h5 class="paintingRiddle col-12 col-md-6">Un Indovinello qualsiasi</h5>
+            </div>
+
+        </div>
+
         <button class="finishGameButton" id="finishGameButton" type="button" ">Menù principale</button>
     </div>
 </div>

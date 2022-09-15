@@ -111,3 +111,31 @@ html{
         font-size: 20px;
     }
 }
+
+@media (max-width:1440px){
+    .outcomeTextWrapper{
+       width:70%;
+    }
+    .finishGameButton{
+        width:70%;
+        padding:10px;
+    }
+}
+
+.endGamePaintingsContainer{
+    width:80%;
+
+}
+
+.paintingWrapper{
+    border-bottom:#870c0c solid 1px;
+    margin-bottom: 5px;
+    padding-bottom:5px;
+    width:100%;
+    align-items:center;
+
+}
+
+.paintingImage{
+    width:60%;
+}

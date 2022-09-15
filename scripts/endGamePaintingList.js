@@ -3,6 +3,7 @@
     $.fn.generatePaintingsList = function (options) {
         let paintingsArray;
 
+        getPaintingsArray();
 
         function getPaintingsArray(){
             let request_type="getPaintingsArray";
@@ -16,7 +17,7 @@
             request.done(function(data){
                 paintingsArray=data;
                 console.log("PAINTINGS ARRAY:" +paintingsArray);
-
+                generateList();
 
             });
         }
@@ -25,15 +26,19 @@
             let paintingsContainer = document.getElementById("endGamePaintingsContainer");
             for(let i=0; i<paintingsArray.length; i++){
 
-                let paintingWrapper = document.createElement("paintingWrapper");
-                let paintingImage =  document.createElement("paintingImage");
-                let paintingRiddle =  document.createElement("paintingRiddle");
+                let paintingWrapper = document.createElement("div");
+                let paintingImage =  document.createElement("img");
+                let paintingRiddle =  document.createElement("h5");
+                paintingWrapper.className("paintingWrapper row align-content-center");
+                paintingImage.className("paintingImage col-12 col-md-4");
+                paintingRiddle.className("paintingRiddle col-12 col-md-6");
 
-                //TODO aggiungi classi agli elementi
-                //TODO riempi con contenuti
+                paintingImage.src=paintingsArray[i].url;
+                paintingRiddle.innerText=paintingsArray[i].riddle;
 
-                //option.innerText= data.paintings[i].title;
-                select.appendChild(option);
+                paintingsContainer.appendChild(paintingWrapper);
+                paintingWrapper.appendChild(paintingImage);
+                paintingWrapper.appendChild(paintingRiddle);
             }
         }
 
