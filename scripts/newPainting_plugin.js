@@ -50,7 +50,7 @@
             author.innerText="";
             technique.innerText="";
             description.innerText="";
-            image.src="https://via.placeholder.com/150x250/#e0e0e0";
+            image.src="https://i.pinimg.com/564x/11/cc/4a/11cc4aca0d1bedf0fc2038b618098526.jpg";
             urlInput.value="";
             $addButton.style.display="null";
             $saveButton.style.display="block";

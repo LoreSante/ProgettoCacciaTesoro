@@ -26,20 +26,6 @@ VALUES ('Impressione, levar del sole','Claude Monet','1872','Olio su tela', 'Mus
         'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Monet_-_Impression%2C_Sunrise.jpg/1024px-Monet_-_Impression%2C_Sunrise.jpg',
         'Impressione, levar del sole');
 
-INSERT INTO `paintings`( `title`, `author`, `year`, `technique`, `position`, `description`, `url`, `riddle`)
-VALUES ('Ultima Cena (Leonardo)',
-        'Leonardo da Vinci',
-        '1494-1498',
-        'Sperimentale',
-        'Santa Maria delle Grazie, Milano',
-        'Il dipinto si basa sul Vangelo di Giovanni 13:21, nel quale Gesù annuncia che verrà tradito da uno dei suoi apostoli. L''opera si basa sulla tradizione dei cenacoli di Firenze, ma come già Leonardo aveva fatto con l''Adorazione dei Magi, l''iconografia venne profondamente rinnovata alla ricerca del significato più intimo ed emotivamente rilevante dell''episodio religioso. Leonardo infatti studiò i "moti dell''animo" degli apostoli sorpresi e sconcertati all''annuncio dell''imminente tradimento di uno di loro. \n\n'
-        'Dentro la scatola prospettica della stanza, rischiarata da tre finestre sul retro e con l''illuminazione frontale da sinistra che corrispondeva all''antica finestra reale del refettorio, Leonardo ambientò in primo piano la lunga tavola della cena, con al centro la figura isolata di Cristo, dalla forma pressoché piramidale per le braccia distese. Egli ha il capo reclinato, gli occhi socchiusi e la bocca appena discostata, come se avesse appena finito di pronunciare la fatidica frase.\n'
-        'Col suo gesto di rassegnazione, Gesù costituisce l''asse centrale della scena compositiva: non solo delle linee dell''architettura (evidente nella fuga di riquadri scuri ai lati, forse arazzi), ma anche dei gesti e delle linee di forza degli apostoli. Ogni particolare è curato con estrema precisione e le pietanze e le stoviglie presenti sulla tavola concorrono a bilanciare la composizione.\n
-        Dal punto di vista geometrico l''ambiente, pur essendo semplice, è calibrato. Attraverso elementari espedienti prospettici (la quadratura del pavimento, il soffitto a cassettoni, gli arazzi appesi alle pareti, le tre finestre del fondo e la posizione della tavola) si ottiene l''effetto di sfondamento della parete su cui si trova il dipinto, tale da mostrarlo come un ambiente nell''ambiente del refettorio stesso, una sorta di raffinato trompe l''oeil. La luce proviene da sinistra, e in effetti in quel lato si aprono le uniche finestre che illuminano l''ambiente. Il chiarore illusorio proveniente dal fondo, invece, dona a Cristo un isolamento sovrannaturale e al tempo stesso determina un effetto di ''controluce''\n.
-        Secondo uno studio recente, il paesaggio che si intravede dalle finestre potrebbe essere un luogo ben preciso, appartenente al territorio dell''alto Lario.',
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Leonardo_da_Vinci_-_The_Last_Supper_high_res.jpg/1280px-Leonardo_da_Vinci_-_The_Last_Supper_high_res.jpg',
-        '«In verità, in verità vi dico: uno di voi mi tradirà».');
-
 
 INSERT INTO `paintings`( `title`, `author`, `year`, `technique`, `position`, `description`, `url`, `riddle`)
 VALUES ('La Grenouillère',

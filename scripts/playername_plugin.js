@@ -19,11 +19,12 @@ let $playerName= "Guest";
             let $this = $(this);
 
             $this.wrap('<div class="plugin_wrapper" />')
-            $('<form class="row text-center" action=server/player_actions_page.php method="post">'
-                +'<label class="col-12 col-md-8 fnameWrapper" title="Nome giocatore" style="padding-left:0; padding-right:3px;">'
+            $(
+                '<form class="row-cols-1 text-center" action=server/player_actions_page.php method="post">'
+                +'<label class="col fnameWrapper" title="Nome giocatore" style="padding: 0 0 1% 0; height: 50%;">'
                 +'<input type="text" class="fname" id="fname" placeholder="Inserire nome giocatore">'
                 +'</label>'
-                +'<input type="button" value="Seleziona" class="nameSelected col-12 col-md-4">'
+                +'<input type="button" value="Accedi" class="nameSelected col" style="margin: 0 auto 0 auto; height: 50%; width: 50%;">'
                 +'</form>'
             ).insertBefore($this);
 
@@ -33,6 +34,7 @@ let $playerName= "Guest";
             $submitButton.on("click", function () {
                 if($this.parent().find(".fname").val()!="")
                     $playerName=$this.parent().find(".fname").val();
+                location.href="menu.php";
                 //sendName($this);
             });
         });
