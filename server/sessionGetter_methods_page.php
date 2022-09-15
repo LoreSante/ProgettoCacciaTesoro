@@ -38,10 +38,6 @@
          echo json_encode($response);
     }
 
-
-
-
-
     function setPaintingsArray(){
          if(isset($_POST['paintingsArray'])) {
              $_SESSION['paintingsArray'] = $_POST['paintingsArray'];
@@ -113,6 +109,7 @@
         $query_string = 'SELECT paintings.id, paintings.title, paintings.author, paintings.year, paintings.technique, paintings.position, paintings.description, paintings.url, paintings.riddle 
     FROM paintingsingame RIGHT JOIN paintings ON paintingsingame.idpainting=paintings.id 
     WHERE paintingsingame.idgame="' . $game .'" ORDER BY paintingsingame.riddleorder';
+
         $result = $mysqli->query($query_string);
 
         $paintings=array();

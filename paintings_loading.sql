@@ -109,7 +109,7 @@ VALUES ('Vaso con dodici girasoli',
         L''artista stendeva i colori con pennellate ruvide e dense, spesso appiccicandoli uno sopra l''altro finché i pigmenti erano ancora umidi. A volte procedeva a scalfire la superficie fresca usando anche l''impugnatura del pennello. Si tratta di un approccio scultoreo alla pittura, in cui le ombre e le luci sono date, oltre che dai pigmenti, dallo spessore dell''impasto cromatico. L''effetto che si otteneva era quello di un''espressività mai vista prima. La serie fu innovativa anche per l''uso estensivo del giallo cadmio, un pigmento di invenzione recente, che l''artista amava usare. \n
         La firma dell''artista si trova spesso sul vaso: come i grandi maestri del passato egli usava solo il proprio nome di battesimo.',
         'https://res.cloudinary.com/tne/image/authenticated/s--cR0YrnfB--/q_80/artworks/VINCENT-VAN-GOGH_SONNENBLUMEN_CC-BY-SA_BSTGS_8672.jpg',
-        'Impressione, levar del sole');
+        'Vaso con dodici girasoli');
 
 INSERT INTO `paintings`( `title`, `author`, `year`, `technique`, `position`, `description`, `url`, `riddle`)
 VALUES ('Ragazza col turbante',
@@ -120,4 +120,4 @@ VALUES ('Ragazza col turbante',
         'Il volto della ragazza, intriso di luce, mostra una rara bellezza: labbra rosse carnose che si dischiudono in un abbozzo stupefatto di sorriso, naso sottile e dritto, occhi grandi e vivi. La luce delle pupille è poi richiamata dall''orecchino con una grossa perla, che brilla sulla penombra del collo. La perla è dipinta utilizzando poche pennellate a goccia, separate l''una dall''altra: è l''occhio umano che ha l''illusione di vederla intera.
         L''artista catturò con viva immediatezza l''espressione sfuggente, carica di un''innocente languidezza. L''orecchino con perla del quadro, che cattura quasi da solo la centralità della luce di cui è pervaso il dipinto, è di grandi dimensioni ed è a forma di goccia. Sebbene la ragazza che lo indossa appaia di modeste condizioni, tale monile era al tempo di Vermeer prerogativa delle dame aristocratiche e dell''alta borghesia. Nel XVII secolo le perle erano una preziosa rarità: venivano cercate dai pescatori di perle e perfino importate dall''Estremo Oriente. Nel caso della perla raffigurata nel dipinto, si tratta di un esemplare di grandi dimensioni che, a parere di alcuni studiosi, in natura non esisterebbe',
         'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/1665_Girl_with_a_Pearl_Earring.jpg/1920px-1665_Girl_with_a_Pearl_Earring.jpg',
-        '');
+        'Ragazza col turbante');

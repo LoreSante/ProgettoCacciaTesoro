@@ -36,7 +36,7 @@ CREATE TABLE `adminLogin` (
   PRIMARY KEY (`password`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
 
-CREATE TABLE `paintingsInGame` (
+CREATE TABLE `paintingsingame` (
     `idgame` int(5) NOT NULL,
     `idpainting` int(5) NOT NULL,
     `riddleorder` int(5) NOT NULL,

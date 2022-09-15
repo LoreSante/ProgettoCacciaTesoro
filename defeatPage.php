@@ -41,7 +41,12 @@ session_start();
         <p id="secondText">
             Un altro giocatore ha risolto tutti gli indovinelli prima di te...
         </p>
-        <button class="finishGameButton" id="finishGameButton" type="button" ">Ritorna al menù principale</button>
+        <!--LISTA QUADRI-->
+        <div class="endGamePaintingsContainer" id="endGamePaintingsContainer">
+
+        </div>
+        <!----->
+        <button class="finishGameButton" id="finishGameButton" type="button">Ritorna al menù principale</button>
     </div>
 </div>
 <div class="header7"></div>
