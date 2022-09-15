@@ -74,7 +74,7 @@
                                 request.done(function (data) {
                                     console.log("REQUEST.DONE CANCELLAZIONE PLAYER: " + data);
                                     deleteGame();
-                                    location.href = "index.php";
+                                    location.href = "menu.php";
                                 });
 
                                 request.fail(function (data){
@@ -85,7 +85,7 @@
                     }
                 }
                 else{
-                    location.href = "index.php";
+                    location.href = "menu.php";
                 }
             });
         }
