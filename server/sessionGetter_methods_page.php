@@ -14,6 +14,9 @@
          case "setPaintingsArray" :
              setPaintingsArray();
          break;
+         case "deleteByGameId":
+             deleteByGameId();
+         break;
 
 
      }
@@ -24,9 +27,20 @@
     }
 
     function getPaintingsArray(){
+         $paintingArray=$_SESSION['paintingsArray'];
+         $length=count($paintingArray);
+
+         if($length==0){
+             loadPaintingsArray();
+         }
+
          $response=$_SESSION['paintingsArray'];
          echo json_encode($response);
     }
+
+
+
+
 
     function setPaintingsArray(){
          if(isset($_POST['paintingsArray'])) {

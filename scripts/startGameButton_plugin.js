@@ -15,7 +15,7 @@
         requestSession.done(function(data){
             console.log("REQUEST.DONE, BOTTONE User ID: " + data);
             playerId=data;
-            setInterval(showButton,2000);
+            setInterval(showButton,500);
 
         });
 
