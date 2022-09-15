@@ -48,6 +48,19 @@
                     })
                     request.done(function (data){
                         console.log("CANCELLAZIONE PARTITA EFFETTUATA");
+                        request_type="deleteByGameId";
+                        request = $.ajax({
+                            url: options.serverURL2,
+                            type: "POST",
+                            data:{ "idGame": $idGame, "action" : request_type },
+                            dataType: "json",
+                        })
+                        request.done(function (data){
+
+                        });
+                        request.fail(function(jqXHR, textStatus) {
+                            alert( "Request failed: " + textStatus );
+                        });
                         location.href="index.php";
                     })
                 });

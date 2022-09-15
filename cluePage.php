@@ -45,6 +45,9 @@ session_start();
     <script type="text/javascript" src="scripts/returnHomeButton_plugin.js"></script>
     <script type="text/javascript" src="scripts/returnHomeButton_plugin_init.js"></script>
 
+    <!--<script type="text/javascript" src="scripts/testing_init.js"></script>
+    <script type="text/javascript" src="scripts/testing.js"></script>-->
+
 
 
     <!-- inizio Bootstrap link -->
