@@ -36,7 +36,10 @@ html{
     //background-color: #ffb053;
     margin: auto;
     height: 100%;
+    /*
     display: flex;
+     */
+
 }
 
 .textContainer{
@@ -52,7 +55,9 @@ html{
 .textContainer img{
 
     width: 50%;
+   /*
     border: 4px solid #BA5100FF;
+    */
 }
 
 
@@ -114,7 +119,9 @@ html{
 
 @media (max-width:1440px){
     .outcomeTextWrapper{
-       width:70%;
+       width:65%;
+        display: block;
+
     }
     .finishGameButton{
         width:70%;
@@ -125,17 +132,44 @@ html{
 .endGamePaintingsContainer{
     width:80%;
 
+    background-color: white;
+
+    padding:5px;
+    margin:10px auto 30px auto;
+
 }
 
 .paintingWrapper{
-    border-bottom:#870c0c solid 1px;
-    margin-bottom: 5px;
+    border-bottom:#3f51b5 solid 1px;
+    margin: 5px;
     padding-bottom:5px;
     width:100%;
     align-items:center;
+
 
 }
 
 .paintingImage{
     width:60%;
+}
+
+.paintingRiddle{
+    /*
+    color:white;
+     */
+}
+
+/*
+TODO AGGIUSTARE MEDIA QUERY
+ */
+@media portrait and (max-width:640px){
+    .endGamePaintingsContainer{
+        width:90%;
+    }
+    .outcomeTextWrapper{
+        width:100%;
+    }
+    .textContainer{
+        margin:0;
+    }
 }

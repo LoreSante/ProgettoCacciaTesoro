@@ -10,7 +10,7 @@
             let request = $.ajax({
                 url: options.serverURL,
                 type: "POST",
-                data:{ "id":data,"action" : request_type },
+                data:{"action" : request_type },
                 dataType: "json",
             })
 
@@ -29,9 +29,9 @@
                 let paintingWrapper = document.createElement("div");
                 let paintingImage =  document.createElement("img");
                 let paintingRiddle =  document.createElement("h5");
-                paintingWrapper.className("paintingWrapper row align-content-center");
-                paintingImage.className("paintingImage col-12 col-md-4");
-                paintingRiddle.className("paintingRiddle col-12 col-md-6");
+                paintingWrapper.className= "paintingWrapper row align-content-center";
+                paintingImage.className="paintingImage col-12 col-md-4";
+                paintingRiddle.className="paintingRiddle col-12 col-md-6";
 
                 paintingImage.src=paintingsArray[i].url;
                 paintingRiddle.innerText=paintingsArray[i].riddle;

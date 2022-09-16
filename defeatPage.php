@@ -47,11 +47,12 @@ session_start();
         </p>
         <!--LISTA QUADRI-->
         <div class="endGamePaintingsContainer container" id="endGamePaintingsContainer">
+            <!-- prototipo quadro in end game
             <div class="paintingWrapper row align-content-center">
                 <img class="paintingImage col-12 col-md-4" src="http://www.dapasserella.com/wp-content/uploads/2018/07/Moschino-punto-interrogativo.jpg">
                 <h5 class="paintingRiddle col-12 col-md-6">Un Indovinello qualsiasi</h5>
             </div>
-
+            -->
         </div>
         <!----->
         <button class="finishGameButton" id="finishGameButton" type="button">Ritorna al menù principale</button>

@@ -9,6 +9,7 @@ session_start();
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <link href="css/victoryPage_style.css" rel="stylesheet" type="text/css">
+    <link href="css/defeatPage_style.css" rel="stylesheet" type="text/css">
     <link href="css/page_style.css" rel="stylesheet" type="text/css">
     <link href="css/dialog_style.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
