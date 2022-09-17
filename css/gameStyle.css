@@ -317,7 +317,14 @@
 }
 
 .rightClueIconWrapper{
+    /* FIXME: valuta se devo rimettere la width o no
+    */
     width:162px;
+
+
+    display:flex;
+    justify-items: center;
+    align-items: center;
 }
 
 

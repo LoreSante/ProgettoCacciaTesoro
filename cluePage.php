@@ -22,6 +22,7 @@ session_start();
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link href="css/gameStyle.css" rel="stylesheet" type="text/css">
     <link href="css/page_style.css" rel="stylesheet" type="text/css">
+    <link href="css/rulesStyle.css" rel="stylesheet" type="text/css">
 
     <script type="text/javascript" src="scripts/playerList_plugin.js"></script>
     <script type="text/javascript" src="scripts/playerList_plugin_init.js"></script>
@@ -48,6 +49,9 @@ session_start();
     <!--<script type="text/javascript" src="scripts/testing_init.js"></script>
     <script type="text/javascript" src="scripts/testing.js"></script>-->
 
+    <script type="text/javascript" src="scripts/rulesDialog.js"></script>
+    <script type="text/javascript" src="scripts/rulesDialog_init.js"></script>
+
 
 
     <!-- inizio Bootstrap link -->
@@ -57,7 +61,7 @@ session_start();
     <!-- fine Bootstrap link -->
 
 </head>
-<body>
+<body id="cluePageBody">
     <div class="headerContainer">
         <div  class="headerCluePage">
             <div class="iconClueWrapper">
@@ -68,6 +72,7 @@ session_start();
                 <p class="points">0/10</p>
             </div>
             <div class="rightClueIconWrapper">
+                <h5 id="rulesButton">Come si gioca?</h5>
             </div>
         </div>
     </div>
@@ -82,6 +87,18 @@ session_start();
         <div id="playerNamesContainer" class="playerNamesContainer">
         </div>
     </div>
+
+
+    <!-- FINESTRA DI DIALOGO -->
+    <div class="container-fluid" id="formWrapper">
+        <div id="rulesWindow">
+            <span class="material-symbols-outlined headerButton" id="closeButton">close</span>
+            WEEEEEEEEE
+        </div>
+
+    </div>
+
+
 
 </body>
 <footer>

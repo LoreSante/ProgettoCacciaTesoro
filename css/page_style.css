@@ -262,6 +262,7 @@ body{
     display:flex;
     flex-direction: row;
     align-items: center;
+
 }
 
 .leftIconWrapper div a span, .rightIconWrapper div a span{
