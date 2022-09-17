@@ -1,7 +1,7 @@
 
 (function($) {
     console.log("JQUERY: " + $);
-    $.fn.enterGame = function (options) {
+    $.fn.enterGame = function (options) {//crea il giocatore sulla base del nickname inserito in index.php, è collegato al tasto nameSelected
         console.log("ENTERGAME")
         let $this = $(this);
         let $enterGameButton = $('.nameSelected', $this.parent());

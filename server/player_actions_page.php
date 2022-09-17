@@ -181,16 +181,18 @@
     function updateData() {
 		if (isset($_POST['id'])) $id = $_POST['id'];
         if (isset($_POST['game'])) $game = $_POST['game'];
-
+        if (isset($_POST['ishost']))
+            $isHost = $_POST['ishost'];
+        else
+            $isHost = 0;
 
 
 		$query_string = 'UPDATE players SET game="'. $game . '" WHERE id="' . $id .'"';
-
 		$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
-
-    	// esegui la query
 		$result = $mysqli->query($query_string);
 
+        $query_string = 'UPDATE players SET ishost="'. $isHost . '" WHERE id="' . $id .'"';
+        $result = $mysqli->query($query_string);
 		//echo $query_string;
 
     	if($mysqli->affected_rows > 0) {
@@ -202,6 +204,7 @@
 		}
 	    echo json_encode($response);
     }
+
 
     //elimina giocatore sulla base dell'id ricevuto
 function  deleteDataSearchedByPlayerId(){
