@@ -15,6 +15,7 @@ body{
     flex-direction: column;
     align-content: center;
     height:100%;
+
 }
 
 .headerContainer{
@@ -114,11 +115,13 @@ body{
 
 
 .indexContainer{
-    margin:auto;
-    width: 50%;
+    margin:5% auto 0 auto;
+    padding-bottom: 2%;
+    width: 60%;
     display: flex;
     flex-direction: column;
-    height: 80%;
+    border: #ffb053 4px  solid;
+    border-radius: 10px;
 }
 
 .indexContainer div{
@@ -132,7 +135,6 @@ body{
 }
 
 
-
 @media (max-height: 1100px){
     .sub-container{
 
@@ -143,8 +145,10 @@ body{
     justify-content: center;
     display: flex;
     flex-direction: column;
-    width:100%;
+    width:90%;
 }
+
+
 
 /*regole footer */
 /*todo riverede le dimensoni del footer, non sono corrette */
@@ -191,11 +195,11 @@ body{
 
 .nameSelected{
     width: 100%;
-    font-size: 40px;
+    font-size: 30px;
     height: available;
     color:white;
     background-color: #002984;
-    border-radius: 15px;
+    border-radius: 10px;
     cursor:pointer;
     transition-duration: 0.4s;
     padding-bottom: 4px;
@@ -225,9 +229,9 @@ body{
 
 .fname{
     width:100%;
-    font-size: 30px;
+    font-size: 25px;
     height: 100%;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 @media (max-width: 767px){
@@ -326,7 +330,7 @@ body{
 
 @media (max-width: 1000px) {
     .logo div{
-        font-size: 100px;
+        font-size: 90px;
     }
 }
 
@@ -336,11 +340,19 @@ body{
     }
 }
 
-@media(max-height: 1000px){
+@media(min-width: 1001px) and (max-width: 1500px){
     .logo div{
-        font-size: 100px;
+        font-size:100px;
     }
 }
+
+@media(min-width: 1501px) and (max-width: 1700px){
+    .logo div{
+        font-size:120px;
+    }
+}
+
+
 
 .headerButton{
     font-size:48px;
@@ -355,6 +367,59 @@ body{
 
 @media (max-width: 1700px) {
     .plugin_wrapper{
-        width: 80%;
+        width: 70%;
+    }
+
+
+}
+
+@media(max-width:930px){
+    .fname{
+        font-size:20px;
+    }
+
+    .nameSelected{
+        font-size:25px;
+    }
+
+    .subtitle{
+        font-size: 25px;
+    }
+}
+
+@media (max-width:780px){
+
+    .logo{
+        font-size:90px;
+        width:90%;
+    }
+
+    .subtitle{
+        font-size:20px;
+    }
+    
+
+    .plugin_wrapper form{
+        height:70%;
+    }
+}
+
+@media (min-width: 451px) and (max-width: 810px){
+    .indexContainer{
+        width: 90%;
+    }
+}
+
+@media (max-width: 450px){
+    .indexContainer{
+        margin-top:30%;
+        width:90%;
+    }
+
+}
+
+@media (max-width: 350px){
+    .logo div{
+        font-size: 60px;
     }
 }
