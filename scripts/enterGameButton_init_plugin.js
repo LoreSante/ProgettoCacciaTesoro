@@ -1,4 +1,4 @@
 $(document).ready(function() {
     console.log("INIT PLUGIN");
-    jQuery(".enterGameButton").enterGame({serverURL : "server/player_actions_page.php"});
+    jQuery(".plugin_wrapper").enterGame({serverURL : "server/player_actions_page.php"});
 });

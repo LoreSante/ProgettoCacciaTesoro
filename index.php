@@ -16,6 +16,8 @@ $_SESSION["idUser"] = "";
     <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="scripts/newGame_plugin.js"></script>
     <script type="text/javascript" src="scripts/newGame_plugin_init.js"></script>
+    <script type="text/javascript" src="scripts/enterGameButton_plugin.js"></script>
+    <script type="text/javascript" src="scripts/enterGameButton_init_plugin.js"></script>
     <script type="text/javascript" src="scripts/playername_plugin_init.js"></script>
     <script type="text/javascript" src="scripts/playername_plugin.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -23,8 +25,8 @@ $_SESSION["idUser"] = "";
     <link href="css/indexPageStyle.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="scripts/adminLogin_init.js"></script>
     <script type="text/javascript" src="scripts/adminLogin.js"></script>
-    <script type="text/javascript" src="scripts/enterGameButton_plugin.js"></script>
-    <script type="text/javascript" src="scripts/enterGameButton_init_plugin.js"></script>
+
+
     <!--
     <script type="text/javascript" src="scripts/ipAddress_plugin.js"></script>
     <script type="text/javascript" src="scripts/ipAddress_plugin_init.js"></script>
@@ -58,7 +60,14 @@ $_SESSION["idUser"] = "";
             Un gioco di caccia al tesoro attraverso i dipinti dell'arte di tutto il mondo. Risolvi gli indovinelli e raggiungi la vittoria!
         </h1>
     </div>
-    <div class="inputName"></div>
+    <div class="plugin_wrapper">
+        <form class="row-cols-1 text-center pluginName" action=server/player_actions_page.php method="post">
+            <label class="col fnameWrapper" title="Nome giocatore" style="padding: 0 0 1% 0; height: 50%;">
+                <input type="text" class="fname" id="fname" placeholder="Inserire nome giocatore">
+                </label>
+            <input type="button" value="Accedi" class="nameSelected col" style="margin: 0 auto 0 auto; height: 50%; width: 50%;">
+        </form>
+    </div>
 </div>
 </body>
 
