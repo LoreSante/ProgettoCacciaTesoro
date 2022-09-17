@@ -222,6 +222,7 @@ body{
 
 }
 
+
 .fname{
     width:100%;
     font-size: 30px;
@@ -321,6 +322,8 @@ body{
 
 
 /* logo */
+
+
 @media (max-width: 1000px) {
     .logo div{
         font-size: 100px;
@@ -335,7 +338,7 @@ body{
 
 @media(max-height: 1000px){
     .logo div{
-        font-size: 90px;
+        font-size: 100px;
     }
 }
 
@@ -346,4 +349,12 @@ body{
 .headerButton:hover{
     font-size:50px;
     cursor:pointer;
+}
+
+/*plugin_wrapper playername*/
+
+@media (max-width: 1700px) {
+    .plugin_wrapper{
+        width: 80%;
+    }
 }

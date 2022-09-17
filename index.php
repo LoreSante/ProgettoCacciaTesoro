@@ -55,7 +55,7 @@ $_SESSION["idUser"] = "";
     <div class="logo">
         <div> Gallery </div>
         <h1 class="subtitle">
-            Una caccia al tesoro attraverso i dipinti dell'arte di tutto il mondo. Risolvi gli indovinelli e raggiungi la vittoria!
+            Un gioco di caccia al tesoro attraverso i dipinti dell'arte di tutto il mondo. Risolvi gli indovinelli e raggiungi la vittoria!
         </h1>
     </div>
     <div class="inputName"></div>

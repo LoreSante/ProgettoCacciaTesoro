@@ -20,7 +20,7 @@ let $playerName= "Guest";
 
             $this.wrap('<div class="plugin_wrapper" />')
             $(
-                '<form class="row-cols-1 text-center" action=server/player_actions_page.php method="post">'
+                '<form class="row-cols-1 text-center pluginName" action=server/player_actions_page.php method="post">'
                 +'<label class="col fnameWrapper" title="Nome giocatore" style="padding: 0 0 1% 0; height: 50%;">'
                 +'<input type="text" class="fname" id="fname" placeholder="Inserire nome giocatore">'
                 +'</label>'
@@ -34,7 +34,6 @@ let $playerName= "Guest";
             $submitButton.on("click", function () {
                 if($this.parent().find(".fname").val()!="")
                     $playerName=$this.parent().find(".fname").val();
-                location.href="menu.php";
                 //sendName($this);
             });
         });
