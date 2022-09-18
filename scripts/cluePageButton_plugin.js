@@ -1,6 +1,6 @@
 (function($) {
 
-    $.fn.cluePageButton = function (options) {
+    $.fn.cluePageButton = function (options) {//fa comparire e scomparire icona cluepage
         console.log("PARTITO");
         let $cluePageButton=document.getElementById("cluePageButton");
         let request_type="getIdUser";

@@ -1,4 +1,4 @@
-(function($) {
+(function($) {//DEPRECATO
 
     $.fn.testing = function (options) {
         let request_type="test";

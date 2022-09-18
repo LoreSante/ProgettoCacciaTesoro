@@ -1,6 +1,6 @@
 (function($) {
 
-    $.fn.showGallery = function (options) {
+    $.fn.showGallery = function (options) {//mostra dipinti in gallery backend
 
         console.log("CALL PLUGIN SHOW GALLERY");
         let $this=$(this);

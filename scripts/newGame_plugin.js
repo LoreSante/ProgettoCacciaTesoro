@@ -4,7 +4,7 @@ let idArray=0;
     console.log("JQUERY: " + $);
 
     let $playerId;
-    $.fn.createGame = function (options) {
+    $.fn.createGame = function (options) {//crea partita, inserisce id partita nel player e dà lui lo stato di host
         let request_type="getIdUser";
         let requestPlayerId = $.ajax({
             url: options.serverURL3,

@@ -1,6 +1,6 @@
 (function($) {
 
-    $.fn.cluePageGame = function (options) {
+    $.fn.cluePageGame = function (options) {//funzionamento gioco
         let paintingArray = [];
         let playerId;
         let playerPoints;
@@ -51,7 +51,7 @@
                     paintingArray=data;
                     console.log("Array is already setted:  " + data);
                 }
-                //TODO Continua da qui
+
                 showCurrentRiddle();
                 setInterval(showCurrentRiddle, 5000);
                 //showCurrentRiddle();
@@ -156,7 +156,7 @@
 
 
         function confirmPaintingButton() {
-            //let $confirmButton=document.getElementById("confirmButton"); TODO:SPOSTARE
+            //let $confirmButton=document.getElementById("confirmButton");
 
             request_type = "loadDataSearchedByPlayerId";
             let requestGetPoints = $.ajax({
@@ -215,14 +215,6 @@
             let $paintingImage=document.getElementById("paintImage");
             $paintingImage.src="http://www.dapasserella.com/wp-content/uploads/2018/07/Moschino-punto-interrogativo.jpg";
         }
-
-
-
-        //TODO: valutare se è meglio creare una permutazione di indici e
-        // scorrere l'array attravero il punteggio (Forse è meglio in effetti).
-        // .Capire inoltre se l'array deve essere una variabile di sessione o no, per permettere la navigazione tra le pagine
-        //
-
     }
 
 })(jQuery);

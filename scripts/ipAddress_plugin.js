@@ -1,6 +1,6 @@
 (function($) {
 
-    $.fn.ipAddress = function (options) {
+    $.fn.ipAddress = function (options) {//DEPRECATO
         let request_type="load";
         let request = $.ajax({
             url: options.serverURL,
@@ -19,4 +19,6 @@
 
     }
 })(jQuery);
+
+
 

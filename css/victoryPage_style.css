@@ -161,9 +161,7 @@ html{
      */
 }
 
-/*
-TODO AGGIUSTARE MEDIA QUERY
- */
+
 @media portrait and (max-width:640px){
     .endGamePaintingsContainer{
         width:90%;

@@ -1,6 +1,6 @@
 // JavaScript Document
 let $playerName= "Guest";
-(function($) {
+(function($) {//DEPRECATO
     console.log("JQUERY: " + $);
     $.fn.insertName = function (options) {
         console.log("CALL PLUGIN TODO");

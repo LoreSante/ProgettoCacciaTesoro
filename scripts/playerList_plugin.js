@@ -1,7 +1,7 @@
 (function($) {
     console.log("JQUERY: " + $);
 
-    $.fn.showPlayerList = function (options) {
+    $.fn.showPlayerList = function (options) {//mostra id e punteggi giocatori in partita
 
         let playerId;
         let request_type = "getIdUser"

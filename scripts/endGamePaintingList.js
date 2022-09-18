@@ -1,6 +1,6 @@
 (function($) {
 
-    $.fn.generatePaintingsList = function (options) {
+    $.fn.generatePaintingsList = function (options) {//fa comparire i dipinti con i riddle nella victory e defeat page
         let paintingsArray;
 
         getPaintingsArray();
