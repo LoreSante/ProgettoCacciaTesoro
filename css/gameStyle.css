@@ -62,7 +62,7 @@
 }
 
 .codeLabel, .matchID{
-    font-size:25px;
+    font-size:28px;
     color:white;
 }
 
@@ -89,7 +89,7 @@
     text-justify: distribute;
     margin-top:5px;
     margin-bottom:5px;
-    font-size: 20px;
+    font-size: 25px;
 
 }
 
@@ -122,7 +122,7 @@
     height: 100%;
     padding-top:12px;
     padding-bottom: 12px;
-    font-size:18px;
+    font-size:21px;
     color:white;
     background-color: #002984;
     border-radius: 10px ;
@@ -350,7 +350,7 @@
 
 }
 
-@media  (max-width: 1500px){
+@media  (max-width: 1550px){
 
     .lobbyContainer{
         width: 80%;

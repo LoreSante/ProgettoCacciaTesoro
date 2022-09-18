@@ -41,9 +41,10 @@
     text-align: start;
     border-radius:10px;
     border: #002984 3px solid;
+    font-size: 22px;
 }
 .enterButton{
-    width: 20%;
+    width: 30%;
     height: 10%;
 }
 .enterButton button{
@@ -92,11 +93,9 @@
         font-size:18px;
     }
 
-}
-
-@media (max-width: 400px){
-    .enterButton button{
-        font-size:14px;
+    .inputForm{
+        font-size:18px;
     }
 
 }
+
