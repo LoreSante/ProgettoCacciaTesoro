@@ -28,6 +28,8 @@ session_start();
     <script type="text/javascript" src="scripts/adminLogin.js"></script>
     <script type="text/javascript" src="scripts/enterGameButton_plugin.js"></script>
     <script type="text/javascript" src="scripts/enterGameButton_init_plugin.js"></script>
+    <script type="text/javascript" src="scripts/nicknameButton_plugin.js"></script>
+    <script type="text/javascript" src="scripts/nicknameButton_plugin_init.js"></script>
     <!--
     <script type="text/javascript" src="scripts/ipAddress_plugin.js"></script>
     <script type="text/javascript" src="scripts/ipAddress_plugin_init.js"></script>
@@ -65,7 +67,7 @@ session_start();
             <div class="sub-container"><button class="homeButton newGameButton menuButton" id="newGameButton" type="button" >Crea Nuova Partita</button></div>
             <div class="sub-container"><button class="homeButton enterGameButton menuButton" type="button" onclick="location.href='enterGame.php'">Entra in Partita</button></div>
             <div class="sub-container"><button class="galleryHomeButton" type="button" onclick="location.href='gallery.php'">Galleria</button></div>
-            <div class="sub-container"><button class="homeButton menuButton" type="button" onclick="location.href=''" style="display: none">Crediti</button></div>
+            <div class="sub-container"><button class="homeButton menuButton nicknameButton" id="nicknameButton" type="button" >Cambia Nickname</button></div>
 
         </div>
 

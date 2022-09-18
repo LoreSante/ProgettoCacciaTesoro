@@ -18,19 +18,19 @@
             })
 
             requestSession.done(function (data) {//ottenimento player per avere id game
-                if(data!=""){
-                    if (confirm("Sicuro di voler uscire?")){
-                        playerId = data;
-                        console.log("REQUEST.DONE 1 OTTENIMENTO ID: " + playerId);
-                        request_type = "loadDataSearchedByPlayerId";
-                        let request2 = $.ajax({
-                            url: options.serverURL,
-                            type: "POST",
-                            data: {"id": playerId, "action": request_type},
-                            dataType: "json",
-                        })
+                    playerId = data;
+                    console.log("REQUEST.DONE 1 OTTENIMENTO ID: " + playerId);
+                    request_type = "loadDataSearchedByPlayerId";
+                    let request2 = $.ajax({
+                        url: options.serverURL,
+                        type: "POST",
+                        data: {"id": playerId, "action": request_type},
+                        dataType: "json",
+                    })
 
-                        request2.done(function (data){ //ottenimento altri player tramite id game
+                    request2.done(function (data){ //ottenimento altri player tramite id game
+                        if(data.player.game!=99999){
+                            if (confirm("Sicuro di voler uscire?")){
                             gameId= data.player.game;
                             let request_type = "loadDataSearchedByGame";
                             console.log("REQUEST.DONE 2 OTTENIMENTO ALTRI PLAYER: " + data.player.game);
@@ -74,19 +74,19 @@
                                 request.done(function (data) {
                                     console.log("REQUEST.DONE CANCELLAZIONE PLAYER: " + data);
                                     deleteGame();
-                                    location.href = "menu.php";
+                                    location.href = "index.php";
                                 });
 
                                 request.fail(function (data){
                                     console.log("REQUEST.FAIL " + data);
                                 });
                             });
-                        });
-                    }
-                }
-                else{
-                    location.href = "menu.php";
-                }
+                            }
+                        }
+                        else
+                            location.href = "menu.php";
+                    });
+
             });
         }
 

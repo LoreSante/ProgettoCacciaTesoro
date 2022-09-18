@@ -61,7 +61,7 @@
                         request.fail(function(jqXHR, textStatus) {
                             alert( "Request failed: " + textStatus );
                         });
-                        location.href="menu.php";
+                        location.href="index.php";
                     })
                 });
 

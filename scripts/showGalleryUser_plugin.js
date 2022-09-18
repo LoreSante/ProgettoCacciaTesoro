@@ -24,13 +24,17 @@
                 // Take the row headings and make an HTML container out of them
                 let newDiv = document.createElement("div");
                 newDiv.className="col-xs-12 paintings";
+                let newDiv3 = document.createElement("div");
+                newDiv3.className="col-xs-12 titlePainting";
                 let newDiv2 = document.createElement("div");
                 newDiv2.className="columnPicture";
                 let newImg =document.createElement("img");
                 newImg.src=data.paintings[i].url;
                 newImg.alt="";
+                newDiv3.innerText=data.paintings[i].title;
                 newDiv2.appendChild(newImg);
                 newDiv.appendChild(newDiv2);
+                newDiv.appendChild(newDiv3);
                 container.appendChild(newDiv);
                 newImg.addEventListener("click", function(){
                     loadPaintingInfo(newImg.src);
