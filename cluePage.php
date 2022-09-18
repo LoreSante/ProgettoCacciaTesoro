@@ -67,12 +67,13 @@ session_start();
             <div class="iconClueWrapper">
                 <div><a><span class="material-symbols-outlined headerButton" id="returnHomeButton">home</span></a></div>
                 <div><a href="gallery.php"><span class="material-symbols-outlined headerButton">panorama</span></a></div>
+                <div><a><span id="rulesButtonMobile" class="material-symbols-outlined headerButton" >help</span></a></div>
             </div>
             <div id="headerProgress">
                 <p class="points">0/10</p>
             </div>
             <div class="rightClueIconWrapper">
-                <h5 id="rulesButton">Come si gioca?</h5>
+                <h5 class="rulesButton" id="rulesButton" >Come si gioca?</h5>
             </div>
         </div>
     </div>
@@ -91,9 +92,25 @@ session_start();
 
     <!-- FINESTRA DI DIALOGO -->
     <div class="container-fluid" id="formWrapper">
-        <div id="rulesWindow">
-            <span class="material-symbols-outlined headerButton" id="closeButton">close</span>
-            WEEEEEEEEE
+        <div id="rulesWindow" class="container">
+
+            <div class="row text-end">
+               <span class="material-symbols-outlined headerButton" id="closeButton">close</span>
+            </div>
+            <div class="row">
+                <h5 class="rulesTitle">Come si gioca?</h5>
+            </div>
+
+                <ul>
+                    <li class="rulesText">Risolvi i 10 indovinelli prima dei tuoi avversari per vincere la partita!</li>
+                    <li class="rulesText">Scegli la risposta tra quelle nella lista e premi su "Conferma" per rispondere</li>
+                    <li class="rulesText">Se non sai la risposta, clicca sul tasto <span class="material-symbols-outlined rulesSimbols">panorama</span> per visitare
+                    la Galleria dei dipinti e consultare le informazioni e le curiosità di ogni quadro. Premi poi su
+                        <span class="material-symbols-outlined rulesSimbols " id="cluePageButton">chat_bubble</span>
+                    per tornare all'indovinello.</li>
+                <ul>
+
+
         </div>
 
     </div>

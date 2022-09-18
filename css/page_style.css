@@ -372,8 +372,11 @@ body{
 }
 
 .headerButton:hover{
+
     font-size:50px;
+
     cursor:pointer;
+
 }
 
 /*plugin_wrapper playername*/

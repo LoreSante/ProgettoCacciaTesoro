@@ -14,7 +14,8 @@
 /* Modal Content/Box */
 #rulesWindow {
     background-color: #3f51b5;
-    border: 3px solid black;
+    border: 3px solid white;
+    margin-top:70px;
 
 }
 
@@ -24,6 +25,7 @@
     padding:2px;
     margin-right:10px;
     margin-top:5px;
+
 }
 #rulesButton:hover{
     cursor:pointer;
@@ -33,4 +35,40 @@
 
 #closeButton{
     color:white;
+    margin:10px;
+}
+.rulesTitle{
+    font-size:40px;
+    text-align:center;
+    color:white;
+}
+.rulesText{
+    color:white;
+    font-size:25px;
+    text-align:justify;
+    text-justify: auto;
+    list-style-type: disc;
+    margin-top:20px;
+}
+
+.rulesSimbols{
+    align-self: auto;
+    color:white;
+    font-size:30px;
+}
+
+#rulesButtonMobile{
+    display:none;
+}
+
+@media (max-width:850px){
+    #rulesButtonMobile{
+        display:block;
+        color:white;
+
+    }
+    #rulesButton{
+        display:none;
+    }
+
 }
