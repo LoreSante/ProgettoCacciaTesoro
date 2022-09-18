@@ -4,7 +4,6 @@
 
 session_start();
 
-$_SESSION["idUser"] = "";
 
 ?>
 
@@ -29,6 +28,8 @@ $_SESSION["idUser"] = "";
     <script type="text/javascript" src="scripts/adminLogin.js"></script>
     <script type="text/javascript" src="scripts/enterGameButton_plugin.js"></script>
     <script type="text/javascript" src="scripts/enterGameButton_init_plugin.js"></script>
+    <script type="text/javascript" src="scripts/nicknameButton_plugin.js"></script>
+    <script type="text/javascript" src="scripts/nicknameButton_plugin_init.js"></script>
     <!--
     <script type="text/javascript" src="scripts/ipAddress_plugin.js"></script>
     <script type="text/javascript" src="scripts/ipAddress_plugin_init.js"></script>
@@ -57,16 +58,15 @@ $_SESSION["idUser"] = "";
         <div class="header2"></div>
         <div class="header3"></div>
     </div>
-        <div class="indexContainer menuContainer">
+        <div class="menuContainer">
             <div class="logo">
                 <div> Gallery </div>
-                <!--<img src="https://via.placeholder.com/150" alt="logo">-->
             </div>
             <div class="inputName"></div>
             <div class="sub-container"><button class="homeButton newGameButton menuButton" id="newGameButton" type="button" >Crea Nuova Partita</button></div>
-            <div class="sub-container"><button class="homeButton enterGameButton menuButton" type="button">Entra in Partita</button></div>
+            <div class="sub-container"><button class="homeButton enterGameButton menuButton" type="button" onclick="location.href='enterGame.php'">Entra in Partita</button></div>
             <div class="sub-container"><button class="galleryHomeButton" type="button" onclick="location.href='gallery.php'">Galleria</button></div>
-            <div class="sub-container"><button class="homeButton menuButton" type="button" onclick="location.href=''" style="display: none">Crediti</button></div>
+            <div class="sub-container"><button class="homeButton menuButton nicknameButton" id="nicknameButton" type="button" >Cambia Nickname</button></div>
 
         </div>
 

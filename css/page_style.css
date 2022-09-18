@@ -113,6 +113,20 @@ body{
     background-color: white;
 }
 
+.menuContainer{
+    margin:5% auto 0 auto;
+    padding-bottom: 2%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: #ffb053 4px  solid;
+}
+
+.menuContainer div{
+    margin: 10px auto;
+}
+
 
 .indexContainer{
     margin:5% auto 0 auto;
@@ -323,8 +337,6 @@ body{
     cursor: pointer;
 
 }
-
-
 
 /* logo */
 

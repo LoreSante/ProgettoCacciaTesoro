@@ -39,7 +39,7 @@
     <div class="headerContainer">
         <div class="header">
             <div class="leftIconWrapper">
-                <div><a href="menu.php"><span class="material-symbols-outlined headerButton">home</span></a></div>
+                <div><a href="index.php"><span class="material-symbols-outlined headerButton">home</span></a></div>
             </div>
             <div class="rightIconWrapper">
 

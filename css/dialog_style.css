@@ -115,7 +115,9 @@
 
 
 
-
+.titlePainting{
+    font: normal 20px/100% "Georgia", sans-serif;
+}
 
 .title{
     font: normal 48px/100% "Georgia", sans-serif;

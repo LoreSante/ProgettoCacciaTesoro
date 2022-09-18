@@ -12,8 +12,19 @@
         })
         requestPlayerId.done(function (data) {
             console.log(data);
-            if(data==="")
-                $cluePageButton.style.display="none";
+            let request_type="loadDataSearchedByPlayerId";
+            let request = $.ajax({
+                url: options.serverURL2,
+                type: "POST",
+                data: { "id": data,"action": request_type},
+                dataType: "json",
+            })
+
+            request.done(function (data){
+                if(data.player.game==99999)
+                    $cluePageButton.style.display="none";
+            });
+
 
         });
         requestPlayerId.fail(function(jqXHR, textStatus) {
