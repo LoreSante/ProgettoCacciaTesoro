@@ -90,7 +90,7 @@ session_start();
     </div>
 
 
-    <!-- FINESTRA DI DIALOGO -->
+    <!-- FINESTRA DI DIALOGO REGOLE -->
     <div class="container-fluid" id="formWrapper">
         <div id="rulesWindow" class="container">
 
