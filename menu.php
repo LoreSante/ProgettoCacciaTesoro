@@ -58,10 +58,9 @@ session_start();
         <div class="header2"></div>
         <div class="header3"></div>
     </div>
-        <div class="indexContainer menuContainer">
+        <div class="menuContainer">
             <div class="logo">
                 <div> Gallery </div>
-                <!--<img src="https://via.placeholder.com/150" alt="logo">-->
             </div>
             <div class="inputName"></div>
             <div class="sub-container"><button class="homeButton newGameButton menuButton" id="newGameButton" type="button" >Crea Nuova Partita</button></div>

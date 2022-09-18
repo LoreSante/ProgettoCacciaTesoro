@@ -53,7 +53,7 @@ $_SESSION["idUser"] = "";
     <div class="header2"></div>
     <div class="header3"></div>
 </div>
-<div class="indexContainer menuContainer">
+<div class="indexContainer">
     <div class="logo">
         <div> Gallery </div>
         <h1 class="subtitle">
