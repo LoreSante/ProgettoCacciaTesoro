@@ -208,6 +208,10 @@
 
 }
 
+.clueContainer button{
+    font-size: 30px;
+}
+
 .clueText{
     color:white;
     font-size: 25px;
@@ -317,8 +321,6 @@
 }
 
 .rightClueIconWrapper{
-    /* FIXME: valuta se devo rimettere la width o no
-    */
     width:162px;
 
 
@@ -398,6 +400,12 @@
     }
 
 
+}
+
+@media (min-width:2000px){
+    .clueText{
+        font-size: 30px;
+    }
 }
 
 
