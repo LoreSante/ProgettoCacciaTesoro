@@ -1,6 +1,6 @@
 (function($) {
 
-    $.fn.nicknameButton = function (options) {
+    $.fn.nicknameButton = function (options) {//si occupa del funzionamento del tasto accedi in index
         console.log("PARTITO");
         let $nicknameButton=document.getElementById("nicknameButton");
         $nicknameButton.onclick= function (){

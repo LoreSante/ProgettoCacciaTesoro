@@ -1,6 +1,6 @@
 (function($) {
 
-    $.fn.checkGameStatus = function (options) {//
+    $.fn.checkGameStatus = function (options) {//verifica lo stato della partita per aggiornare gli eventi del gioco
         let idGame;
         let player;
         let victoryPoints=10;

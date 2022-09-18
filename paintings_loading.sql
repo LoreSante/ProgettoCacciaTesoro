@@ -17,7 +17,7 @@ INSERT INTO `paintings`( `title`, `author`, `year`, `technique`, `position`, `de
 VALUES ('Nascita di Venere','Sandro Botticelli','1485','Tempera su tela', 'Galleria Degli Uffizi, Firenze',
         'La fonte del mito fu quasi sicuramente una delle Stanze del Poliziano, a sua volta ispirata a Ovidio, alla Teogonia di Esiodo, al De rerum natura di Lucrezio e a un inno omerico. Contrariamente al titolo con cui l''opera è nota, essa non raffigura la nascita della dea, ma il suo approdo sull''isola di Cipro. \n
 Venere avanza leggera fluttuando su una conchiglia lungo la superficie del mare increspata dalle onde, in tutta la sua grazia e ineguagliabile bellezza, nuda e distante come una splendida statua antica. Viene sospinta e riscaldata dal soffio di Zefiro, il vento fecondatore, abbracciato a un personaggio femminile con cui simboleggia la fisicità dell''atto d''amore, che muove Venere col vento della passione. Forse la figura femminile è la ninfa Clori, forse il vento Aura o Bora. ',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/El_Beso_%28Pinacoteca_de_Brera%2C_Mil%C3%A1n%2C_1859%29.jpg/800px-El_Beso_%28Pinacoteca_de_Brera%2C_Mil%C3%A1n%2C_1859%29.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg/1200px-Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg',
         'I primi attimi d''una bellezza ineguagliabile');
 
 INSERT INTO `paintings`( `title`, `author`, `year`, `technique`, `position`, `description`, `url`, `riddle`)
