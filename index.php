@@ -62,10 +62,10 @@ $_SESSION["idUser"] = "";
     </div>
     <div class="plugin_wrapper">
         <form class="row-cols-1 text-center pluginName" action=server/player_actions_page.php method="post">
-            <label class="col fnameWrapper" title="Nome giocatore" style="padding: 0 0 1% 0; height: 50%;">
+            <label class="col fnameWrapper" title="Nome giocatore" >
                 <input type="text" class="fname" id="fname" placeholder="Inserire nome giocatore">
                 </label>
-            <input type="button" value="Accedi" class="nameSelected col" style="margin: 0 auto 0 auto; height: 50%; width: 50%;">
+            <input type="button" value="Accedi" class="nameSelected col" style="width: 50%;">
         </form>
     </div>
 </div>

@@ -82,7 +82,7 @@ body{
 
 .homeButton {
     border-color: black;
-    font-size: 25px;
+    /*font-size: 25px;*/
     height: 100%;
     border-radius: 15px;
     cursor:pointer;
@@ -98,7 +98,6 @@ body{
 
 .galleryHomeButton {
     border-color: black;
-    font-size: 25px;
     color: black;
     background-color: #ffb053;
     width: 100%;
@@ -114,17 +113,22 @@ body{
 }
 
 .menuContainer{
-    margin:5% auto 0 auto;
+    margin:2% auto 0 auto;
     padding-bottom: 2%;
     width: 60%;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    border: #ffb053 4px  solid;
+
 }
 
 .menuContainer div{
     margin: 10px auto;
+}
+
+.menuContainer button{
+    padding: 3% 0 3% 0;
+    font-size: 40px;
 }
 
 
@@ -209,7 +213,7 @@ body{
 
 .nameSelected{
     width: 100%;
-    font-size: 30px;
+    font-size: 40px;
     height: available;
     color:white;
     background-color: #002984;
@@ -240,11 +244,15 @@ body{
 
 }
 
+.plugin_wrapper input{
+    padding: 2% 0 2% 0;
+    margin: 0 auto 2% 0;
+}
+
 
 .fname{
-    width:100%;
-    font-size: 25px;
-    height: 100%;
+    width:90%;
+    font-size: 30px;
     border-radius: 10px;
 }
 
@@ -345,11 +353,29 @@ body{
     .logo div{
         font-size: 90px;
     }
+
+    .menuContainer button{
+        font-size: 30px;
+    }
+    .menuContainer{
+        width: 95%;
+    }
+
 }
 
 @media(max-width: 600px){
     .logo div{
+        font-size: 90px;
+    }
+}
+
+@media (max-height: 810px) {
+    .logo div{
         font-size: 80px;
+    }
+
+    .subtitle{
+        font-size:27px;
     }
 }
 
@@ -357,12 +383,27 @@ body{
     .logo div{
         font-size:100px;
     }
+    .menuContainer button{
+        font-size: 30px;
+    }
 }
 
 @media(min-width: 1501px) and (max-width: 1700px){
     .logo div{
         font-size:120px;
     }
+
+    .menuContainer button{
+        font-size: 30px;
+    }
+}
+
+@media(max-height: 1000px){
+
+    .menuContainer button{
+        padding: 1% 0 1% 0;
+    }
+
 }
 
 
@@ -420,13 +461,13 @@ body{
     }
 }
 
-@media (min-width: 451px) and (max-width: 810px){
+@media (min-width: 500px) and (max-width: 810px){
     .indexContainer{
         width: 90%;
     }
 }
 
-@media (max-width: 450px){
+@media (max-width: 499px){
     .indexContainer{
         margin-top:30%;
         width:90%;
