@@ -31,7 +31,7 @@
 
 @media(max-width: 950px) and (min-width:800px){
 
-    .indexContainer{
+    .indexContainer, .menuContainer{
         margin-top:5%;
     }
 }
@@ -39,7 +39,7 @@
 
 @media(max-width: 800px) and (min-width:650px){
 
-    .indexContainer{
+    .indexContainer,.menuContainer{
         margin-top:10%;
     }
 }
@@ -47,7 +47,7 @@
 
 @media(max-width: 651px) and (min-width:500px){
 
-    .indexContainer{
+    .indexContainer,.menuContainer{
         margin-top:15%;
     }
 }
@@ -55,7 +55,7 @@
 
 @media(max-width: 499px){
 
-    .indexContainer{
+    .indexContainer,.menuContainer{
         margin-top:20%;
     }
 }

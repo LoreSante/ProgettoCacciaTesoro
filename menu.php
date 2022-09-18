@@ -40,7 +40,7 @@ session_start();
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!-- END bootstrap -->
 
-
+    <link href="css/indexPageStyle.css" rel="stylesheet" type="text/css">
 
 
 </head>
