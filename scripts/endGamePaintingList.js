@@ -24,7 +24,8 @@
 
         function generateList(){
             let paintingsContainer = document.getElementById("endGamePaintingsContainer");
-            for(let i=0; i<paintingsArray.length; i++){
+            let victoryPoints = 10;
+            for(let i=0; i<victoryPoints; i++){
 
                 let paintingWrapper = document.createElement("div");
                 let paintingImage =  document.createElement("img");
