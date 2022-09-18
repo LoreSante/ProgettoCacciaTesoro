@@ -21,11 +21,12 @@ $_SESSION["idUser"] = "";
     <script type="text/javascript" src="scripts/playername_plugin_init.js"></script>
     <script type="text/javascript" src="scripts/playername_plugin.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link href="css/page_style.css" rel="stylesheet" type="text/css">
-    <link href="css/indexPageStyle.css" rel="stylesheet" type="text/css">
+
     <script type="text/javascript" src="scripts/adminLogin_init.js"></script>
     <script type="text/javascript" src="scripts/adminLogin.js"></script>
 
+    <link href="css/page_style.css" rel="stylesheet" type="text/css">
+    <link href="css/indexPageStyle.css" rel="stylesheet" type="text/css">
 
     <!--
     <script type="text/javascript" src="scripts/ipAddress_plugin.js"></script>
