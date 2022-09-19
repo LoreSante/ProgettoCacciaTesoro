@@ -4,7 +4,7 @@ let arrayLength;
 
 (function($) {
 
-    $.fn.adminLogin = function (options){
+    $.fn.adminLogin = function (options){ //verifica corretto inserimento password per entrare in gestione backend programma
         
         let $loginButton = $('.loginButton', this.parent());
 

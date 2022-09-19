@@ -1,7 +1,7 @@
 
 (function($) {
 
-    $.fn.insertPainting = function (options){
+    $.fn.insertPainting = function (options){//si occupa della dialog di aggiunta dipinti in backend
 
         let modal = document.getElementById("formWrapper");
         let openButton = document.getElementById("addPaintButton");

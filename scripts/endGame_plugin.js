@@ -1,6 +1,6 @@
 (function($) {
 
-    $.fn.endGame = function (options) {//
+    $.fn.endGame = function (options) {//si occupa di verificare il raggiungimento del punteggio necessario a vincere
         let idGame;
         let playerId;
         let victoryPoints=10;

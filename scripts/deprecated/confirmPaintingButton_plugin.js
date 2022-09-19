@@ -32,7 +32,7 @@
         requestPaintingArray.done(function (data) {
             paintingArray = data;
             console.log("REQUEST Painting Array [BUTTON] DONE---: " + data);
-            setInterval(createButton,1000); //FIXME: verifica che non blocchi il pc
+            setInterval(createButton,1000);
 
         });
         requestPaintingArray.fail(function (jqXHR, textStatus) {
@@ -52,7 +52,7 @@
 
 
         function confirmPaintingButton() {
-            //let $confirmButton=document.getElementById("confirmButton"); TODO:SPOSTARE
+            //let $confirmButton=document.getElementById("confirmButton");
 
             request_type = "loadDataSearchedByPlayerId";
             let requestGetPoints = $.ajax({

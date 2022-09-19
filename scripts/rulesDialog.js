@@ -1,6 +1,6 @@
 (function($) {
 
-    $.fn.showRules = function (options) {
+    $.fn.showRules = function (options) {//si occupa della dialog che narra le regole del gioco
 
         let modal = document.getElementById("formWrapper");
 

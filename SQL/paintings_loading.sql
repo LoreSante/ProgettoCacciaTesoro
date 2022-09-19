@@ -5,26 +5,26 @@ INSERT INTO `paintings`( `title`, `author`, `year`, `technique`, `position`, `de
 VALUES ('Il bacio (Klimt)','Gustav Klimt','1907-1908','Olio su tela','Österreichische Galerie Belvedere, Vienna',
         'Al centro di un luogo etereo ed astratto due amanti si stringono e si abbandonano ad un bacio intenso; la fanciulla è pienamente abbandonata nell''amplesso, con gli occhi chiusi in una posizione estatica, mentre l''uomo - del quale si intravede solo il profilo - stringe la testa dell''amata con delicatezza, protendendosi verso di lei in segno protettivo e di affetto',
         'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/The_Kiss_-_Gustav_Klimt_-_Google_Cultural_Institute.jpg/800px-The_Kiss_-_Gustav_Klimt_-_Google_Cultural_Institute.jpg',
-        'Il bacio (Klimt)');
+        'Un concreto amore in un luogo astratto');
 
 INSERT INTO `paintings`( `title`, `author`, `year`, `technique`, `position`, `description`, `url`, `riddle`)
 VALUES ('Il bacio (Hayez)','Francesco Hayez','1859','Olio su tela','Pinacoteca di Brera, Milano',
         'La scena è ambientata in un vago interno medievale. Si tratta dell''androne di un castello, di cui sono messi in rilievo tre gradini, a destra della tela, e l''estesa parete lapidea; la superficie di quest''ultima occupa omogeneamente quasi tutto lo sfondo del dipinto, e di fatto viene interrotta solo da un varco archiacuto gotico, introdotto da una sottile colonnina, e da una bifora che si staglia in alto a destra, appena accennata in quanto tagliata dal margine superiore del quadro. Ebbene, in quest''ambientazione medievaleggiante si sta consumando un appassionato quanto sensuale bacio tra due giovani amanti, in un clima di romantica sospensione. ',
         'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/El_Beso_%28Pinacoteca_de_Brera%2C_Mil%C3%A1n%2C_1859%29.jpg/800px-El_Beso_%28Pinacoteca_de_Brera%2C_Mil%C3%A1n%2C_1859%29.jpg',
-        'Il bacio (Hayez)');
+        'Il medioevo nel 1859');
 
 INSERT INTO `paintings`( `title`, `author`, `year`, `technique`, `position`, `description`, `url`, `riddle`)
 VALUES ('Nascita di Venere','Sandro Botticelli','1485','Tempera su tela', 'Galleria Degli Uffizi, Firenze',
         'La fonte del mito fu quasi sicuramente una delle Stanze del Poliziano, a sua volta ispirata a Ovidio, alla Teogonia di Esiodo, al De rerum natura di Lucrezio e a un inno omerico. Contrariamente al titolo con cui l''opera è nota, essa non raffigura la nascita della dea, ma il suo approdo sull''isola di Cipro. \n
 Venere avanza leggera fluttuando su una conchiglia lungo la superficie del mare increspata dalle onde, in tutta la sua grazia e ineguagliabile bellezza, nuda e distante come una splendida statua antica. Viene sospinta e riscaldata dal soffio di Zefiro, il vento fecondatore, abbracciato a un personaggio femminile con cui simboleggia la fisicità dell''atto d''amore, che muove Venere col vento della passione. Forse la figura femminile è la ninfa Clori, forse il vento Aura o Bora. ',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/El_Beso_%28Pinacoteca_de_Brera%2C_Mil%C3%A1n%2C_1859%29.jpg/800px-El_Beso_%28Pinacoteca_de_Brera%2C_Mil%C3%A1n%2C_1859%29.jpg',
-        'Nascita di Venere');
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg/1200px-Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg',
+        'I primi attimi d''una bellezza ineguagliabile');
 
 INSERT INTO `paintings`( `title`, `author`, `year`, `technique`, `position`, `description`, `url`, `riddle`)
 VALUES ('Impressione, levar del sole','Claude Monet','1872','Olio su tela', 'Musée Marmottan Monet, Parigi',
         'Si tratta di una tela dove i princìpi cardinali dell’Impressionismo sono già perfettamente delineati. A essere raffigurato è uno scorcio mattutino del porto di Le Havre, avvolto da una nebbia impalpabile e scialba che rende tutto sfocato e indefinito. In primo piano troviamo, disposte in diagonale da sinistra verso destra, tre piccole imbarcazioni che, con placidi remeggi, solcano le acque portuali. Sullo sfondo, dietro il velo di foschia, si profilano infatti i pennoni delle navi ormeggiate, le silhouette dei mezzi meccanici per la movimentazione delle merci, alcune ciminiere fumanti e persino un albero. Alzandosi dalle viscere fluviali, poi, in alto si è librato il disco rossastro del sole che, facendosi lentamente strada nel cielo, emette dei raggi aranciati che si riverberano guizzanti sullo specchio d’acqua, appena screziato da alcune onde, e inondano omogeneamente tutto il paesaggio. In basso a sinistra, infine, il dipinto è firmato e datato: «Claude Monet ’72». ',
         'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Monet_-_Impression%2C_Sunrise.jpg/1024px-Monet_-_Impression%2C_Sunrise.jpg',
-        'Impressione, levar del sole');
+        'C.M. ''72');
 
 
 INSERT INTO `paintings`( `title`, `author`, `year`, `technique`, `position`, `description`, `url`, `riddle`)
@@ -35,7 +35,7 @@ VALUES ('La Grenouillère',
         'Nationalmuseum, Stoccolma',
         'Con questo dipinto Renoir dimostra la propria devozione alle prescrizioni del poeta Baudelaire, il quale nel 1846 scrisse che: «L''eroismo della vita moderna ci circonda e ci avvolge [...] Modernità è tutto quanto è transitorio, fugace, contingente; una metà dell''arte, l''altra metà è l''eterno, l''immutabile», aggiungendo che «un artista, un vero artista sarà quello che riuscirà a strappare alla vita moderna il suo lato epico, e ci farà vedere e sentire quanto siamo grandi e poetici nelle nostre cravatte e nelle nostre scarpe lucide». Pittore magistrale della via moderne, Renoir avrebbe dedicato alla modernità un consistente numero di tele, fra le quali spiccano senz''ombra di dubbio i celeberrimi Bal au moulin de la Galette, Ballo in città e Ballo in campagna. Come abbiamo già accennato, il soggetto dell''opera è la Grenouillère: in primo piano, infatti, vi troviamo delle imbarcazioni che galleggiano placidamente sul fiume, mentre al centro della composizione è raffigurato un isolotto artificiale affollato da vari parigini in vacanza.\n Renoir restituisce quest''impressione della Grenouillère con un''immediatezza quasi fotografica. Dal punto di vista tecnico, il trattamento della materia pittorica è molto vario: se in primo piano le pennellate sono nette e decise, nello sfondo si fanno più leggere e filamentose, in modo da suggerire l''andamento prospettico della tela (è importante notare come la costruzione della prospettiva del dipinto venga affidata anche all''albero sull''isolotto, che con la sua sagoma scura stacca prepotentemente il primo dal secondo piano).[2] Renoir, inoltre, dà particolare risalto ai riverberi prodotti dalla luce solare che, penetrando tra le fronde palpitanti degli alberi, si rifrange sulle acque scure della Senna. Questi fugaci riflessi vengono catturati con una frammentazione delle pennellate in tocchi tremolanti di colore, che rendono perfettamente l''instabilità e la mobilità delle acque fluviali. L''atmosfera che si respira in questo dipinto, insomma, è squillante e vacanziera, in pieno accordo con la poetica renoiriana della joie de vivre.',
         'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Auguste_Renoir_-_La_Grenouill%C3%A8re.jpg/800px-Auguste_Renoir_-_La_Grenouill%C3%A8re.jpg',
-        'La Grenouillère');
+        'La città è la sua residenza... ma non solo: anche una sindrome');
 
 INSERT INTO `paintings`( `title`, `author`, `year`, `technique`, `position`, `description`, `url`, `riddle`)
 VALUES ('Giuditta che decapita Oloferne (Artemisia Gentileschi Napoli)',
@@ -49,7 +49,7 @@ La scena raffigurata è quella della decapitazione con una scimitarra di Olofern
 
 La tela riprende i tre personaggi in primo piano dominati da un accentuato chiaroscuro che rende la pittura tra le più alte rappresentazioni del primo caravaggismo. L''ancella è in abiti rossi, che lotta con Oloferne disteso sul letto, mentre Artemisia con la spada, riccamente ornata sul manico, è atta a decapitare l''uomo. Fa da contrasto alla cupa scenografia il biancore delle lenzuola del letto su cui è steso Oloferne, comunque riccamente macchiate dal sangue che copioso sgorga dal suo stesso collo.',
         'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Gentileschi_Artemisia_Judith_Beheading_Holofernes_Naples.jpg/800px-Gentileschi_Artemisia_Judith_Beheading_Holofernes_Naples.jpg',
-        'Giuditta che decapita Oloferne (Artemisia Gentileschi Napoli)');
+        'Tre donne, ma non tutte sono su tela');
 
 INSERT INTO `paintings`( `title`, `author`, `year`, `technique`, `position`, `description`, `url`, `riddle`)
 VALUES ('Una domenica pomeriggio sull''isola della Grande-Jatte',
@@ -59,7 +59,7 @@ VALUES ('Una domenica pomeriggio sull''isola della Grande-Jatte',
         'Art Institute of Chicago, Chicago',
         'Come gli Impressionisti, infatti, Seurat in questo dipinto persegue la luminosità naturale mediante l''utilizzo di pochi colori puri. Se, tuttavia, pittori come Monet e Renoir davano le pennellate per veloci tocchi virgolati, Seurat in Una domenica pomeriggio sull''isola della Grande-Jatte preferisce depositare i colori sulla tela in forma di tocchi separati minutissimi, spesso puntiformi, basandosi sulla legge della complementarità cromatica teorizzata dal chimico Michel-Eugène Chevreul. In questo modo, a una visione distanziata, i vari puntini di colore puro tendono a fondersi e a restituire un colore diverso, ricomponendosi non per via di un intervento meccanico del pittore, bensì grazie alla retina dell''occhio dell''osservatore. Seurat, in questo modo, riesce un secolo dopo, tecnica e storia fanno ancora emozionare e ottenere la maggiore luminosità e brillantezza cromatica senza ricorrere a impasti, velature o mescolanze chimiche, bensì semplicemente sfruttando le dinamiche percettive dell''occhio umano.',
         'https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Georges_Seurat_-_Un_dimanche_apr%C3%A8s-midi_%C3%A0_l%27%C3%AEle_de_la_Grande_Jatte.jpg/1024px-Georges_Seurat_-_Un_dimanche_apr%C3%A8s-midi_%C3%A0_l%27%C3%AEle_de_la_Grande_Jatte.jpg',
-        'Una domenica pomeriggio sull''isola della Grande-Jatte');
+        'Tanti punti ma nessun discorso');
 
 INSERT INTO `paintings`( `title`, `author`, `year`, `technique`, `position`, `description`, `url`, `riddle`)
 VALUES ('Putto che suona',
@@ -95,7 +95,7 @@ VALUES ('Vaso con dodici girasoli',
         L''artista stendeva i colori con pennellate ruvide e dense, spesso appiccicandoli uno sopra l''altro finché i pigmenti erano ancora umidi. A volte procedeva a scalfire la superficie fresca usando anche l''impugnatura del pennello. Si tratta di un approccio scultoreo alla pittura, in cui le ombre e le luci sono date, oltre che dai pigmenti, dallo spessore dell''impasto cromatico. L''effetto che si otteneva era quello di un''espressività mai vista prima. La serie fu innovativa anche per l''uso estensivo del giallo cadmio, un pigmento di invenzione recente, che l''artista amava usare. \n
         La firma dell''artista si trova spesso sul vaso: come i grandi maestri del passato egli usava solo il proprio nome di battesimo.',
         'https://res.cloudinary.com/tne/image/authenticated/s--cR0YrnfB--/q_80/artworks/VINCENT-VAN-GOGH_SONNENBLUMEN_CC-BY-SA_BSTGS_8672.jpg',
-        'Vaso con dodici girasoli');
+        'Non solo pittura, anche scultura');
 
 INSERT INTO `paintings`( `title`, `author`, `year`, `technique`, `position`, `description`, `url`, `riddle`)
 VALUES ('Ragazza col turbante',
@@ -106,4 +106,4 @@ VALUES ('Ragazza col turbante',
         'Il volto della ragazza, intriso di luce, mostra una rara bellezza: labbra rosse carnose che si dischiudono in un abbozzo stupefatto di sorriso, naso sottile e dritto, occhi grandi e vivi. La luce delle pupille è poi richiamata dall''orecchino con una grossa perla, che brilla sulla penombra del collo. La perla è dipinta utilizzando poche pennellate a goccia, separate l''una dall''altra: è l''occhio umano che ha l''illusione di vederla intera.
         L''artista catturò con viva immediatezza l''espressione sfuggente, carica di un''innocente languidezza. L''orecchino con perla del quadro, che cattura quasi da solo la centralità della luce di cui è pervaso il dipinto, è di grandi dimensioni ed è a forma di goccia. Sebbene la ragazza che lo indossa appaia di modeste condizioni, tale monile era al tempo di Vermeer prerogativa delle dame aristocratiche e dell''alta borghesia. Nel XVII secolo le perle erano una preziosa rarità: venivano cercate dai pescatori di perle e perfino importate dall''Estremo Oriente. Nel caso della perla raffigurata nel dipinto, si tratta di un esemplare di grandi dimensioni che, a parere di alcuni studiosi, in natura non esisterebbe',
         'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/1665_Girl_with_a_Pearl_Earring.jpg/1920px-1665_Girl_with_a_Pearl_Earring.jpg',
-        'Ragazza col turbante');
+        'Una piccola, ma graziosa, illusione di luce nel nero');
